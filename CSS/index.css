@@ -1,0 +1,104 @@
+/*add font here*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0
+}
+body{
+    font-family: "Work Sans","Helvetica Neue";background-color: black;
+    font-size: 1rem;
+    line-height: 1.5
+}
+.header {
+   
+    padding:0.75rem 1.5rem ;
+    align-items: center;
+    height: 3.5rem;
+
+}
+
+.instapro-logo{
+    display: block;
+    height: 1.5rem;
+    margin: 5px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    background-color: #333;
+}
+
+.nav-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+
+}
+
+.nav-links li {
+    list-style: none;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color:#fff;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-links a:hover{
+    color:#dfddeb
+}
+
+.toggle-menu{
+    position: absolute;
+    color:#fff;
+    top: .75rem;
+    right: 1.55rem;
+    margin: 8px;
+    justify-content: space-between;
+    display: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.span-toggle{
+    margin: 2px;
+    padding: 4px;
+}
+
+@media (max-width: 960px){
+    .toggle-menu{
+        display: flex;
+       
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links{
+        width: 100%;
+        display: none;
+    }
+    .nav-links ul {
+        flex-direction: column;
+    }
+    
+    .nav-links li a {
+        margin: 0;
+        padding: 1rem 1.5rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+        
+        
+        }
