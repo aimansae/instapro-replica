@@ -1,31 +1,34 @@
 /*add font here*/
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
-*{
+
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0
+    margin: 0;
+    padding: 0
 }
-body{
-    font-family: "Work Sans","Helvetica Neue";background-color: black;
+
+body {
+    font-family: "Work Sans", "Helvetica Neue";
     font-size: 1rem;
     line-height: 1.5
 }
+
 .header {
-   
-    padding:0.75rem 1.5rem ;
+
+    padding: 0.75rem 1.5rem;
     align-items: center;
     height: 3.5rem;
 
 }
 
-.instapro-logo{
+.instapro-logo {
     display: block;
     height: 1.5rem;
     margin: 5px;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,13 +36,15 @@ body{
     background-color: #333;
 }
 
-.nav-links ul{
+.nav-links ul li{
     margin: 0;
     padding: 0;
     display: flex;
-
-
+   
 }
+
+
+
 
 .nav-links li {
     list-style: none;
@@ -48,18 +53,18 @@ body{
 
 .nav-links li a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     padding: 1rem;
     display: block;
 }
 
-.nav-links a:hover{
-    color:#dfddeb
+.nav-links a:hover {
+    color: #dfddeb
 }
 
-.toggle-menu{
+.toggle-menu {
     position: absolute;
-    color:#fff;
+    color: #fff;
     top: .75rem;
     right: 1.55rem;
     margin: 8px;
@@ -69,36 +74,79 @@ body{
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
+    color: rgb(44, 44, 44);
 }
-.span-toggle{
+
+.span-toggle {
     margin: 2px;
     padding: 4px;
 }
+@media (min-width: 60rem){
+.header {
+    padding: 1.5rem;
+    height: 5rem;
+}
+}
 
-@media (max-width: 960px){
-    .toggle-menu{
-        display: flex;
-       
+@media (max-width: 960px) {
+    .instapro-logo {
+        display: block;
+        height: 1.5rem;
     }
+
+    .toggle-menu {
+        display: flex;
+        height: 2rem;
+
+    }
+
+    .header {
+        display: flex;
+        padding: 0.75rem 1.5rem;
+        align-items: center;
+        height: 3.5rem;
+        justify-content: space-between;
+        width: min(100%, 63rem);
+    }
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: #fff;
+
     }
-    .nav-links{
-        width: 100%;
+
+    .nav-links {
         display: none;
+        width: 100%;
     }
+
     .nav-links ul {
         flex-direction: column;
     }
-    
+  
     .nav-links li a {
+     
+        margin: 0;
+        padding: 1rem 1.5rem;
+        color: rgb(1, 1, 1);
+        border-bottom: 1px solid rgb(217, 215, 213);
+        width:100%;
         margin: 0;
         padding: 1rem 1.5rem;
     }
+
     .nav-links.active {
         display: flex;
+       
     }
+
+    .nav-links li:hover {
+        background-color: #f0f5fe;
         
-        
-        }
+    }
+    .nav-links a:hover {
+        color: black
+    }
+
+}
