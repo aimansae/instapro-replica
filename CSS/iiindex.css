@@ -1,5 +1,7 @@
+/* Google Font*/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
 
+/*restetting all spacing*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -121,27 +123,36 @@ i fa-arrow-right{
     padding-right: 0;
 }
 
-.info-section{
+.info-section, .summer-section{
     padding: 1rem;
     margin:1rem 0px;
-    background-color: #f1f3f9;
-}
-.ol-container{
-    display: flex;
-    gap: 1rem;
-    padding: 3rem;
-    justify-content: space-around;
     
 }
+
+.info-section{
+    background-color: #f1f3f9;
+}
+
+
 
 ol li {
     list-style: none;
    
 }
+.number-icon{
+    color:#e5cb4e;
+    font-size: 1.5rem;
+
+}
 .section-title{
     margin-top: 2rem;
     color: black;
+    font-size: 2rem;
 
+}
+.list-title{
+    font-size: 1.25rem;
+    font-weight: 900;
 }
 h3 {
     color: black;
@@ -152,7 +163,7 @@ h3 {
     font-weight: 800;
 }
 
-.li-item{
+.li-item, .card{
     width: 20%;
 }
 
@@ -190,6 +201,7 @@ p{
   .nav-links.active {
     display: flex;
     background-color: #fff;
+
   }
 }
 
@@ -240,6 +252,7 @@ input[type="text"]:focus {
 .signup-container span {
     color: #fff;
 }
+
 .yellow-arrow{
         width: 1.5rem;
     height: 1.5rem;
@@ -250,12 +263,29 @@ input[type="text"]:focus {
     display: inline-flex;
     
 }
+.ol-container, .card-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 3rem;
+    justify-content: space-around;
+    
+}
+
+.card-wrapper{
+    display: flex;
+}
+
+.card img{
+    border-radius: 25px;
+    width: 130%;
+}
 
 @media (min-width: 60rem){
 .header {
     padding: 1.5rem;
     height: 5rem;
 }
+
 
 .h1-container h1 {
     font-size: 3rem;
@@ -266,19 +296,37 @@ input[type="text"]:focus {
     margin: 0px 0px 6rem;
 }
 
-.info-section{
+.info-section, .summer-section{
     padding-left: 3rem;
     padding-right: 3rem;
 
 }
 }
 
-@media (min-width: 30rem){
-.ol-container {
-    flex-direction:column;
-}
-.li-item{
+@media (max-width: 960px){
+
+    .ol-container{
+        flex-direction: column;
+        
+    }
+
+    .card-wrapper{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+.li-item, .card{
     width: 100%;
+    margin-bottom:1rem ;
+    
+}
+.card{
+    text-align: center;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;;
 }
 }
 
