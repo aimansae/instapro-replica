@@ -201,6 +201,8 @@ p{
   .nav-links.active {
     display: flex;
     background-color: #fff;
+ ;
+
 
   }
 }
@@ -270,7 +272,13 @@ input[type="text"]:focus {
     justify-content: space-around;
     
 }
+.review-ol-container{
+    display: flex;
+    padding: 3rem;
+    justify-content: space-around;
+    text-align: center;
 
+}
 .card-wrapper{
     display: flex;
 }
@@ -322,10 +330,11 @@ input[type="text"]:focus {
   box-sizing: border-box;
 }
 
-.more-btn{
+.more-btn, .send-request-btn{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 #expandButton{
@@ -333,10 +342,20 @@ input[type="text"]:focus {
     padding: 1.2rem;
     background-color: #fff;
     color: #3F27BA;
+    border-radius:9999px ;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.request-btn{
+    padding: 1.2rem;
+    background-color: #3F27BA;
+    color: #fff;
     border-radius:3rem ;
     align-items: center;
     font-size: 1.3rem;
     font-weight: bold;
+    text-decoration: none;
 }
 .expand-hide{
     display: none;
@@ -350,6 +369,20 @@ input[type="text"]:focus {
     
 }
 
+.review-title{
+    color: #3f27ba;
+    font-size: 3rem;
+    line-height: 3.625rem;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.review-list-item p {
+    color: #0171cd;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bolder;
+}
 @media (min-width: 60rem){
 .header {
     padding: 1.5rem;
@@ -381,6 +414,19 @@ input[type="text"]:focus {
     .ol-container{
         flex-direction: column;
         
+    }
+
+    .review-ol-container{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .review-list-item{
+        margin: 3rem;
+    }
+
+    .review-title{
+        font-size: 4rem;
     }
 
     .card-wrapper, .jobs-wrapper, .show{
