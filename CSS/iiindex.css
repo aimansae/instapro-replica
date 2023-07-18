@@ -163,7 +163,7 @@ h3 {
     font-weight: 800;
 }
 
-.li-item, .card{
+.li-item{
     width: 20%;
 }
 
@@ -210,7 +210,7 @@ p{
 .main-container{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 3rem;
     width:80%; 
     
 }
@@ -277,7 +277,77 @@ input[type="text"]:focus {
 
 .card img{
     border-radius: 25px;
-    width: 130%;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-title{
+    font-size: 2rem;
+    text-align: left;
+    
+
+    
+}
+
+.card-icon{
+    font-size: 2rem;
+    color:#3F27BA;
+}
+.card-text p {
+    margin: 2rem 0;
+    font-size: large;
+    color:#5e636e ;
+}
+
+/* section with links for jobs*/
+.jobs-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+
+    
+}
+
+.jobs-link-ul{
+    list-style: none;
+    margin: 2rem 0;
+    font-size: 1rem;
+  
+   
+}
+
+.joblist{
+  flex: 0 0 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.more-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+#expandButton{
+    border: 1px solid #3F27BA;
+    padding: 1.2rem;
+    background-color: #fff;
+    color: #3F27BA;
+    border-radius:3rem ;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.expand-hide{
+    display: none;
+}
+
+.show{
+    display: flex;
+    flex-wrap: wrap;
+   
+ 
+    
 }
 
 @media (min-width: 60rem){
@@ -301,6 +371,9 @@ input[type="text"]:focus {
     padding-right: 3rem;
 
 }
+
+
+
 }
 
 @media (max-width: 960px){
@@ -310,7 +383,7 @@ input[type="text"]:focus {
         
     }
 
-    .card-wrapper{
+    .card-wrapper, .jobs-wrapper, .show{
         flex-direction: column;
         justify-content: center;
 
@@ -322,12 +395,13 @@ input[type="text"]:focus {
     
 }
 .card{
-    text-align: center;
+    text-align: left;
 }
 .card img{
     width: 100%;
     border-radius: 10px;;
 }
+
 }
 
 
