@@ -422,6 +422,7 @@ hr {
     margin-top: 2rem;
 }
 
+
 .footer-ul {
     flex-wrap: wrap;
     margin: 0;
@@ -491,7 +492,7 @@ hr {
 .ul-rating-desciption li{
     color: black;
     text-decoration: none;
-    margin-right: 2rem;
+    
 }
 .rating-description p{
     text-decoration:none;
@@ -500,6 +501,8 @@ hr {
 
 }
 
+
+
 .fa-star{
     color:#73cf11
 }
@@ -507,6 +510,48 @@ hr {
     width: 5em;
     height: auto;
 }
+
+
+/*parnter list*/
+.partner-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.partner-wrapper p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    
+}
+
+
+
+.ul-partners li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.country-link .service-link{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+span.copyright{
+    color: #5e636e;
+}
+
+.lastdiv-container{
+    margin-top: 3rem;
+}
+.lastdiv-container li {
+    margin-right: 1rem;
+}
+
 
 @media (min-width: 60rem) {
     .header {
@@ -532,7 +577,15 @@ hr {
 
     }
 
+    .country-link, .service-link{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    }
 
+   
+    
+   
 
 }
 
@@ -569,6 +622,8 @@ hr {
         flex-direction: column;
         padding: 3rem;
     }
+
+    
     .socialmedia-wrapper {
         flex-direction: column;
         padding: 3rem;
@@ -604,4 +659,5 @@ hr {
         ;
     }
 
+   
 }
