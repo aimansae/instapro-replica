@@ -3,7 +3,8 @@ const navbarLinks = document.getElementsByClassName('nav-links')[0]
 
 
 togglemenu.addEventListener('click', () =>{
-    navbarLinks.classList.toggle('active')
+    navbarLinks.classList.toggle('active');
+    navbarLinks.classList.add('togglestyle')
 })
 
 // expand more jobs button
