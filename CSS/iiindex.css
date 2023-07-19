@@ -410,24 +410,24 @@ input[type="text"]:focus {
 }
 
 /* footer*/
-hr{
-    
+hr {
+
     height: 0.5rem;
-    background-color:#DFDDEB ;
+    background-color: #DFDDEB;
 }
 
-.footer-wrapper{
+.footer-wrapper, .socialmedia-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
 }
 
 .footer-ul {
-        flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
 }
 
 .footer-ul li {
@@ -440,18 +440,72 @@ hr{
 
 }
 
-.footer-ul a{
+.footer-ul a {
     font-size: 1.2rem;
     color: #3F27BA;
     text-decoration: none;
 }
-.singup-link{
+
+.singup-link {
     background-color: #F9F8F6;
     padding: 0 1rem;
 }
+
 .singup-link a {
     text-decoration: underline;
 
+}
+
+.socialmedia-wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    
+
+}
+
+
+.ul-socialmedia,.ul-rating-desciption{
+    display: flex;
+
+
+
+}
+.socialmedia-wrapper li {
+    
+    font-size: 1.5rem;
+    align-items: center;
+    color: #3F27BA;
+
+}
+
+.socialmedia-wrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.ul-socialmedia i{
+    margin-right: 2rem;
+}
+.ul-rating-desciption li{
+    color: black;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+.rating-description p{
+    text-decoration:none;
+    margin-left: .5rem;
+    color: black;
+
+}
+
+.fa-star{
+    color:#73cf11
+}
+.trustpilot-logo {
+    width: 5em;
+    height: auto;
 }
 
 @media (min-width: 60rem) {
@@ -471,7 +525,8 @@ hr{
     }
 
     .info-section,
-    .summer-section,.footer-wrapper {
+    .summer-section,
+    .footer-wrapper, .socialmedia-wrapper{
         padding-left: 3rem;
         padding-right: 3rem;
 
@@ -509,8 +564,28 @@ hr{
         justify-content: center;
 
     }
+
     .footer-wrapper{
-flex-direction: column;
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .socialmedia-wrapper {
+        flex-direction: column;
+        padding: 3rem;
+        align-items: start;
+       
+    }
+    .ul-rating-desciption{
+        display: flex;
+        
+    }
+    .ul-rating-desciption li {
+        margin-top: 2rem;
+        
+    }
+
+    .socialmedia-icon{
+        font-size: 2rem;
     }
     .li-item,
     .card {
