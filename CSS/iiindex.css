@@ -30,9 +30,7 @@ h2 {
     font-size: 1.5rem;
     line-height: 1.313;
     margin-bottom: 1rem;
-
 }
-
 
 .svgclass {
     display: block;
@@ -65,7 +63,6 @@ h2 {
     display: block;
     color: #fff;
     font-weight: bold;
-    
 }
 
 .nav-links li a:hover {
@@ -79,14 +76,10 @@ h2 {
     display: none;
     color: #fff;
     font-weight: bold;
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
     border: 1px solid #fff;
-    border-radius:.5rem ;
-    
+    border-radius: 0.5rem;
 }
-
-/*styling main and hero image*/
-
 
 .main-article picture {
     display: block;
@@ -98,6 +91,7 @@ h2 {
     z-index: -2;
     overflow: hidden;
 }
+
 .main-article picture img {
     width: 100%;
     height: 100%;
@@ -105,11 +99,10 @@ h2 {
     object-position: 50% 50%;
 }
 
-
 .input-container {
     position: relative;
     border-radius: 3.5rem;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 0;
     box-shadow: 0 0.0625rem 0.375rem rgba(0, 0, 0, 0.15);
 
@@ -142,38 +135,32 @@ i fa-arrow-right {
     padding-right: 0;
 }
 
-
 .summer-section {
     padding: 1rem;
     margin: 1rem 0px;
-
 }
-.info-section{
-    padding:  1rem;;
+
+.info-section {
+    padding: 1rem;
 }
 
 .info-section {
     background-color: #f1f3f9;
 }
 
-
-
 ol li {
     list-style: none;
-
 }
 
 .number-icon {
     color: #e5cb4e;
     font-size: 1.5rem;
-
 }
 
 .section-title {
     margin-top: 2rem;
     color: black;
     font-size: 2rem;
-
 }
 
 .list-title {
@@ -183,7 +170,7 @@ ol li {
 
 h3 {
     color: black;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
 }
 
 .section-title,
@@ -229,13 +216,12 @@ p {
     .nav-links.active {
         display: flex;
         background-color: #fff;
-        ;
-
-
     }
-    .togglestyle li a{
+
+    .togglestyle li a {
         color: black;
     }
+
     .togglestyle ul li {
         margin-top: 1rem;
     }
@@ -247,8 +233,6 @@ p {
     display: flex;
     flex-direction: column;
     padding: 3rem 3rem 1rem;
-    
-
 }
 
 .h1-container {
@@ -302,7 +286,6 @@ input[type="text"]:focus {
     background-color: #e5cb4e;
     border-radius: 50%;
     display: inline-flex;
-
 }
 
 .ol-container,
@@ -311,7 +294,6 @@ input[type="text"]:focus {
     gap: 1rem;
     padding: 3rem;
     justify-content: space-around;
-
 }
 
 .review-ol-container {
@@ -319,7 +301,6 @@ input[type="text"]:focus {
     padding: 3rem;
     justify-content: space-around;
     text-align: center;
-
 }
 
 .card-wrapper {
@@ -335,14 +316,11 @@ input[type="text"]:focus {
 .card-title {
     font-size: 2rem;
     text-align: left;
-
-
-
 }
 
 .card-icon {
     font-size: 2rem;
-    color: #3F27BA;
+    color: #3f27ba;
 }
 
 .card-text p {
@@ -356,16 +334,12 @@ input[type="text"]:focus {
     display: flex;
     flex-wrap: wrap;
     padding: 3rem;
-
-
 }
 
 .jobs-link-ul {
     list-style: none;
     margin: 2rem 0;
     font-size: 1rem;
-
-
 }
 
 .joblist {
@@ -383,10 +357,10 @@ input[type="text"]:focus {
 }
 
 #expandButton {
-    border: 1px solid #3F27BA;
+    border: 1px solid #3f27ba;
     padding: 1.2rem;
     background-color: #fff;
-    color: #3F27BA;
+    color: #3f27ba;
     border-radius: 9999px;
     align-items: center;
     font-size: 1.3rem;
@@ -395,7 +369,7 @@ input[type="text"]:focus {
 
 .request-btn {
     padding: 1.2rem;
-    background-color: #3F27BA;
+    background-color: #3f27ba;
     color: #fff;
     border-radius: 3rem;
     align-items: center;
@@ -411,9 +385,6 @@ input[type="text"]:focus {
 .show {
     display: flex;
     flex-wrap: wrap;
-
-
-
 }
 
 .review-title {
@@ -422,7 +393,6 @@ input[type="text"]:focus {
     line-height: 3.625rem;
     text-align: center;
     font-weight: bolder;
-
 }
 
 .review-list-item p {
@@ -434,24 +404,22 @@ input[type="text"]:focus {
 
 /* footer*/
 hr {
-
     height: 0.5rem;
-    background-color: #DFDDEB;
+    background-color: #dfddeb;
 }
 
-.footer-wrapper, .socialmedia-wrapper {
+.footer-wrapper,
+.socialmedia-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
 }
-
 
 .footer-ul {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 .footer-ul li {
@@ -460,80 +428,69 @@ hr {
     padding: 10px;
     box-sizing: border-box;
     flex-wrap: wrap;
-
-
 }
 
 .footer-ul a {
     font-size: 1.2rem;
-    color: #3F27BA;
+    color: #3f27ba;
     text-decoration: none;
 }
 
 .singup-link {
-    background-color: #F9F8F6;
+    background-color: #f9f8f6;
     padding: 0 1rem;
 }
 
 .singup-link a {
     text-decoration: underline;
-
 }
 
 .socialmedia-wrapper {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
-    
-
 }
 
-
-.ul-socialmedia,.ul-rating-desciption{
+.ul-socialmedia,
+.ul-rating-desciption {
     display: flex;
-
-
-
 }
+
 .socialmedia-wrapper li {
-    
     font-size: 1.5rem;
     align-items: center;
-    color: #3F27BA;
-
+    color: #3f27ba;
 }
 
 .socialmedia-wrapper ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    
 }
-.ul-socialmedia i{
+
+.ul-socialmedia i {
     margin-right: 2rem;
 }
-.ul-rating-desciption li{
+
+.ul-rating-desciption li {
     color: black;
     text-decoration: none;
-    
 }
-.rating-description p{
-    text-decoration:none;
-    margin-left: .5rem;
+
+.rating-description p {
+    text-decoration: none;
+    margin-left: 0.5rem;
     color: black;
-
 }
 
-
-
-.fa-star{
-    color:#73cf11
+.fa-star {
+    color: #73cf11;
 }
+
 .trustpilot-logo {
     width: 5em;
     height: auto;
 }
-
 
 /*parnter list*/
 .partner-wrapper {
@@ -547,10 +504,7 @@ hr {
     margin-top: 3rem;
     margin-left: 1rem;
     font-size: 1.5rem;
-    
 }
-
-
 
 .ul-partners li {
     list-style: none;
@@ -559,22 +513,22 @@ hr {
     margin-left: 1rem;
 }
 
-.country-link .service-link{
+.country-link .service-link {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-span.copyright{
+span.copyright {
     color: #5e636e;
 }
 
-.lastdiv-container{
+.lastdiv-container {
     margin-top: 3rem;
 }
+
 .lastdiv-container li {
     margin-right: 1rem;
 }
-
 
 @media (min-width: 60rem) {
     .header {
@@ -582,47 +536,39 @@ span.copyright{
         height: 5rem;
     }
 
-    
     .h1-container h1 {
         font-size: 3rem;
         line-height: 1.208;
     }
 
-    .main-container{
+    .main-container {
         max-width: 80%;
     }
 
     .info-section,
     .summer-section,
-    .footer-wrapper, .socialmedia-wrapper{
+    .footer-wrapper,
+    .socialmedia-wrapper {
         padding-left: 3rem;
         padding-right: 3rem;
-
     }
 
-    .country-link, .service-link{
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 0.5rem;
+    .country-link,
+    .service-link {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
     }
-
-   
-    
-   
-
 }
 
 @media (max-width: 960px) {
-
     .ol-container {
         flex-direction: column;
-
     }
 
     .review-ol-container {
         flex-direction: column;
         justify-content: center;
-
     }
 
     .review-list-item {
@@ -638,38 +584,35 @@ span.copyright{
     .show {
         flex-direction: column;
         justify-content: center;
-
     }
 
-    .footer-wrapper{
+    .footer-wrapper {
         flex-direction: column;
         padding: 3rem;
     }
 
-    
     .socialmedia-wrapper {
         flex-direction: column;
         padding: 3rem;
         align-items: start;
-       
-    }
-    .ul-rating-desciption{
-        display: flex;
-        
-    }
-    .ul-rating-desciption li {
-        margin-top: 2rem;
-        
     }
 
-    .socialmedia-icon{
+    .ul-rating-desciption {
+        display: flex;
+    }
+
+    .ul-rating-desciption li {
+        margin-top: 2rem;
+    }
+
+    .socialmedia-icon {
         font-size: 2rem;
     }
+
     .li-item,
     .card {
         width: 100%;
         margin-bottom: 1rem;
-
     }
 
     .card {
@@ -679,12 +622,5 @@ span.copyright{
     .card img {
         width: 100%;
         border-radius: 10px;
-        ;
     }
-
-   
-}
-
-@media (max-width: 567px){
-
 }
