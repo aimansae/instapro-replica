@@ -11,6 +11,7 @@
 body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.5;
+    font-size: 1rem;
 }
 
 h1,
@@ -24,6 +25,7 @@ h1 {
     font-size: 2rem;
     line-height: 1.313;
     margin-bottom: 3rem;
+ 
 }
 
 h2 {
@@ -39,6 +41,9 @@ h2 {
 
 .header {
     padding: 0.75rem 1.5rem;
+    width: min(100%, calc(60rem + (2 * 1.5rem)));
+    margin-inline: auto;
+    z-index: 10;
 }
 
 .navbar {
@@ -59,10 +64,9 @@ h2 {
 
 .nav-links li a {
     text-decoration: none;
-    padding: 1rem;
     display: block;
     color: #fff;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .nav-links li a:hover {
@@ -80,6 +84,7 @@ h2 {
     border: 1px solid #fff;
     border-radius: 0.5rem;
 }
+
 
 .main-article picture {
     display: block;
@@ -135,18 +140,8 @@ i fa-arrow-right {
     padding-right: 0;
 }
 
-.summer-section {
-    padding: 1rem;
-    margin: 1rem 0px;
-}
 
-.info-section {
-    padding: 1rem;
-}
 
-.info-section {
-    background-color: #f1f3f9;
-}
 
 ol li {
     list-style: none;
@@ -158,14 +153,24 @@ ol li {
 }
 
 .section-title {
-    margin-top: 2rem;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.summer-title{
+    margin-bottom: 2rem;
     color: black;
     font-size: 2rem;
 }
-
 .list-title {
     font-size: 1.4rem;
     font-weight: 900;
+    margin-left: 1rem;
+}
+
+.li-item p {
+    margin-left: 2rem;
 }
 
 h3 {
@@ -178,9 +183,6 @@ h3 {
     font-weight: 800;
 }
 
-.li-item {
-    width: 20%;
-}
 
 p {
     font-size: 1rem;
@@ -240,7 +242,7 @@ p {
 }
 
 .search-main-div {
-    margin-bottom: 2rem;
+    margin: 0 0 6rem;
     width: 100%;
 }
 
@@ -256,7 +258,8 @@ input[type="text"]:focus {
     position: relative;
     margin: 0.25rem 0.25rem 0.25rem 0;
     z-index: 2;
-    width: 3rem;
+    /*now removed width 3 rem for smaller screen*/
+    width: auto;
     height: 3rem;
     min-width: auto;
     padding-left: 0;
@@ -264,6 +267,13 @@ input[type="text"]:focus {
     background-color: #3f27ba;
     color: #fff;
     border-radius: 1.5rem;
+
+    /*added now*/
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left:1.5rem ;
+    padding-right: 1.5rem;
+    
 }
 
 /*Signup container*/
@@ -288,13 +298,28 @@ input[type="text"]:focus {
     display: inline-flex;
 }
 
-.ol-container,
+
 .card-wrapper {
     display: flex;
     gap: 1rem;
-    padding: 3rem;
+    padding: 0 3rem 3rem;
     justify-content: space-around;
 }
+
+/*added now*/
+
+.info-section{
+    background-color: #F9F8F6;
+}
+/*added now*/
+
+
+.ol-container{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+}
+
 
 .review-ol-container {
     display: flex;
@@ -308,32 +333,42 @@ input[type="text"]:focus {
 }
 
 .card img {
-    border-radius: 25px;
+    border-radius: 10px;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.card-title {
-    font-size: 2rem;
-    text-align: left;
-}
 
 .card-icon {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #3f27ba;
 }
 
+.card-text img {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 0.75rem;
+}
 .card-text p {
-    margin: 2rem 0;
-    font-size: large;
+ 
+    margin: 0.5rem 0;
+    font-size: 1rem;
     color: #5e636e;
 }
 
+.card-text a {
+    color:#3f27ba ;
+}
+
+.card-arrow{
+    color:#3f27ba ;
+}
 /* section with links for jobs*/
 .jobs-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem;
+    padding: 0 3rem;
+
 }
 
 .jobs-link-ul {
@@ -353,29 +388,29 @@ input[type="text"]:focus {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    margin-bottom: 1rem;
 }
 
 #expandButton {
     border: 1px solid #3f27ba;
-    padding: 1.2rem;
+    padding: calc(0.5rem - 1px) 2rem;
     background-color: #fff;
     color: #3f27ba;
     border-radius: 9999px;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .request-btn {
-    padding: 1.2rem;
+    padding: calc(1rem - 1px) 2rem;
     background-color: #3f27ba;
     color: #fff;
     border-radius: 3rem;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+    margin-bottom: 3rem;
 }
 
 .expand-hide {
@@ -423,18 +458,14 @@ hr {
 }
 
 .footer-ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     flex: 0 0 33.33%;
-    padding: 10px;
+    /* padding: 10px; */
     box-sizing: border-box;
     flex-wrap: wrap;
 }
 
-.footer-ul a {
-    font-size: 1.2rem;
-    color: #3f27ba;
-    text-decoration: none;
-}
+
 
 .singup-link {
     background-color: #f9f8f6;
@@ -469,7 +500,7 @@ hr {
 }
 
 .ul-socialmedia i {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .ul-rating-desciption li {
@@ -499,19 +530,9 @@ hr {
     padding-left: 3rem;
 }
 
-.partner-wrapper p {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-}
 
-.ul-partners li {
-    list-style: none;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
+
+
 
 .country-link .service-link {
     display: block;
@@ -542,11 +563,21 @@ span.copyright {
     }
 
     .main-container {
-        max-width: 80%;
+      /*   max-width: 80%;
+
+        added now*/
+    max-width: calc(60rem + 2 * 3rem);
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    }
+
+    /* added now*/
+    .search-main-div{
+        width: 55%
     }
 
     .info-section,
-    .summer-section,
     .footer-wrapper,
     .socialmedia-wrapper {
         padding-left: 3rem;
@@ -559,8 +590,71 @@ span.copyright {
         margin-bottom: 0;
         margin-right: 0.5rem;
     }
+
+    /*toggle menu added now*/
+    .link-list{
+        margin: 0px 0px 0px 1rem;
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+
+    }
+    .signup-style {
+    outline: transparent solid 2px;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(217, 215, 213);
+    }
+
+    /*added now*/
+
+    
+   
+    .ol-container, .section-title, .summer-title {
+    max-width: calc(60rem + 2 * 3rem);
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
+    .card-title{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight:600;
+}
+
+.footer-ul a {
+    font-size: 1rem;
+    color: #3f27ba;
+    text-decoration: none;
+}
+
+
+.partner-wrapper p {
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+   
+}
+
+.ul-partners li {
+    list-style: none;
+    font-size: 1rem;
+}
+    }
+
+
+/* addded now*/
+
+@media( min-width: 48rem) {
+    .info-section{
+
+    padding-left: 0;
+    padding-right: 0;
+    margin: 6rem 0;
+
+    }
+}
 @media (max-width: 960px) {
     .ol-container {
         flex-direction: column;
@@ -606,7 +700,7 @@ span.copyright {
     }
 
     .socialmedia-icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .li-item,
