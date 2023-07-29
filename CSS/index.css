@@ -25,7 +25,7 @@ h1 {
     font-size: 2rem;
     line-height: 1.313;
     margin-bottom: 3rem;
- 
+
 }
 
 h2 {
@@ -85,6 +85,22 @@ h2 {
     border-radius: 0.5rem;
 }
 
+.main-article::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
+    mix-blend-mode: multiply;
+}
 
 .main-article picture {
     display: block;
@@ -156,13 +172,15 @@ ol li {
     color: black;
     font-size: 2rem;
     margin-bottom: 3rem;
+    margin-left: 3rem;
 }
 
-.summer-title{
+.summer-title {
     margin-bottom: 2rem;
     color: black;
     font-size: 2rem;
 }
+
 .list-title {
     font-size: 1.4rem;
     font-weight: 900;
@@ -188,7 +206,12 @@ p {
     font-size: 1rem;
 }
 
-@media (max-width: 990px) {
+
+
+
+
+
+@media (max-width: 960px) {
     .toggle-menu {
         display: flex;
     }
@@ -235,6 +258,8 @@ p {
     display: flex;
     flex-direction: column;
     padding: 3rem 3rem 1rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .h1-container {
@@ -271,9 +296,9 @@ input[type="text"]:focus {
     /*added now*/
     font-size: 1rem;
     font-weight: 600;
-    padding-left:1.5rem ;
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
-    
+
 }
 
 /*Signup container*/
@@ -281,6 +306,10 @@ input[type="text"]:focus {
 .signup-container i {
     color: #3f27ba;
     padding-top: 3px;
+}
+
+.signup-container a {
+    text-decoration-color: #fff;
 }
 
 .signup-container span {
@@ -304,26 +333,43 @@ input[type="text"]:focus {
     gap: 1rem;
     padding: 0 3rem 3rem;
     justify-content: space-around;
+    margin-left: 3rem;
+}
+
+.card {
+    width: 33.33%;
 }
 
 /*added now*/
 
-.info-section{
+.info-section {
     background-color: #F9F8F6;
+    box-sizing: border-box;
+    padding: 6rem 0;
+
+
 }
+
+
 /*added now*/
 
 
-.ol-container{
+
+.ol-container {
     display: flex;
     gap: 1.5rem;
     justify-content: space-around;
+    padding-left: 3rem;
+    margin-top: 3rem;
+}
+
+li.li-item {
+    width: 33.33%
 }
 
 
 .review-ol-container {
     display: flex;
-    padding: 3rem;
     justify-content: space-around;
     text-align: center;
 }
@@ -349,20 +395,22 @@ input[type="text"]:focus {
     width: 1.75rem;
     margin-right: 0.75rem;
 }
+
 .card-text p {
- 
+
     margin: 0.5rem 0;
     font-size: 1rem;
     color: #5e636e;
 }
 
 .card-text a {
-    color:#3f27ba ;
+    color: #3f27ba;
 }
 
-.card-arrow{
-    color:#3f27ba ;
+.card-arrow {
+    color: #3f27ba;
 }
+
 /* section with links for jobs*/
 .jobs-wrapper {
     display: flex;
@@ -437,6 +485,10 @@ input[type="text"]:focus {
     font-weight: bolder;
 }
 
+li.rating-description {
+    font-size: 18px;
+}
+
 /* footer*/
 hr {
     height: 0.5rem;
@@ -488,7 +540,7 @@ hr {
 }
 
 .socialmedia-wrapper li {
-    font-size: 1.5rem;
+
     align-items: center;
     color: #3f27ba;
 }
@@ -501,6 +553,10 @@ hr {
 
 .ul-socialmedia i {
     margin-right: 1rem;
+}
+
+.ul-socialmedia li {
+    font-size: 1.5rem;
 }
 
 .ul-rating-desciption li {
@@ -532,11 +588,22 @@ hr {
 
 
 
-
-
 .country-link .service-link {
     display: block;
     margin-bottom: 0.5rem;
+}
+
+.country-link a,
+.service-link a {
+    color: #3f27ba;
+}
+
+.service-link a {
+    text-decoration: none;
+}
+
+.service-link a:hover {
+    text-decoration: underline;
 }
 
 span.copyright {
@@ -548,7 +615,7 @@ span.copyright {
 }
 
 .lastdiv-container li {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 @media (min-width: 60rem) {
@@ -563,63 +630,96 @@ span.copyright {
     }
 
     .main-container {
-      /*   max-width: 80%;
+        /*   max-width: 80%;
 
         added now*/
-    max-width: calc(60rem + 2 * 3rem);
-    padding-left: 3rem;
-    padding-right: 3rem;
+        max-width: calc(60rem + 2 * 3rem);
+        padding-left: 3rem;
+        padding-right: 3rem;
 
     }
 
     /* added now*/
-    .search-main-div{
-        width: 55%
+    .search-main-div {
+        width: 55%;
     }
 
-    .info-section,
+
     .footer-wrapper,
     .socialmedia-wrapper {
+        max-width: calc(60rem + 2 * 3rem);
         padding-left: 3rem;
         padding-right: 3rem;
     }
 
-    .country-link,
-    .service-link {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-right: 0.5rem;
+    .info-section,
+    .footer-wrapper,
+    .socialmedia-wrapper,
+    .partner-wrapper {
+
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
-    /*toggle menu added now*/
-    .link-list{
-        margin: 0px 0px 0px 1rem;
-        font-size: 0.875rem;
-        padding: 0.25rem 0.5rem;
-
+    .footer-wrapper,
+    .socialmedia-wrapper,
+    .partner-wrapper {
+        margin-left: 3rem;
     }
-    .signup-style {
+
+    .partner-wrapper {
+        padding-bottom: 3rem;
+    }
+
+    li.li-item {
+        width: 33.33%
+    }
+
+
+
+
+
+}
+
+
+.country-link,
+.service-link {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+}
+
+/*toggle menu added now*/
+.link-list {
+    margin: 0px 0px 0px 1rem;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+
+}
+
+.signup-style {
     outline: transparent solid 2px;
     border-radius: 0.5rem;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(217, 215, 213);
-    }
+}
 
-    /*added now*/
+/*added now*/
 
-    
-   
-    .ol-container, .section-title, .summer-title {
+
+
+
+.summer-title {
     max-width: calc(60rem + 2 * 3rem);
     padding-left: 3rem;
     padding-right: 3rem;
 }
 
-    .card-title{
+.card-title {
     font-size: 1.25rem;
     line-height: 1.75rem;
-    font-weight:600;
+    font-weight: 600;
 }
 
 .footer-ul a {
@@ -634,47 +734,36 @@ span.copyright {
     margin-top: 3rem;
     margin-bottom: 1rem;
 
-   
+
 }
 
 .ul-partners li {
     list-style: none;
     font-size: 1rem;
 }
-    }
 
-
-/* addded now*/
-
-@media( min-width: 48rem) {
-    .info-section{
-
-    padding-left: 0;
-    padding-right: 0;
-    margin: 6rem 0;
-
-    }
+.wrapper-list-container {
+    display: flex;
 }
-@media (max-width: 960px) {
-    .ol-container {
-        flex-direction: column;
-    }
 
-    .review-ol-container {
-        flex-direction: column;
-        justify-content: center;
-    }
+
+
+
+
+
+
+@media (max-width: 960px) {
+
+
+
 
     .review-list-item {
         margin: 3rem;
     }
 
-    .review-title {
-        font-size: 4rem;
-    }
 
-    .card-wrapper,
-    .jobs-wrapper,
+
+    /*.jobs-wrapper,*/
     .show {
         flex-direction: column;
         justify-content: center;
@@ -685,11 +774,6 @@ span.copyright {
         padding: 3rem;
     }
 
-    .socialmedia-wrapper {
-        flex-direction: column;
-        padding: 3rem;
-        align-items: start;
-    }
 
     .ul-rating-desciption {
         display: flex;
@@ -703,11 +787,7 @@ span.copyright {
         font-size: 1.5rem;
     }
 
-    .li-item,
-    .card {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+
 
     .card {
         text-align: left;
@@ -717,4 +797,124 @@ span.copyright {
         width: 100%;
         border-radius: 10px;
     }
+}
+
+@media(max-width:48rem) {
+    .h1-container {
+        margin: 0;
+    }
+
+    .search-main-div {
+        margin: 0 0 3rem;
+    }
+
+    .main-container {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .search-main-div {
+        margin-bottom: 2rem
+    }
+
+    .info-section {
+        padding: 3rem 0;
+    }
+
+    .ol-container {
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    li.li-item {
+        width: 100%;
+    }
+
+    .section-title {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .summer-section {
+        padding-bottom: 3rem;
+    }
+
+    .summer-title {
+        padding-left: 0;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: 0;
+
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-text {
+        margin-top: 1.5rem;
+    }
+
+    .jobs-wrapper {
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: 0;
+    }
+
+    .jobs-link-ul {
+        display: block;
+    }
+
+    .request-btn,
+    .more-btn {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    #expandButton,
+    .request-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .review-ol-container {
+        flex-direction: column;
+    }
+
+    .footer-wrapper,
+    .socialmedia-wrapper {
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .footer-ul li {
+        margin-bottom: 1.5rem;
+    }
+
+    .socialmedia-wrapper {
+
+        align-items: start;
+    }
+
+    .partner-wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .country-link,
+    .service-link {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+
 }
