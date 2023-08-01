@@ -34,10 +34,14 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* styling instapro logo*/
+
 .svgclass {
     display: block;
     height: 2rem;
 }
+
+/* styling header and navbar  */
 
 .header {
     padding: 0.75rem 1.5rem;
@@ -73,6 +77,8 @@ h2 {
     color: #f0f5fe;
 }
 
+/*styling toggle bar for smaller devices*/
+
 .toggle-menu {
     position: absolute;
     top: 0.75rem;
@@ -85,6 +91,10 @@ h2 {
     border-radius: 0.5rem;
 }
 
+/*syling logo on toggle */
+.newLogo{
+    width:7rem;
+}
 .main-article::before {
     content: "";
     display: block;
@@ -210,10 +220,27 @@ p {
 
 
 
-
+@media(max-width: 780px){
+    .input-container{
+        margin-top:3rem;
+    }
+}
 @media (max-width: 960px) {
+
+    .header{
+        width: 100%;
+        padding: .75rem 0;
+
+        margin: 0;
+    }
     .toggle-menu {
         display: flex;
+    }
+    .toggle-menu {
+        text-decoration: none;
+    }
+    .span-toggle{
+        margin-right: .3rem;
     }
 
     .nav-links {
@@ -228,19 +255,41 @@ p {
 
     .nav-links ul {
         flex-direction: column;
+        width: 100%;
+
+       
     }
 
-    .nav-links li:hover {
-        color: #f0f5fe;
+    .nav-links ul li{
+        border-bottom: 1px solid rgb(217, 215, 213);
+
+    }
+  
+
+    .nav-links ul li:hover {
+        background-color: #cfd8e8;
+
     }
 
     .nav-links li a:hover {
         color: black;
     }
+    .nav-links ul li a{
+        margin: 0;
+        padding: .75rem;
+        font-size: 1rem;
+
+    }
 
     .nav-links.active {
         display: flex;
         background-color: #fff;
+        position: absolute;
+        margin-top: 2rem;
+    }
+
+    .link-list.active{
+        background-color:red;
     }
 
     .togglestyle li a {
@@ -250,6 +299,7 @@ p {
     .togglestyle ul li {
         margin-top: 1rem;
     }
+
 }
 
 /*styling main*/
@@ -643,6 +693,10 @@ span.copyright {
     .search-main-div {
         width: 55%;
     }
+    .review-list-item {
+        margin: 3rem;
+    }
+
 
 
     .footer-wrapper,
@@ -757,10 +811,7 @@ span.copyright {
 
 
 
-    .review-list-item {
-        margin: 3rem;
-    }
-
+    
 
 
     /*.jobs-wrapper,*/
@@ -860,6 +911,9 @@ span.copyright {
         margin-top: 1.5rem;
     }
 
+    .card img{
+        height: 120px;
+    }
     .jobs-wrapper {
         flex-direction: column;
         padding-left: 1.5rem;
@@ -875,6 +929,9 @@ span.copyright {
     .more-btn {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+    .review-list-item{
+        margin: 1.5rem;
     }
 
     #expandButton,

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <script src="https://kit.fontawesome.com/5b2ec3dbf8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Brand title</div>
+        <a class="toggle-menu"><i class="fa-solid fa-bars"></i></a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                
+
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-menu')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+
+        })
+
+    </script>
+    
+</body>
+</html>
