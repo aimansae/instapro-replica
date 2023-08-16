@@ -11,13 +11,17 @@
 body {
     font-family: "Work Sans", sans-serif;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 h1,
-h2,
+
 h3 {
     color: #fff;
+}
+.question {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 h1 {
@@ -29,11 +33,16 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.313;
-    margin-bottom: 1rem;
+    color: #2C2C2C;
+   
 }
+.section-title{
+    margin-bottom: 1rem;
+    margin-left: 3rem;
 
+}
 /* styling instapro logo*/
 
 .svgclass {
@@ -110,13 +119,15 @@ h2 {
     z-index: -1;
     background: rgba(0, 0, 0, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
     mix-blend-mode: multiply;
+    /*TO CHECK*/
+    margin-bottom: -4.2rem;
 }
 
 .main-article picture {
     display: block;
     position: absolute;
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     right: 0;
     z-index: -2;
@@ -178,27 +189,23 @@ ol li {
     font-size: 1.5rem;
 }
 
-.section-title {
-    color: black;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    margin-left: 3rem;
-}
+
 
 .summer-title {
     margin-bottom: 2rem;
-    color: black;
-    font-size: 2rem;
+    
 }
 
 .list-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 900;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+    color: #2C2C2C;
 }
 
 .li-item p {
-    margin-left: 2rem;
+    margin-left: 2.3rem;
+    margin-top: 1rem;
 }
 
 h3 {
@@ -206,13 +213,17 @@ h3 {
     margin-bottom: 0.25rem;
 }
 
-.section-title,
+
 h3 {
     font-weight: 800;
 }
 
 
 p {
+    font-size: 1rem;
+}
+
+::placeholder{
     font-size: 1rem;
 }
 
@@ -332,16 +343,16 @@ input[type="text"]:focus {
 .input-button {
     position: relative;
     margin: 0.25rem 0.25rem 0.25rem 0;
+    padding: .9rem 1.5rem;
     z-index: 2;
     /*now removed width 3 rem for smaller screen*/
     width: auto;
     height: 3rem;
     min-width: auto;
-    padding-left: 0;
-    padding-right: 0;
     background-color: #3f27ba;
     color: #fff;
     border-radius: 1.5rem;
+    border: none;
 
     /*added now*/
     font-size: 1rem;
@@ -352,22 +363,32 @@ input[type="text"]:focus {
 }
 
 /*Signup container*/
-
+.signup-container{
+    margin-bottom: 3rem;
+}
 .signup-container i {
     color: #3f27ba;
     padding-top: 3px;
+    font-size: .875rem;
+    background-color: #e5cb4e;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
 }
 
 .signup-container a {
-    text-decoration-color: #fff;
+    text-decoration: none;
 }
 
 .signup-container span {
     color: #fff;
-    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline;
 }
 
-.yellow-arrow {
+
+/* .yellow-arrow {
     width: 1.5rem;
     height: 1.5rem;
     text-align: center;
@@ -376,14 +397,12 @@ input[type="text"]:focus {
     border-radius: 50%;
     display: inline-flex;
 }
-
+ */
 
 .card-wrapper {
     display: flex;
-    gap: 1rem;
-    padding: 0 3rem 3rem;
     justify-content: space-around;
-    margin-left: 3rem;
+    gap: 1.5rem;
 }
 
 .card {
@@ -409,14 +428,18 @@ input[type="text"]:focus {
     display: flex;
     gap: 1.5rem;
     justify-content: space-around;
-    padding-left: 3rem;
+    padding: 0 3rem;
     margin-top: 3rem;
 }
-
-li.li-item {
-    width: 33.33%
+li.li-item{
+    width:30%;
+    margin-left: 1rem;
 }
 
+.num-title{
+    display: flex;
+    align-items: baseline;
+}
 
 .review-ol-container {
     display: flex;
@@ -424,9 +447,7 @@ li.li-item {
     text-align: center;
 }
 
-.card-wrapper {
-    display: flex;
-}
+
 
 .card img {
     border-radius: 10px;
@@ -436,36 +457,44 @@ li.li-item {
 
 
 .card-icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #3f27ba;
+    margin-right: .55rem;
 }
+
 
 .card-text img {
     height: 1.75rem;
     width: 1.75rem;
-    margin-right: 0.75rem;
+
 }
 
 .card-text p {
 
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 1rem;
     font-size: 1rem;
-    color: #5e636e;
+    color: #6F6F6F;
 }
 
 .card-text a {
-    color: #3f27ba;
+    color: #330691;
+    font-size: 1rem;
+    line-height: 0%;
+
 }
+
 
 .card-arrow {
     color: #3f27ba;
-}
+    font-size: 1rem;
+}    
 
 /* section with links for jobs*/
 .jobs-wrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 0 3rem;
+    margin-top: 3rem;
 
 }
 
@@ -475,9 +504,13 @@ li.li-item {
     font-size: 1rem;
 }
 
+.jobslist li a {
+    color: #330691;
+}
+
 .joblist {
     flex: 0 0 33.33%;
-    padding: 10px;
+ 
     box-sizing: border-box;
 }
 
@@ -485,9 +518,11 @@ li.li-item {
 .send-request-btn {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    
 }
-
+.more-btn{
+    margin-top:3rem;
+}
 #expandButton {
     border: 1px solid #3f27ba;
     padding: calc(0.5rem - 1px) 2rem;
@@ -500,15 +535,15 @@ li.li-item {
 }
 
 .request-btn {
-    padding: calc(1rem - 1px) 2rem;
+    padding: 15px 64px; 
     background-color: #3f27ba;
     color: #fff;
-    border-radius: 3rem;
+    border-radius: 9999px;
     align-items: center;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 3rem;
+    margin-bottom: 0px 0px 48px;
 }
 
 .expand-hide {
@@ -571,13 +606,14 @@ hr {
 
 .singup-link {
     background-color: #f9f8f6;
-    padding: 0 1rem;
+    padding: 16px 24px;
 }
 
-.singup-link a {
-    text-decoration: underline;
-}
 
+
+.singup-link p {
+    margin-bottom: 4px;
+}
 .socialmedia-wrapper {
     display: flex;
     align-items: center;
@@ -613,6 +649,10 @@ hr {
     color: black;
     text-decoration: none;
 }
+.singup-link li a {
+    text-decoration: underline;
+}
+
 
 .rating-description p {
     text-decoration: none;
@@ -668,6 +708,11 @@ span.copyright {
     margin-right: 1.5rem;
 }
 
+.summer-sections{
+    padding: 6rem 3rem;
+
+}
+
 @media (min-width: 60rem) {
     .header {
         padding: 1.5rem;
@@ -706,13 +751,16 @@ span.copyright {
         padding-right: 3rem;
     }
 
-    .info-section,
+    
     .footer-wrapper,
     .socialmedia-wrapper,
     .partner-wrapper {
 
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+    .info-section{
+
     }
 
     .footer-wrapper,
@@ -725,10 +773,7 @@ span.copyright {
         padding-bottom: 3rem;
     }
 
-    li.li-item {
-        width: 33.33%
-    }
-
+   
 
 
 
@@ -764,22 +809,21 @@ span.copyright {
 
 
 
-.summer-title {
-    max-width: calc(60rem + 2 * 3rem);
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
+
 
 .card-title {
     font-size: 1.25rem;
-    line-height: 1.75rem;
     font-weight: 600;
+    color:#2c2c2c;
 }
 
 .footer-ul a {
     font-size: 1rem;
-    color: #3f27ba;
+    color: #3F27BA;;
     text-decoration: none;
+}
+.singup-link a {
+    text-decoration: underline;
 }
 
 
@@ -882,18 +926,14 @@ span.copyright {
         width: 100%;
     }
 
-    .section-title {
-        margin-left: 1.5rem;
-        font-size: 1.5rem;
-    }
+
+
+  
 
     .summer-section {
         padding-bottom: 3rem;
     }
 
-    .summer-title {
-        padding-left: 0;
-    }
 
     .card-wrapper {
         flex-direction: column;
@@ -939,11 +979,13 @@ span.copyright {
         display: block;
         width: 100%;
         text-align: center;
+        
 
     }
 
     .review-ol-container {
         flex-direction: column;
+        padding: 48px 0px;
     }
 
     .footer-wrapper,
