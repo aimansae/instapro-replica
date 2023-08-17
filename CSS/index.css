@@ -46,11 +46,6 @@ button {
     cursor: pointer;
 }
 
-.section-title {
-    margin-bottom: 1rem;
-    margin-left: 3rem;
-
-}
 
 /* styling instapro logo*/
 
@@ -114,6 +109,14 @@ button {
     width: 7rem;
 }
 
+.main-article{
+
+        position: relative;
+        overflow: hidden;
+        margin-top: -5rem;
+    }
+
+
 .main-article::before {
     content: "";
     display: block;
@@ -130,14 +133,14 @@ button {
     background: rgba(0, 0, 0, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
     mix-blend-mode: multiply;
     /*TO CHECK*/
-    margin-bottom: -4.2rem;
+    
 }
 
 .main-article picture {
     display: block;
     position: absolute;
     top: 0;
-    /* bottom: 0; */
+    bottom: 0; 
     left: 0;
     right: 0;
     z-index: -2;
@@ -206,14 +209,15 @@ ol li {
 
 }
 
-.list-title {
+
+.how-list-title {
     font-size: 1.5rem;
     font-weight: 900;
     margin-left: 1.5rem;
     color: #2C2C2C;
 }
 
-.li-item p {
+.how-li-item p {
     margin-left: 2.3rem;
     margin-top: 1rem;
 }
@@ -422,7 +426,7 @@ input[type="text"]:focus {
 }
  */
 
-.card-wrapper {
+.summer-card-div {
     display: flex;
     justify-content: space-around;
     gap: 1.5rem;
@@ -432,9 +436,9 @@ input[type="text"]:focus {
     width: 33.33%;
 }
 
-/*added now*/
 
-.info-section {
+.how-it-works-section,
+.find-prof-section {
     background-color: #F9F8F6;
     box-sizing: border-box;
     padding: 6rem 0;
@@ -447,16 +451,15 @@ input[type="text"]:focus {
 
 
 
-.ol-container {
+.how-ol-container {
     display: flex;
     gap: 1.5rem;
     justify-content: space-around;
-    padding: 0 3rem;
     margin-top: 3rem;
 }
 
-li.li-item {
-    width: 30%;
+li.how-li-item {
+    width: 33.33%;
     margin-left: 1rem;
 }
 
@@ -473,7 +476,7 @@ li.li-item {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding: 6rem 3rem;
+    /*padding: 6rem 3rem;*/
 }
 
 
@@ -511,7 +514,7 @@ li.li-item {
 .card-text a {
     color: #330691;
     font-size: 1rem;
-    line-height: 0%;
+   
 
 }
 
@@ -526,7 +529,6 @@ li.li-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 3rem;
     margin-top: 3rem;
 
 }
@@ -544,31 +546,32 @@ li.li-item {
 .joblist {
     box-sizing: border-box;
     width: 31.5%;
+    margin-bottom: 1.5rem;
 }
 
-.icon-link {
+.icon-and-link {
     display: flex;
     align-items: baseline;
 }
 
-.icon-link .card-arrow {
+.icon-and-link .card-arrow {
     margin-right: .5rem;
 }
 
-.icon-link a {
+.icon-and-link a {
     color: #3727BA;
 }
 
-.icon-link a:hover,
+.icon-and-link a:hover,
 .card-text a:hover {
     text-decoration: none;
 }
 
-.icon-link a:visited {
+.icon-and-link a:visited {
     color: #330691;
 }
 
-li.icon-link {
+li.icon-and-link {
     margin-top: 1.5rem;
 }
 
@@ -765,10 +768,6 @@ span.copyright {
 
 
 
-.summer-sections {
-    padding: 6rem 3rem;
-
-}
 
 @media (min-width: 60rem) {
     .header {
@@ -781,21 +780,33 @@ span.copyright {
         line-height: 1.208;
     }
 
-    .main-container {
-        /*   max-width: 80%;
-
-        added now*/
+    .main-container{
         max-width: calc(60rem + 2 * 3rem);
         padding-left: 3rem;
         padding-right: 3rem;
 
     }
+    .div-summer-section,
+    .div-how-it-works,
+    .div-find-prof{
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 0 3rem ;
 
-    /* added now*/
+    }
+
+    .summer-section{
+       
+        padding: 6rem 0 ;
+
+
+    }
+
     .search-main-div {
         width: 55%;
     }
 
+   
     .review-list-item {
         margin: 3rem;
     }
@@ -810,7 +821,6 @@ span.copyright {
 
 
 
-    .info-section {}
 
 
 
@@ -959,9 +969,9 @@ span.copyright {
         border-radius: 10px;
     }
 }
-
+/*
 @media(max-width:48rem) {
-    .h1-container {
+     .h1-container {
         margin: 0;
     }
 
@@ -982,9 +992,9 @@ span.copyright {
         padding: 3rem 0;
     }
 
-    .ol-container {
+    .how-ol-container {
         flex-direction: column;
-        padding-left: 1.5rem;
+        /*padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 
@@ -996,12 +1006,9 @@ span.copyright {
 
 
 
-    .summer-section {
-        padding-bottom: 3rem;
-    }
+ 
 
-
-    .card-wrapper {
+    .summer-card-div {
         flex-direction: column;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -1053,7 +1060,7 @@ span.copyright {
 
     .review-ol-container {
         flex-direction: column;
-        padding: 48px 0px;
+        /*padding: 48px 0px;
     }
 
     .footer-wrapper,
@@ -1080,5 +1087,8 @@ span.copyright {
         margin-bottom: 1rem;
     }
 
+*/
 
+@media (min-width: 48rem){
+  
 }
