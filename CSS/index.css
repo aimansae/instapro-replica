@@ -42,7 +42,7 @@ h2 {
 }
 
 a,
-button {
+button{
     cursor: pointer;
 }
 
@@ -61,6 +61,7 @@ button {
     width: min(100%, calc(60rem + (2 * 1.5rem)));
     margin-inline: auto;
     z-index: 10;
+    position: relative;
 }
 
 .navbar {
@@ -87,9 +88,12 @@ button {
 }
 
 .nav-links li a:hover {
-    color: #f0f5fe;
+    color: #DFDDEB;
 }
-
+a.link-list.signup-style:hover {
+    color: #fff;
+    background-color: #ffffff3d;
+}
 /*styling toggle bar for smaller devices*/
 
 .toggle-menu {
@@ -246,25 +250,20 @@ p {
 
 
 @media(max-width: 780px) {
-    .input-container {
-        margin-top: 3rem;
-    }
+    
 }
 
 @media (max-width: 960px) {
 
-    .header {
+    /* .header {
         width: 100%;
         padding: .75rem 0;
 
         margin: 0;
-    }
+    } */
 
     .toggle-menu {
         display: flex;
-    }
-
-    .toggle-menu {
         text-decoration: none;
     }
 
@@ -343,7 +342,7 @@ p {
 }
 
 .h1-container {
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 .search-main-div {
@@ -473,7 +472,7 @@ li.how-li-item {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding: 6rem 0;
+    padding: 6rem 3rem;
 }
 
 
@@ -708,7 +707,7 @@ hr {
     font-size: 2rem;
 }
 
-.ul-rating-desciption li {
+.ul-rating-desciption li:not(:last-child) {
     color: black;
     text-decoration: none;
     margin-right: .5rem;
@@ -766,63 +765,6 @@ span.copyright {
 
 
 
-
-
-@media (min-width: 60rem) {
-    .header {
-        padding: 1.5rem;
-        height: 5rem;
-    }
-
-    .h1-container h1 {
-        font-size: 3rem;
-        line-height: 1.208;
-    }
-
-    .main-container{
-        max-width: calc(60rem + 2 * 3rem);
-        padding-left: 3rem;
-        padding-right: 3rem;
-
-    }
-    .div-summer-section,
-    .div-how-it-works,
-    .div-find-prof,
-    .div-requests-number,
-    footer{
-        max-width: 66rem;
-        margin: 0 auto;
-        padding: 0 3rem ;
-
-    }
-    .div-requests-number{
-        padding-bottom: 3rem;
-    }
-    footer{
-        max-width: 66rem;
-        margin: 0 auto;
-        padding: 3rem ;
-
-    }
-
-    .summer-section
-    {
-       
-        padding: 6rem 0 ;
-
-
-    }
-   
-    
-
-    .search-main-div {
-        width: 55%;
-    }
-
-   
-    .requestnum-list-item {
-        margin: 3rem;
-    }
 
 
 
@@ -914,6 +856,15 @@ span.copyright {
     flex-wrap: wrap;
     line-height: 1.5rem;
 }
+.ul-partners{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5rem;
+
+}
+.ul-partners li{
+    margin-right:.5rem;
+}
 
 .ul-partners a:hover {
     text-decoration: none;
@@ -947,9 +898,9 @@ span.copyright {
         justify-content: center;
     }
 
-    .footer-wrapper {
+    /* .footer-wrapper {
         flex-direction: column;
-    }
+    } */
 
 
     .ul-rating-desciption {
@@ -1095,7 +1046,107 @@ span.copyright {
     }
 
 */
+@media (min-width: 60rem) {
+    .header {
+        padding: 1.5rem;
+        height: 5rem;
+    }
 
-@media (min-width: 48rem){
-  
+    .h1-container h1 {
+        font-size: 3rem;
+        line-height: 1.208;
+    }
+
+    .main-container{
+        max-width: calc(60rem + 2 * 3rem);
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+    }
+    .div-summer-section,
+    .div-how-it-works,
+    .div-find-prof,
+    .div-requests-number,
+    footer{
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 0 3rem ;
+
+    }
+    .div-requests-number{
+        padding-bottom: 3rem;
+    }
+    footer{
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 3rem ;
+
+    }
+
+    .summer-section
+    {
+       
+        padding: 6rem 0 ;
+
+
+    }
+   
+    
+
+    .search-main-div {
+        width: 55%;
+    }
+
+   
+    .requestnum-list-item {
+        margin: 3rem;
+    }
+
+
+}
+@media (max-width: 48rem){
+    header,
+    .main-container {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .instapro-logo{
+        font-size: .875rem;
+    }
+    .input-container{
+        width: 60%;
+    }
+    .toggle-menu{
+        font-size:.875rem ;
+    }
+
+    .div-how-it-works,
+    .div-summer-section,
+    .div-find-prof{
+        padding: 0 1.5rem ;
+    }
+    footer{
+        padding: 3.13rem 1.5rem ;
+    }
+    .how-ol-container{
+        gap:1rem
+    }
+
+    .how-list-title{
+        font-size: 1.25rem;
+    }
+    .section-title, 
+    .summer-title{
+        font-size:1.5rem ;
+    }
+    .card-title{
+        font-size:1.125rem
+    }
+    .div-find-prof h2{
+        font-size: 2rem;
+    }
+    .request-btn{
+       padding: 1rem 2rem; 
+    }
 }
