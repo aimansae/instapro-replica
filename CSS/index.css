@@ -652,6 +652,9 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+.footer-wrapper{
+    margin-bottom: 3rem;
+}
 
 .footer-ul {
     /*flex-wrap: wrap;*/
@@ -677,8 +680,7 @@ hr {
 
 
 .socialmedia-wrapper {
-    display: flex;
-    justify-content: space-between;
+   margin-bottom:3rem ;
 }
 
 .ul-socialmedia,.ul-rating-desciption {
@@ -733,10 +735,9 @@ hr {
 }
 
 /*parnter list*/
-.partner-wrapper {
+.div-partners {
     display: flex;
     flex-direction: column;
-    margin: 3rem;
 }
 
 
@@ -787,7 +788,8 @@ span.copyright {
     .div-summer-section,
     .div-how-it-works,
     .div-find-prof,
-    .div-requests-number{
+    .div-requests-number,
+    footer{
         max-width: 66rem;
         margin: 0 auto;
         padding: 0 3rem ;
@@ -795,6 +797,12 @@ span.copyright {
     }
     .div-requests-number{
         padding-bottom: 3rem;
+    }
+    footer{
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 3rem ;
+
     }
 
     .summer-section
@@ -818,21 +826,13 @@ span.copyright {
 
 
 
-    .socialmedia-wrapper {
-        max-width: calc(60rem + 2 * 3rem);
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
+    
 
 
 
 
 
-
-    .footer-wrapper {
-        margin: 3rem;
-    }
-
+  
     
 
 
@@ -901,8 +901,6 @@ span.copyright {
 
 
 .ul-partners{
-    margin-top: 1rem ;
-    margin-bottom: 3rem;
     line-height:1;
 }
 .ul-partners li, .ul-services {
@@ -921,8 +919,13 @@ span.copyright {
     text-decoration: none;
 }
 
+.div-partners p{
+    margin-bottom: 1.5rem;
+}
+
 .wrapper-list-container {
     display: flex;
+    margin-bottom:3rem;
 }
 
 
@@ -946,7 +949,6 @@ span.copyright {
 
     .footer-wrapper {
         flex-direction: column;
-        padding: 3rem;
     }
 
 
@@ -1081,7 +1083,7 @@ span.copyright {
         align-items: start;
     }
 
-    .partner-wrapper {
+    .div-partners {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
