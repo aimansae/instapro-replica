@@ -445,7 +445,6 @@ input[type="text"]:focus {
 
 .requests-number-section {
     background-color: #F9F8F6;
-    padding-bottom: 3rem;
 }
 
 
@@ -605,7 +604,7 @@ li.icon-and-link {
     background-color: #3f27ba;
     color: #fff;
     border-radius: 9999px;
-    align-items: center;
+    text-align: center;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -646,14 +645,16 @@ hr {
     background-color: #dfddeb;
 }
 
-.footer-wrapper,
-.socialmedia-wrapper {
+.footer-wrapper{
     display: flex;
     justify-content: space-between;
 }
-.footer-wrapper{
-    margin-bottom: 3rem;
+.socialmedia-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .footer-ul {
     /*flex-wrap: wrap;*/
@@ -684,7 +685,7 @@ hr {
 
 .ul-socialmedia,.ul-rating-desciption {
     display: flex;
-    align-items: center;
+   
 }
 
 .socialmedia-wrapper li {
@@ -781,7 +782,7 @@ span.copyright {
 
 
 
-}
+
 
 
 .country-link,
@@ -903,14 +904,14 @@ span.copyright {
     } */
 
 
-    .ul-rating-desciption {
+    /* .ul-rating-desciption {
         display: flex;
         align-items: center;
-    }
+    } */
 
-    .ul-rating-desciption li {
+   /* .ul-rating-desciption li {
         margin-top: 2rem;
-    }
+    }  */
 
     .socialmedia-icon {
         font-size: 1.5rem;
@@ -1123,14 +1124,58 @@ span.copyright {
 
     .div-how-it-works,
     .div-summer-section,
-    .div-find-prof{
+    .div-find-prof,
+    .div-send-request{
         padding: 0 1.5rem ;
     }
+    .how-it-works-section,
+    .summer-section,
+    .find-prof-section,
+    .div-requests-number,
+    .div-partners
+    {
+        padding: 3rem 0 ;
+    }
+    .requestnum-ol-container{
+        padding-top: 3rem;
+        padding-bottom: 0;
+    }
+    .how-li-item p{
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+    
     footer{
         padding: 3.13rem 1.5rem ;
     }
-    .how-ol-container{
-        gap:1rem
+    .how-ol-container,
+    .jobs-wrapper,
+    .requestnum-ol-container,
+    .footer-wrapper,
+    .socialmedia-wrapper,
+    .ul-partners,
+    .ul-services
+    {
+        flex-direction: column;
+    }
+    .summer-card-div{
+        flex-direction: column;
+        gap: 2rem; /*to check*/
+    }
+
+    li.how-li-item,
+    .card,
+    .joblist,
+    #expandButton,
+    .request-btn,
+    .footer-ul
+    {
+        width: 100%;
+    }
+
+    .card img{
+        height: 8rem;
+        object-fit: cover;
     }
 
     .how-list-title{
@@ -1146,7 +1191,33 @@ span.copyright {
     .div-find-prof h2{
         font-size: 2rem;
     }
-    .request-btn{
-       padding: 1rem 2rem; 
+    
+    .requestnum-list-item{
+        margin-bottom: 3rem;
     }
+    .footer-ul li{
+        margin-bottom: 1rem;
+        
+    }
+    .socialmedia-wrapper{
+        justify-content: start;
+        align-items: start;
+        gap:2rem;
+        margin-top: 1.5rem;
+    }
+    .ul-socialmedia i {
+        font-size: 2rem;
+    }
+    .ul-rating-desciption li {
+        font-size:1.125rem;
+    }
+   .ul-partners li {
+    margin-bottom: .5rem;
+   }
+
+   .ul-services li:last-child{
+    margin-top: 1.5rem;
+   }
+
+   
 }
