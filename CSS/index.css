@@ -438,16 +438,16 @@ input[type="text"]:focus {
 
 
 .how-it-works-section,
-.find-prof-section {
+.find-prof-section{
     background-color: #F9F8F6;
     box-sizing: border-box;
     padding: 6rem 0;
-
-
 }
 
-
-/*added now*/
+.requests-number-section {
+    background-color: #F9F8F6;
+    padding-bottom: 3rem;
+}
 
 
 
@@ -468,15 +468,12 @@ li.how-li-item {
     align-items: baseline;
 }
 
-.company-data-section {
-    margin-bottom: 3rem;
-}
 
-.review-ol-container {
+.requestnum-ol-container {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    /*padding: 6rem 3rem;*/
+    padding: 6rem 0;
 }
 
 
@@ -576,11 +573,12 @@ li.icon-and-link {
 }
 
 .more-btn,
-.send-request-btn {
+.div-send-request {
     display: flex;
     justify-content: center;
 
 }
+
 
 .more-btn {
     margin-top: 3rem;
@@ -624,7 +622,7 @@ li.icon-and-link {
     flex-wrap: wrap;
 }
 
-.review-title {
+.requestnum-title {
     color: #3f27ba;
     font-size: 3rem;
     line-height: 3.625rem;
@@ -632,7 +630,7 @@ li.icon-and-link {
     font-weight: bolder;
 }
 
-.review-list-item p {
+.requestnum-list-item p {
     color: #0171cd;
     font-size: 2rem;
     line-height: 2rem;
@@ -788,26 +786,33 @@ span.copyright {
     }
     .div-summer-section,
     .div-how-it-works,
-    .div-find-prof{
+    .div-find-prof,
+    .div-requests-number{
         max-width: 66rem;
         margin: 0 auto;
         padding: 0 3rem ;
 
     }
+    .div-requests-number{
+        padding-bottom: 3rem;
+    }
 
-    .summer-section{
+    .summer-section
+    {
        
         padding: 6rem 0 ;
 
 
     }
+   
+    
 
     .search-main-div {
         width: 55%;
     }
 
    
-    .review-list-item {
+    .requestnum-list-item {
         margin: 3rem;
     }
 
@@ -1045,7 +1050,7 @@ span.copyright {
         margin-right: 1.5rem;
     }
 
-    .review-list-item {
+    .requestnum-list-item {
         margin: 1.5rem;
     }
 
@@ -1058,7 +1063,7 @@ span.copyright {
 
     }
 
-    .review-ol-container {
+    .requestnum {
         flex-direction: column;
         /*padding: 48px 0px;
     }
