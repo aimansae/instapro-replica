@@ -19,9 +19,11 @@ h1,
 h3 {
     color: #fff;
 }
+
 .question {
     color: #fff;
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -36,13 +38,20 @@ h2 {
     font-size: 2rem;
     line-height: 1.313;
     color: #2C2C2C;
-   
+
 }
-.section-title{
+
+a,
+button {
+    cursor: pointer;
+}
+
+.section-title {
     margin-bottom: 1rem;
     margin-left: 3rem;
 
 }
+
 /* styling instapro logo*/
 
 .svgclass {
@@ -101,9 +110,10 @@ h2 {
 }
 
 /*syling logo on toggle */
-.newLogo{
-    width:7rem;
+.newLogo {
+    width: 7rem;
 }
+
 .main-article::before {
     content: "";
     display: block;
@@ -193,7 +203,7 @@ ol li {
 
 .summer-title {
     margin-bottom: 2rem;
-    
+
 }
 
 .list-title {
@@ -223,7 +233,7 @@ p {
     font-size: 1rem;
 }
 
-::placeholder{
+::placeholder {
     font-size: 1rem;
 }
 
@@ -231,26 +241,30 @@ p {
 
 
 
-@media(max-width: 780px){
-    .input-container{
-        margin-top:3rem;
+@media(max-width: 780px) {
+    .input-container {
+        margin-top: 3rem;
     }
 }
+
 @media (max-width: 960px) {
 
-    .header{
+    .header {
         width: 100%;
         padding: .75rem 0;
 
         margin: 0;
     }
+
     .toggle-menu {
         display: flex;
     }
+
     .toggle-menu {
         text-decoration: none;
     }
-    .span-toggle{
+
+    .span-toggle {
         margin-right: .3rem;
     }
 
@@ -268,14 +282,14 @@ p {
         flex-direction: column;
         width: 100%;
 
-       
+
     }
 
-    .nav-links ul li{
+    .nav-links ul li {
         border-bottom: 1px solid rgb(217, 215, 213);
 
     }
-  
+
 
     .nav-links ul li:hover {
         background-color: #cfd8e8;
@@ -285,7 +299,8 @@ p {
     .nav-links li a:hover {
         color: black;
     }
-    .nav-links ul li a{
+
+    .nav-links ul li a {
         margin: 0;
         padding: .75rem;
         font-size: 1rem;
@@ -299,8 +314,8 @@ p {
         margin-top: 2rem;
     }
 
-    .link-list.active{
-        background-color:red;
+    .link-list.active {
+        background-color: red;
     }
 
     .togglestyle li a {
@@ -336,9 +351,7 @@ input[type="text"]:focus {
     outline: none;
 }
 
-.input-container:hover {
-    border: 2px solid #3f27ba;
-}
+
 
 .input-button {
     position: relative;
@@ -362,13 +375,19 @@ input[type="text"]:focus {
 
 }
 
+.input-button:hover,
+.request-btn:hover {
+    background-color: #330691;
+}
+
 /*Signup container*/
-.signup-container{
+.signup-container {
     margin-bottom: 3rem;
 }
-.signup-container i {
+
+.yellow-arrow {
     color: #3f27ba;
-    padding-top: 3px;
+    padding-top: 4px;
     font-size: .875rem;
     background-color: #e5cb4e;
     border-radius: 50%;
@@ -378,6 +397,10 @@ input[type="text"]:focus {
 }
 
 .signup-container a {
+    text-decoration: none;
+}
+
+.signup-container span:hover {
     text-decoration: none;
 }
 
@@ -431,20 +454,26 @@ input[type="text"]:focus {
     padding: 0 3rem;
     margin-top: 3rem;
 }
-li.li-item{
-    width:30%;
+
+li.li-item {
+    width: 30%;
     margin-left: 1rem;
 }
 
-.num-title{
+.num-title {
     display: flex;
     align-items: baseline;
+}
+
+.company-data-section {
+    margin-bottom: 3rem;
 }
 
 .review-ol-container {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    padding: 6rem 3rem;
 }
 
 
@@ -459,7 +488,10 @@ li.li-item{
 .card-icon {
     font-size: 1.5rem;
     color: #3f27ba;
-    margin-right: .55rem;
+}
+
+.fa-house-chimney {
+    margin-right: .5rem;
 }
 
 
@@ -487,12 +519,13 @@ li.li-item{
 .card-arrow {
     color: #3f27ba;
     font-size: 1rem;
-}    
+}
 
 /* section with links for jobs*/
 .jobs-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 3rem;
     margin-top: 3rem;
 
@@ -500,7 +533,7 @@ li.li-item{
 
 .jobs-link-ul {
     list-style: none;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     font-size: 1rem;
 }
 
@@ -509,33 +542,66 @@ li.li-item{
 }
 
 .joblist {
-    flex: 0 0 33.33%;
- 
     box-sizing: border-box;
+    width: 31.5%;
+}
+
+.icon-link {
+    display: flex;
+    align-items: baseline;
+}
+
+.icon-link .card-arrow {
+    margin-right: .5rem;
+}
+
+.icon-link a {
+    color: #3727BA;
+}
+
+.icon-link a:hover,
+.card-text a:hover {
+    text-decoration: none;
+}
+
+.icon-link a:visited {
+    color: #330691;
+}
+
+li.icon-link {
+    margin-top: 1.5rem;
 }
 
 .more-btn,
 .send-request-btn {
     display: flex;
     justify-content: center;
-    
+
 }
-.more-btn{
-    margin-top:3rem;
+
+.more-btn {
+    margin-top: 3rem;
 }
+
 #expandButton {
     border: 1px solid #3f27ba;
-    padding: calc(0.5rem - 1px) 2rem;
+    padding: 7px 32px;
     background-color: #fff;
     color: #3f27ba;
     border-radius: 9999px;
     align-items: center;
     font-size: 1rem;
+    line-height: 1.5;
     font-weight: bold;
+
+}
+
+#expandButton:hover {
+    background-color: #F0F5FE;
 }
 
 .request-btn {
-    padding: 15px 64px; 
+    padding: 15px 64px;
     background-color: #3f27ba;
     color: #fff;
     border-radius: 9999px;
@@ -565,7 +631,7 @@ li.li-item{
 
 .review-list-item p {
     color: #0171cd;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2rem;
     font-weight: bolder;
 }
@@ -584,19 +650,15 @@ hr {
 .socialmedia-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
 }
 
 .footer-ul {
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    /*flex-wrap: wrap;*/
     list-style: none;
+    width: 33%;
 }
 
 .footer-ul li {
-    margin-bottom: 0.75rem;
-    flex: 0 0 33.33%;
     /* padding: 10px; */
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -607,22 +669,20 @@ hr {
 .singup-link {
     background-color: #f9f8f6;
     padding: 16px 24px;
+    border-radius: .5rem;
 }
 
 
 
-.singup-link p {
-    margin-bottom: 4px;
-}
+
 .socialmedia-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-.ul-socialmedia,
-.ul-rating-desciption {
+.ul-socialmedia,.ul-rating-desciption {
     display: flex;
+    align-items: center;
 }
 
 .socialmedia-wrapper li {
@@ -638,17 +698,19 @@ hr {
 }
 
 .ul-socialmedia i {
-    margin-right: 1rem;
+    margin-right: .75rem;
 }
 
 .ul-socialmedia li {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .ul-rating-desciption li {
     color: black;
     text-decoration: none;
+    margin-right: .5rem;
 }
+
 .singup-link li a {
     text-decoration: underline;
 }
@@ -673,7 +735,7 @@ hr {
 .partner-wrapper {
     display: flex;
     flex-direction: column;
-    padding-left: 3rem;
+    margin: 3rem;
 }
 
 
@@ -700,15 +762,10 @@ span.copyright {
     color: #5e636e;
 }
 
-.lastdiv-container {
-    margin-top: 3rem;
-}
 
-.lastdiv-container li {
-    margin-right: 1.5rem;
-}
 
-.summer-sections{
+
+.summer-sections {
     padding: 6rem 3rem;
 
 }
@@ -738,42 +795,31 @@ span.copyright {
     .search-main-div {
         width: 55%;
     }
+
     .review-list-item {
         margin: 3rem;
     }
 
 
 
-    .footer-wrapper,
     .socialmedia-wrapper {
         max-width: calc(60rem + 2 * 3rem);
         padding-left: 3rem;
         padding-right: 3rem;
     }
 
+
+
+    .info-section {}
+
+
+
+    .footer-wrapper {
+        margin: 3rem;
+    }
+
     
-    .footer-wrapper,
-    .socialmedia-wrapper,
-    .partner-wrapper {
 
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    .info-section{
-
-    }
-
-    .footer-wrapper,
-    .socialmedia-wrapper,
-    .partner-wrapper {
-        margin-left: 3rem;
-    }
-
-    .partner-wrapper {
-        padding-bottom: 3rem;
-    }
-
-   
 
 
 
@@ -785,7 +831,6 @@ span.copyright {
 .service-link {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 0.5rem;
 }
 
 /*toggle menu added now*/
@@ -814,30 +859,51 @@ span.copyright {
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color:#2c2c2c;
+    color: #2c2c2c;
 }
 
 .footer-ul a {
     font-size: 1rem;
-    color: #3F27BA;;
+    color: #3F27BA;
+    ;
     text-decoration: none;
 }
+
+.footer-ul a:hover {
+    text-decoration: underline;
+
+
+}
+
 .singup-link a {
+    color: #330691;
     text-decoration: underline;
 }
 
-
-.partner-wrapper p {
-    font-size: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-
-
+.singup-link a:hover {
+    text-decoration: none;
 }
 
-.ul-partners li {
+
+.ul-partners{
+    margin-top: 1rem ;
+    margin-bottom: 3rem;
+    line-height:1;
+}
+.ul-partners li, .ul-services {
     list-style: none;
     font-size: 1rem;
+}
+.ul-services{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    line-height: 1.5rem;
+}
+
+.ul-partners a:hover {
+    text-decoration: none;
 }
 
 .wrapper-list-container {
@@ -849,13 +915,12 @@ span.copyright {
 
 
 
-
 @media (max-width: 960px) {
 
 
 
 
-    
+
 
 
     /*.jobs-wrapper,*/
@@ -872,6 +937,7 @@ span.copyright {
 
     .ul-rating-desciption {
         display: flex;
+        align-items: center;
     }
 
     .ul-rating-desciption li {
@@ -928,7 +994,7 @@ span.copyright {
 
 
 
-  
+
 
     .summer-section {
         padding-bottom: 3rem;
@@ -951,9 +1017,10 @@ span.copyright {
         margin-top: 1.5rem;
     }
 
-    .card img{
+    .card img {
         height: 120px;
     }
+
     .jobs-wrapper {
         flex-direction: column;
         padding-left: 1.5rem;
@@ -970,7 +1037,8 @@ span.copyright {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-    .review-list-item{
+
+    .review-list-item {
         margin: 1.5rem;
     }
 
@@ -979,7 +1047,7 @@ span.copyright {
         display: block;
         width: 100%;
         text-align: center;
-        
+
 
     }
 
@@ -995,9 +1063,6 @@ span.copyright {
         padding-right: 1.5rem;
     }
 
-    .footer-ul li {
-        margin-bottom: 1.5rem;
-    }
 
     .socialmedia-wrapper {
 
