@@ -476,7 +476,7 @@ li.how-li-item {
 
 
 
-.card img {
+.card-image {
     border-radius: 10px;
     width: 100%;
     margin-bottom: 1rem;
@@ -493,11 +493,11 @@ li.how-li-item {
 }
 
 
-.card-text img {
+/* .card-text img {
     height: 1.75rem;
     width: 1.75rem;
 
-}
+} */
 
 .card-text p {
 
@@ -543,6 +543,9 @@ li.how-li-item {
     width: 31.5%;
     margin-bottom: 1.5rem;
 }
+.card-text p {
+    font-size: 16px;
+}
 
 .icon-and-link {
     display: flex;
@@ -570,6 +573,29 @@ li.icon-and-link {
     margin-top: 1.5rem;
 }
 
+.div-testimonials{
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-around;
+    border-top: 1px solid #E6E6E6;
+    padding-top: 1.5rem;
+}
+
+.img-testimonial img{
+    height: 6rem;
+    object-fit: cover;
+    /* margin-right: .75rem;
+    margin-right: 1rem; */
+
+}
+.flex-testimonial p {
+    margin-left: .5rem; 
+}
+
+.text-bold{
+    font-weight: 900;
+    color: #2C2C2C;
+}
 .more-btn,
 .div-send-request {
     display: flex;
@@ -640,7 +666,7 @@ li.rating-description {
 }
 
 /* footer*/
-hr {
+hr.footer-divider {
     height: 0.5rem;
     background-color: #dfddeb;
 }
@@ -648,6 +674,7 @@ hr {
 .footer-wrapper{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
 }
 .socialmedia-wrapper{
     display: flex;
@@ -880,7 +907,9 @@ span.copyright {
     margin-bottom:3rem;
 }
 
-
+.ul-services li:last-child{
+    margin-top: 1.5rem;
+   }
 
 
 
@@ -899,20 +928,6 @@ span.copyright {
         justify-content: center;
     }
 
-    /* .footer-wrapper {
-        flex-direction: column;
-    } */
-
-
-    /* .ul-rating-desciption {
-        display: flex;
-        align-items: center;
-    } */
-
-   /* .ul-rating-desciption li {
-        margin-top: 2rem;
-    }  */
-
     .socialmedia-icon {
         font-size: 1.5rem;
     }
@@ -928,125 +943,7 @@ span.copyright {
         border-radius: 10px;
     }
 }
-/*
-@media(max-width:48rem) {
-     .h1-container {
-        margin: 0;
-    }
 
-    .search-main-div {
-        margin: 0 0 3rem;
-    }
-
-    .main-container {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    }
-
-    .search-main-div {
-        margin-bottom: 2rem
-    }
-
-    .info-section {
-        padding: 3rem 0;
-    }
-
-    .how-ol-container {
-        flex-direction: column;
-        /*padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    li.li-item {
-        width: 100%;
-    }
-
-
-
-
-
- 
-
-    .summer-card-div {
-        flex-direction: column;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        margin-left: 0;
-
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .card-text {
-        margin-top: 1.5rem;
-    }
-
-    .card img {
-        height: 120px;
-    }
-
-    .jobs-wrapper {
-        flex-direction: column;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        margin-left: 0;
-    }
-
-    .jobs-link-ul {
-        display: block;
-    }
-
-    .request-btn,
-    .more-btn {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-
-    .requestnum-list-item {
-        margin: 1.5rem;
-    }
-
-    #expandButton,
-    .request-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-
-
-    }
-
-    .requestnum {
-        flex-direction: column;
-        /*padding: 48px 0px;
-    }
-
-    .footer-wrapper,
-    .socialmedia-wrapper {
-        flex-direction: column;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-
-    .socialmedia-wrapper {
-
-        align-items: start;
-    }
-
-    .div-partners {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    .country-link,
-    .service-link {
-        display: block;
-        margin-bottom: 1rem;
-    }
-
-*/
 @media (min-width: 60rem) {
     .header {
         padding: 1.5rem;
@@ -1087,10 +984,17 @@ span.copyright {
     .summer-section
     {
        
-        padding: 6rem 0 ;
+        padding-top: 6rem ;
 
 
     }
+
+    .summer-section2 {
+        padding-top: 3rem;
+        padding-bottom:6rem;
+    }
+    
+    
    
     
 
@@ -1130,6 +1034,7 @@ span.copyright {
     }
     .how-it-works-section,
     .summer-section,
+    .summer-section2
     .find-prof-section,
     .div-requests-number,
     .div-partners
