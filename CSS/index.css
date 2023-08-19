@@ -1367,8 +1367,8 @@ hr.footer-divider {
         font-size: 2rem;
     }
 
-    .div-send-request{
-        margin-bottom: 3rem;
+    .requests-number-section{
+        padding-bottom: 3rem;
     }
     .footer{
         padding: 3.1rem 1.5rem ;
@@ -1377,7 +1377,7 @@ hr.footer-divider {
     
     }
 
-    @media (min-width: 30rem) {
+    @media (max-width: 30rem) {
         .signup-container {
 
             padding-bottom: 3.5rem;
@@ -1386,5 +1386,28 @@ hr.footer-divider {
 
         .li.how-li-item {
             margin-left: 0;
+        }
+        .flex-testimonial p {
+           
+            display: inline-block;
+            white-space: pre-line;
+        }
+        .div-testimonials{
+            width: auto;
+        }
+        .review-card {
+            width: 80%;
+        }
+        .requestnum-list-item p{
+            font-size: 1.5rem;
+        }
+        .div-find-prof h2{
+            font-size: 1.8rem;
+        }
+        .div-find-prof{
+            padding-top: 3rem;
+        }
+        .request-btn{
+            padding:calc(1rem - 1px) 2rem;
         }
     }
