@@ -285,6 +285,11 @@ p {
         padding-left: 1.5rem;
     }
 
+    /* .logosvg {
+
+        transform: scale(.7);
+    } */
+
     .toggle-menu {
         display: flex;
         text-decoration: none;
@@ -351,6 +356,9 @@ p {
 
     .activeLogo {
         fill: rgb(0, 153, 204);
+    }
+    .activeLogoGrey{
+        fill:rgb(194, 205, 214);
     }
 
     .ul-services li:last-child {
@@ -1087,6 +1095,9 @@ span.copyright {
     .header {
         padding: 1.5rem;
         height: 5rem;
+    }
+    .logosvg{
+        height: 2.5rem;
     }
 
     .how-ol-container li:first-child {

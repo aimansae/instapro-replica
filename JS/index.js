@@ -1,4 +1,5 @@
-const logo = document.getElementsByClassName("logoblue")[0];
+const logo = document.querySelectorAll(".logoblue");
+const logoGrey = document.querySelectorAll(".logogrey");
 const menuButton = document.getElementsByClassName("toggle-menu")[0];
 const toggleMenuX = document.getElementsByClassName("iconx")[0];
 const toggleMenuBars = document.getElementsByClassName("icon-bars")[0];
@@ -15,7 +16,13 @@ menuButton.addEventListener("click", (e) => {
   toggleMenuBars.classList.toggle("activeBars");
   toggleMenuX.classList.toggle("activeX");
   signupStyle.style.border = "none";
-  logo.classList.toggle("activeLogo");
+
+  for (let i = 0; i < logo.length; i++) {
+  logo[i].classList.toggle("activeLogo");
+  }
+  for (let i = 0; i < logoGrey.length; i++) {
+    logoGrey[i].classList.toggle("activeLogoGrey");
+    }
 });
 
 // to close togglemenu on click
