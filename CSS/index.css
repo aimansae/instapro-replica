@@ -1,6 +1,9 @@
 /* Google Font*/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
-
+/* path[Attributes] {
+    d: path("M 12.6 28.6 a 12.6 12.6 0 1 0 0 -25.2 a 12.6 12.6 0 0 0 0 25.2 Z");
+    fill: rgb(0, 153, 204);
+} */
 /*restetting all spacing*/
 * {
     box-sizing: border-box;
@@ -49,7 +52,7 @@ button {
 
 /* styling instapro logo*/
 
-.svgclass {
+.logosvg {
     display: block;
     height: 2rem;
 }
@@ -100,15 +103,26 @@ a.link-list.signup-style:hover {
 
 .toggle-menu {
     position: absolute;
+    height:2rem;
     top: 0.75rem;
     right: 1rem;
     display: none;
-    color: #fff;
-    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
     padding: 0.25rem 0.5rem;
     border: 1px solid #fff;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0px;
+   
 }
+
+.toggle-menu:hover{
+    background-color: #ffffff2e;
+}
+
 
 /*syling logo on toggle */
 .newLogo {
@@ -257,11 +271,16 @@ p {
 
 @media (max-width: 960px) {
 
-    /* .header {
-        width: 100%;
-        padding: .75rem 0;
-
-        margin: 0;
+    .header{
+        padding: 0;
+    }
+    .instapro-logo{
+        padding-top:.75rem ;
+        padding-left: 1.5rem;
+    }
+    /* .logosvg {
+        display: block;
+        height: 1.5rem;
     } */
 
     .toggle-menu {
@@ -269,67 +288,91 @@ p {
         text-decoration: none;
     }
 
-    .span-toggle {
-        margin-right: .3rem;
+    i.fa-solid.fa-bars {
+        margin-left: .3rem;
+    }
+    .iconx {
+        display: none;
+    }
+
+    .activeX{
+        display: block;
+        margin-left: .3rem;
+    }
+    .activeBars{
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+    }
+    .navbarActive{
+        border: 2px solid #3F27BA;
+        color: #2c2c2c;
     }
 
     .nav-links {
         display: none;
-        width: 100%;
+        cursor: pointer;
     }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    .headerActiveBackground{
+        background-color: #fff;
     }
-
     .nav-links ul {
         flex-direction: column;
-        width: 100%;
-
 
     }
-
+    
     .nav-links ul li {
         border-bottom: 1px solid rgb(217, 215, 213);
 
     }
-
-
-    .nav-links ul li:hover {
-        background-color: #cfd8e8;
-
-    }
-
-    .nav-links li a:hover {
-        color: black;
-    }
-
-    .nav-links ul li a {
-        margin: 0;
-        padding: .75rem;
-        font-size: 1rem;
-
-    }
-
-    .nav-links.active {
+    .active {
         display: flex;
-        background-color: #fff;
-        position: absolute;
-        margin-top: 2rem;
+        width: 100%;
+        /* position: absolute; /*added later*/
+        /* margin-top: 2.8rem; */
+        /* background: #fff;  */
     }
-
-    .link-list.active {
-        background-color: red;
+    .activeLogo{
+        fill: rgb(0, 153, 204);
     }
+       
+    }
+    .active li a{
+        margin: 0;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+   
+    /* .nav-links ul {
+        flex-direction: column;
 
-    .togglestyle li a {
+    } */
+
+   
+    .active ul {
+        margin:.5rem 0;
+        width: 100%;
+    }
+    .active ul li:hover {
+        background-color: #F0F5FE;    
+
+    }
+    
+    .active li a {
         color: black;
     }
-
-    .togglestyle ul li {
-        margin-top: 1rem;
+    .active li a:hover,
+    .active li:last-child a:hover  {
+        color: #2c2c2c;
     }
+
+    .active li:last-child{
+        border-bottom: none;
+    }
+
+   
 
 }
 
@@ -1011,16 +1054,9 @@ hr.footer-divider {
     
 }
 
+/* tolto 19-8 */
+/* @media (max-width: 960px) {
 
-@media (max-width: 960px) {
-
-
-
-
-
-
-
-    /*.jobs-wrapper,*/
     .show {
         flex-direction: column;
         justify-content: center;
@@ -1040,7 +1076,7 @@ hr.footer-divider {
         width: 100%;
         border-radius: 10px;
     }
-}
+} */
 
 @media (min-width: 60rem) {
     .header {
@@ -1067,7 +1103,7 @@ hr.footer-divider {
     }
 
 
-
+    .main-container,
     .div-summer-section,
     .div-how-it-works,
     .div-find-prof,
