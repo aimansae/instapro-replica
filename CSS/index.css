@@ -13,6 +13,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
 
 /*restetting all spacing*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,7 +59,6 @@ h2 {
     font-size: 2rem;
     line-height: 1.313;
     color: #2C2C2C;
-
 }
 
 a,
@@ -67,7 +67,7 @@ button {
 }
 
 
-/* styling instapro logo*/
+/* styling instapro svg logo*/
 
 .logosvg {
     display: block;
@@ -117,7 +117,7 @@ a.link-list.signup-style:hover {
     background-color: #ffffff3d;
 }
 
-/*styling toggle bar for smaller devices*/
+/*styling toggle menubar for smaller devices*/
 
 .toggle-menu {
     position: absolute;
@@ -142,11 +142,7 @@ a.link-list.signup-style:hover {
     background-color: #ffffff2e;
 }
 
-
-/*syling logo on toggle */
-.newLogo {
-    width: 7rem;
-}
+/* main content*/
 
 .main-article {
 
@@ -154,7 +150,6 @@ a.link-list.signup-style:hover {
     overflow: hidden;
     margin-top: -5rem;
 }
-
 
 .main-article::before {
     content: "";
@@ -171,7 +166,6 @@ a.link-list.signup-style:hover {
     z-index: -1;
     background: rgba(0, 0, 0, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
     mix-blend-mode: multiply;
-    /*TO CHECK*/
 
 }
 
@@ -236,9 +230,6 @@ i fa-arrow-right {
     padding-right: 0;
 }
 
-
-
-
 ol li {
     list-style: none;
 }
@@ -248,13 +239,9 @@ ol li {
     font-size: 1.5rem;
 }
 
-
-
 .summer-title {
     margin-bottom: 2rem;
-
 }
-
 
 .how-list-title {
     font-size: 1.5rem;
@@ -272,12 +259,6 @@ ol li {
 h3 {
     margin-bottom: 0.25rem;
 }
-
-
-h3 {
-    font-weight: 800;
-}
-
 
 p {
     font-size: 1rem;
@@ -303,11 +284,6 @@ p {
         padding-top: .75rem;
         padding-left: 1.5rem;
     }
-
-    /* .logosvg {
-        display: block;
-        height: 1.5rem;
-    } */
 
     .toggle-menu {
         display: flex;
@@ -594,7 +570,6 @@ li.how-li-item {
 .card-text p {
 
     margin: 0.5rem 0 1rem;
-    font-size: 1rem;
     color: #6F6F6F;
 }
 
@@ -636,9 +611,6 @@ li.how-li-item {
     margin-bottom: 1.5rem;
 }
 
-.card-text p {
-    font-size: 16px;
-}
 
 .icon-and-link {
     display: flex;
@@ -715,6 +687,7 @@ li.icon-and-link {
     background-color: #fff;
     padding: 1rem;
     border-radius: .5rem;
+    cursor: pointer;
 
 }
 
@@ -730,6 +703,9 @@ li.icon-and-link {
     font-size: 1rem;
     color: #3F27BA;
     font-weight: 900;
+}
+.review-card a {
+    text-decoration: none;
 }
 
 .review-img {
