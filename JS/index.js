@@ -18,11 +18,11 @@ menuButton.addEventListener("click", (e) => {
   signupStyle.style.border = "none";
 
   for (let i = 0; i < logo.length; i++) {
-  logo[i].classList.toggle("activeLogo");
+    logo[i].classList.toggle("activeLogo");
   }
   for (let i = 0; i < logoGrey.length; i++) {
     logoGrey[i].classList.toggle("activeLogoGrey");
-    }
+  }
 });
 
 // to close togglemenu on click
@@ -34,10 +34,8 @@ document.addEventListener("click", (e) => {
     menuButton.classList.remove("navbarActive");
     toggleMenuBars.classList.remove("activeBars");
     header.classList.remove("headerActiveBackground");
-
     toggleMenuX.classList.remove("activeX");
     signupStyle.style.border = "";
-    logo.classList.remove("activeLogo");
   }
 });
 
@@ -51,7 +49,6 @@ expandButton.addEventListener("click", function () {
   expandButton.remove();
   console.log("clicked");
 });
-
 
 // for logo image
 // togglemenu.addEventListener('click', () =>{
