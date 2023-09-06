@@ -825,6 +825,9 @@ li.icon-and-link {
 li.rating-description {
     font-size: 18px;
 }
+li .rating-description{
+    color: #2C2C2C;
+}
 
 /* footer*/
 .footer{
@@ -907,7 +910,6 @@ li.rating-description {
 }
 
 .ul-rating-desciption li:not(:last-child) {
-    color: 2C2C2C;
     text-decoration: none;
     margin-right: .5rem;
 }
