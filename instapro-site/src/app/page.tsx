@@ -1,5 +1,5 @@
 // to render homepage
-
+'use client';
 import NavBar from '@components/NavBar';
 
 const Home = () => {

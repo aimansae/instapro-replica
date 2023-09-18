@@ -88,7 +88,11 @@ in Instapro site directory create new folder:
 
 - icons and images go in pubblic
 
+Styling:
+Install Emotion js 
+npm i @emotion/styled @emotion/react
 
+Inport {css } from @emotion/react
 
 Errors
 Eslint: parameter children implicity has an any type: 
@@ -117,3 +121,9 @@ const RootLayout = ({ children }: MyComponentProps)
 
 Prettirt Error: Error related to end of line section
 Delete cr: changed vs code setting from CRLF to LF
+
+ERRORS:
+npm run de  not working error: Script missing
+Fixed by cd instapro-site
+The directoy i as working in was not correct
+

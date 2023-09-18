@@ -1,11 +1,57 @@
-import React from 'react';
+'use client';
 
-const NavBar = () => {
+import React from 'react';
+import styled from '@emotion/styled';
+
+const Header = styled.header`
+  padding: 0.75rem 1.5rem;
+  width: min(100%, calc(60rem + (2 * 1.5rem)));
+  margin-inline: auto;
+  z-index: 10;
+  position: relative;
+  background: green;
+
+  @media (max-width: 960px) {
+    padding: 0;
+  }
+  @media (min-width: 60rem) {
+    padding: 1.5rem;
+    height: 5rem;
+  }
+
+  @media (max-width: 48rem) {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+`;
+
+const Navbar = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const InstaproLogo = styled.div`
+  @media (max-width: 960px) {
+    padding-top: 0.75rem;
+    padding-left: 1.5rem;
+    background: green;
+  }
+  @media (max-width: 48rem) {
+   {
+        font-size: .875rem;
+    }
+
+
+`;
+
+const NavBar: React.FC = () => {
   return (
-    <div>
-      <header className="header">
-        <nav className="navbar">
-          <div className="instapro-logo">
+    <>
+      <Header>
+        <Navbar>
+          <InstaproLogo>
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +88,7 @@ const NavBar = () => {
                 ></path>
               </svg>
             </a>
-          </div>
+          </InstaproLogo>
           <a href="#" className="toggle-menu">
             <span className="span-toggle">Menu </span>
             <span className="icon-bars">
@@ -53,7 +99,7 @@ const NavBar = () => {
             </span>
           </a>
 
-          <div className="nav-links">
+          <InstaproLogo className="nav-links">
             <ul>
               <li>
                 <a className="link-list" href="#">
@@ -76,10 +122,10 @@ const NavBar = () => {
                 </a>
               </li>
             </ul>
-          </div>
-        </nav>
-      </header>
-    </div>
+          </InstaproLogo>
+        </Navbar>
+      </Header>
+    </>
   );
 };
 
