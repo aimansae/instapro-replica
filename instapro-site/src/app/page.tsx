@@ -5,8 +5,7 @@ import NavBar from '@components/NavBar';
 const Home = () => {
   return (
     <div>
-      Home
-      <NavBar />;
+      <NavBar />
     </div>
   );
 };
