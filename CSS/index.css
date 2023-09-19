@@ -346,11 +346,7 @@ p {
         display: flex;
         width: 100%;
         position: absolute;
-        /*added later*/
         margin-top: 44px;
-        /*added later*/
-        /* position: absolute; /*added later*/
-        /* margin-top: 2.8rem; */
         background-color: #fff;
     }
 

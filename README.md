@@ -127,3 +127,4 @@ npm run de  not working error: Script missing
 Fixed by cd instapro-site
 The directoy i as working in was not correct
 
+For icons such as hamburger bar: npm install react-icons --save
