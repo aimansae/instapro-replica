@@ -11,7 +11,7 @@ interface StyledLinkProps {
   href: string;
 }
 
-const Header = styled.header`
+const StyleHeader = styled.header`
   padding: 0.75rem 1.5rem;
   width: min(100%, calc(60rem + (2 * 1.5rem)));
   margin-inline: auto;
@@ -34,7 +34,7 @@ const Header = styled.header`
   }
 `;
 
-const Navbar = styled.nav`
+const StyleNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ const Navbar = styled.nav`
   }
 `;
 
-const InstaproLogo = styled.div`
+const StyleInstaproLogo = styled.div`
   @media (max-width: 960px) {
     padding-top: 0.75rem;
     padding-left: 1.5rem;
@@ -56,7 +56,7 @@ const InstaproLogo = styled.div`
   }
 `;
 
-const NavLinks = styled.div`
+const StyleNavDesktop = styled.div`
   ul {
     margin: 0;
     padding: 0;
@@ -91,16 +91,18 @@ const NavLinks = styled.div`
       color: #fff;
       background-color: #ffffff3d;
     }
-    @media (max-width: 960px) {
-      border: none;
-      &:hover {
-        color: black;
-      }
-    }
   }
+  @media (max-width: 960px) {
+    border: none;
+    &:hover {
+      color: black;
+    }
+    display: none;
+  }
+`;
 
-  /* Media Query for screens with a maximum width of 960px */
-
+/* Media Query for screens with a maximum width of 960px */
+const StyleNavMobile = styled.div`
   @media (max-width: 960px) {
     ul {
       flex-direction: column;
@@ -192,16 +194,16 @@ const StyleMenuButton = styled.button`
 
 const NavBar: React.FC<NavBarProps> = () => {
   // state to toggle navbar onClick
-  const [navbarOpen, setNavbarClose] = useState(true);
+  const [navbarOpen, setNavbarClose] = useState(false);
   const toggleNav = () => {
     setNavbarClose(!navbarOpen);
     console.log('clicked');
   };
   return (
     <>
-      <Header>
-        <Navbar>
-          <InstaproLogo>
+      <StyleHeader>
+        <StyleNavbar>
+          <StyleInstaproLogo>
             <a href="#">
               <CustomSVG
                 xmlns="http://www.w3.org/2000/svg"
@@ -232,11 +234,32 @@ const NavBar: React.FC<NavBarProps> = () => {
                 ></path>
               </CustomSVG>
             </a>
-          </InstaproLogo>
+          </StyleInstaproLogo>
+
           <>
+            {/* desktop view */}
+            <StyleNavDesktop>
+              <ul>
+                <li>
+                  <LinkListAnchor href="#">Get Free quotes »</LinkListAnchor>
+                </li>
+                <li>
+                  <LinkListAnchor href="#">How does it work</LinkListAnchor>
+                </li>
+                <li>
+                  <LinkListAnchor href="#">Log In</LinkListAnchor>
+                </li>
+                <li>
+                  <LinkListAnchor className=" signup-style" href="#">
+                    Signup as a professional
+                  </LinkListAnchor>
+                </li>
+              </ul>
+            </StyleNavDesktop>
+            {/* MOBILE */}
             <StyleMenuButton onClick={toggleNav}>
               <span className="span-toggle">
-                Menu
+                Menuuuu
                 <FaBars />
               </span>
               {/* <button className="span-toggle">
@@ -250,33 +273,29 @@ const NavBar: React.FC<NavBarProps> = () => {
                    <i className="fa-solid fa-x"></i>
                  </span> */}
             </StyleMenuButton>
-            {navbarOpen && (
-              <>
-                <NavLinks>
-                  <ul>
-                    <li>
-                      <LinkListAnchor href="#">
-                        Get Free quotes »
-                      </LinkListAnchor>
-                    </li>
-                    <li>
-                      <LinkListAnchor href="#">How does it work</LinkListAnchor>
-                    </li>
-                    <li>
-                      <LinkListAnchor href="#">Log In</LinkListAnchor>
-                    </li>
-                    <li>
-                      <LinkListAnchor className=" signup-style" href="#">
-                        Signup as a professional
-                      </LinkListAnchor>
-                    </li>
-                  </ul>
-                </NavLinks>
-              </>
-            )}
+            <StyleNavMobile>
+              {navbarOpen && (
+                <ul>
+                  <li>
+                    <LinkListAnchor href="#">Get Free quotes »</LinkListAnchor>
+                  </li>
+                  <li>
+                    <LinkListAnchor href="#">How does it work</LinkListAnchor>
+                  </li>
+                  <li>
+                    <LinkListAnchor href="#">Log In</LinkListAnchor>
+                  </li>
+                  <li>
+                    <LinkListAnchor className=" signup-style" href="#">
+                      Signup as a professional
+                    </LinkListAnchor>
+                  </li>
+                </ul>
+              )}
+            </StyleNavMobile>
           </>
-        </Navbar>
-      </Header>
+        </StyleNavbar>
+      </StyleHeader>
     </>
   );
 };
