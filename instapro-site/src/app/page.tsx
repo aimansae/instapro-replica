@@ -5,7 +5,7 @@ import NavBar from '@components/NavBar';
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar href={''} />
     </div>
   );
 };

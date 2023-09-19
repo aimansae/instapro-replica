@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { FaBars, FaTimes } from 'react-icons/fa';
 interface NavBarProps {
@@ -20,6 +20,7 @@ const Header = styled.header`
 
   @media (max-width: 960px) {
     padding: 0;
+    width: 100%;
   }
   @media (min-width: 60rem) {
     padding: 1.5rem;
@@ -28,8 +29,8 @@ const Header = styled.header`
 
   @media (max-width: 48rem) {
     max-width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    // padding-left: 1.5rem;
+    // padding-right: 1.5rem;
   }
 `;
 
@@ -37,6 +38,11 @@ const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: start;
+  }
 `;
 
 const InstaproLogo = styled.div`
@@ -85,6 +91,12 @@ const NavLinks = styled.div`
       color: #fff;
       background-color: #ffffff3d;
     }
+    @media (max-width: 960px) {
+      border: none;
+      &:hover {
+        color: black;
+      }
+    }
   }
 
   /* Media Query for screens with a maximum width of 960px */
@@ -92,14 +104,29 @@ const NavLinks = styled.div`
   @media (max-width: 960px) {
     ul {
       flex-direction: column;
+      width: 100%;
+      margin: 0.5rem 0;
     }
 
     li {
       border-bottom: 1px solid rgb(217, 215, 213);
+
+      &:hover {
+        background-color: #f0f5fe;
+      }
+    }
+    a {
+      color: black;
+      display: block;
+      &:hover {
+        color: black;
+      }
     }
 
-    display: none;
+    background: white;
+    width: 100%;
     cursor: pointer;
+    margin: 0.5rem 0;
   }
 `;
 
@@ -112,6 +139,18 @@ const LinkListAnchor = styled.a<StyledLinkProps>`
     color: #fff;
     background-color: #ffffff3d;
   }
+  @media (max-width: 960px) {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    &:hover {
+      color: black;
+    }
+  }
 `;
 const CustomSVG = styled.svg`
   display: block;
@@ -122,7 +161,7 @@ const CustomSVG = styled.svg`
   }
 `;
 
-const ToggleMenuAncor = styled.a`
+const StyleMenuButton = styled.button`
   position: absolute;
   height: 2rem;
   top: 0.75rem;
@@ -139,7 +178,7 @@ const ToggleMenuAncor = styled.a`
   margin: 0px;
   font-family: 'moderat', sans-serif;
   &:hover {
-    background-color: #ffffff2e;
+    color: black;
   }
   @media (max-width: 960px) {
     display: flex;
@@ -153,10 +192,9 @@ const ToggleMenuAncor = styled.a`
 
 const NavBar: React.FC<NavBarProps> = () => {
   // state to toggle navbar onClick
-  const [navbarActive, setNavbarActive] = useState(true);
-
-  const handleClick = () => {
-    setNavbarActive(!navbarActive);
+  const [navbarOpen, setNavbarClose] = useState(true);
+  const toggleNav = () => {
+    setNavbarClose(!navbarOpen);
     console.log('clicked');
   };
   return (
@@ -195,44 +233,48 @@ const NavBar: React.FC<NavBarProps> = () => {
               </CustomSVG>
             </a>
           </InstaproLogo>
-          {navbarActive && (
-            <>
-              <ToggleMenuAncor href="#">
-                <button className="span-toggle" onClick={handleClick}>
-                  Menu
-                  <FaBars />
-                </button>
-                <button className="span-toggle" onClick={handleClick}>
-                  Menu
-                  <FaTimes />
-                </button>
-                <span className="icon-bars">
-                  <i className="fa-solid fa-bars"></i>
-                </span>
-                <span className="span-toggle iconx">
-                  <i className="fa-solid fa-x"></i>
-                </span>
-              </ToggleMenuAncor>
-              <NavLinks>
-                <ul>
-                  <li>
-                    <LinkListAnchor href="#">Get Free quotes »</LinkListAnchor>
-                  </li>
-                  <li>
-                    <LinkListAnchor href="#">How does it work</LinkListAnchor>
-                  </li>
-                  <li>
-                    <LinkListAnchor href="#">Log In</LinkListAnchor>
-                  </li>
-                  <li>
-                    <LinkListAnchor className=" signup-style" href="#">
-                      Signup as a professional
-                    </LinkListAnchor>
-                  </li>
-                </ul>
-              </NavLinks>
-            </>
-          )}
+          <>
+            <StyleMenuButton onClick={toggleNav}>
+              <span className="span-toggle">
+                Menu
+                <FaBars />
+              </span>
+              {/* <button className="span-toggle">
+                   Menu
+                   <FaTimes />
+                 </button> */}
+              {/* <span className="icon-bars">
+                   <i className="fa-solid fa-bars"></i>
+                 </span>
+                 <span className="span-toggle iconx">
+                   <i className="fa-solid fa-x"></i>
+                 </span> */}
+            </StyleMenuButton>
+            {navbarOpen && (
+              <>
+                <NavLinks>
+                  <ul>
+                    <li>
+                      <LinkListAnchor href="#">
+                        Get Free quotes »
+                      </LinkListAnchor>
+                    </li>
+                    <li>
+                      <LinkListAnchor href="#">How does it work</LinkListAnchor>
+                    </li>
+                    <li>
+                      <LinkListAnchor href="#">Log In</LinkListAnchor>
+                    </li>
+                    <li>
+                      <LinkListAnchor className=" signup-style" href="#">
+                        Signup as a professional
+                      </LinkListAnchor>
+                    </li>
+                  </ul>
+                </NavLinks>
+              </>
+            )}
+          </>
         </Navbar>
       </Header>
     </>
