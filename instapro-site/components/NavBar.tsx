@@ -81,6 +81,12 @@ const StyledNavDesktop = styled.div`
     &:hover {
       color: #dfddeb;
     }
+    @media (min-width: 60rem) {
+      color: #fff;
+      &:hover {
+        color: #dfddeb;
+      }
+    }
   }
   .signup-style {
     outline: transparent solid 2px;
@@ -142,22 +148,28 @@ const StyledLinkListAnchor = styled.a<StyledLinkProps>`
   margin: 0px 0px 0px 1rem;
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
+  text-decoration: none;
+
+  .desktopAncor {
+    font-weight: 600;
+    display: block;
+    color: #fff;
+  }
 
   &:hover {
-    color: #fff;
     background-color: #ffffff3d;
   }
   @media (max-width: 960px) {
     text-decoration: none;
     font-weight: 600;
     display: block;
-    color: #2c2c2c;
+    color: fff;
     margin: 0;
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    &:hover {
-      color: black;
-    }
+    // &:hover {
+    //   color: black;
+    // }
   }
 `;
 const StyledLogoSVG = styled.svg`
@@ -279,7 +291,7 @@ const NavBar: React.FC<NavBarProps> = () => {
             <StyledNavDesktop>
               <ul>
                 <li>
-                  <StyledLinkListAnchor href="#">
+                  <StyledLinkListAnchor className="desktopAncor" href="#">
                     Get Free quotes »
                   </StyledLinkListAnchor>
                 </li>

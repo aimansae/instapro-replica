@@ -88,7 +88,7 @@ const StyledFormContainer = styled.div`
   margin: 0 0 6rem;
   width: 100%;
   @media (min-width: 60rem) {
-    wisth: 55%;
+    width: 55%;
   }
 `;
 
@@ -114,6 +114,10 @@ const StyledInputContainer = styled.div`
     border: 2px solid #3f27ba;
   }
 
+  @media only screen and (min-width: 47.5rem) and (max-width: 60rem) {
+    width: 60%;
+  }
+
   .input-button{
     position: relative;
     margin: 0.15rem 0.15rem 0.15rem 0;
@@ -136,24 +140,11 @@ const StyledInputContainer = styled.div`
     @media (max-width: 48rem) {
         padding: 0 1rem;
     }
-    .l-screen-btn{
-        @media (max-width: 48rem) {
-            display:none;
-        }
-    }
-    .s-screen-btn{
-        display: none;
-        @media (max-width: 48rem) {
-            display:block;
-        }
-    }
-
-  @media (max-width: 48rem) {
-    width: 100%;
-  }
-  @media only screen and (min-width: 760px) and (max-width: 960px) {
-    width: 60%;
-  }
+    
+//   @media (max-width: 48rem) {
+//     width: 100%;
+//   }
+ 
 `;
 
 const StyledInput = styled.input`
@@ -171,6 +162,21 @@ const StyledInput = styled.input`
   text-overflow: ellipsis;
 `;
 
+const StyledButtonDesk = styled.button`
+
+    @media (max-width: 48rem) {
+      display: none;
+      background-color: black;
+    }
+  }
+`;
+const StyledButtonMobile = styled.button`
+  display: none;
+
+  @media (max-width: 48rem) {
+    display: block;
+  }
+`;
 const Main = () => {
   return (
     <main>
@@ -222,15 +228,14 @@ const Main = () => {
                     name="search-input"
                     placeholder="For example: Home renovation"
                   />
-                  <button className="input-button l-screen-btn" type="submit">
-                    {' '}
+                  <StyledButtonDesk className="input-button" type="submit">
                     Find a professional
-                  </button>
+                  </StyledButtonDesk>
                   {/* for smaller screen<i className="fa-solid fa-arrow-right"></i>--> */}
 
-                  <button className="input-button s-screen-btn" type="submit">
+                  <StyledButtonMobile className="input-button" type="submit">
                     <i className="fa-solid fa-arrow-right"></i>
-                  </button>
+                  </StyledButtonMobile>
                 </StyledInputContainer>
               </form>
             </article>
