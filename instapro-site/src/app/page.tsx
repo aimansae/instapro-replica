@@ -1,5 +1,6 @@
 // to render homepage
 'use client';
+import HowitWorks from '@components/HowitWorks';
 import Main from '@components/Main';
 import NavBar from '@components/NavBar';
 import 'font-awesome/css/font-awesome.min.css';
@@ -9,6 +10,7 @@ const Home = () => {
     <div>
       <NavBar href={''} />
       <Main />
+      <HowitWorks />
     </div>
   );
 };

@@ -3,9 +3,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import 'font-awesome/css/font-awesome.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const StyledArticle = styled.article`
   position: relative;
@@ -146,7 +143,6 @@ const StyledInputContainer = styled.div`
     @media (max-width: 48rem) {
         padding: 0 1rem;
     }
-  
     .arrow-right{
       font-weight: 900;
     }
@@ -201,9 +197,12 @@ const StyledSignupLink = styled.div`
     font-size: 1rem;
     display: flex;
     align-items: start;
-
+    text-decoration: none;
+  }
+  .underlined {
+    text-decoration: none;
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -212,7 +211,7 @@ const StyledSignupLink = styled.div`
   }
 `;
 
-const yellowArrow: SerializedStyles = css`
+const StyledYellowArrowIcon = styled.i`
 
   color: #3f27ba;
   padding-top: 4px;
@@ -288,8 +287,8 @@ const Main = () => {
 
           <StyledSignupLink>
             <a href="#">
-              <FontAwesomeIcon icon={faArrowRight} css={yellowArrow} />
-              <span>Sign up as a professional</span>
+              <StyledYellowArrowIcon className="fa fa-arrow-right fa-light" />
+              <span className="underlined">Sign up as a professional</span>
             </a>
           </StyledSignupLink>
         </StyledMainContainer>
