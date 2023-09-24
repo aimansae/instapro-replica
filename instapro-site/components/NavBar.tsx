@@ -78,13 +78,14 @@ const StyledNavDesktop = styled.div`
     font-family: 'moderat', sans-serif;
     color: #2c2c2c;
 
-    &:hover {
-      color: #dfddeb;
-    }
+    // &:hover {
+    //   color: #dfddeb;
+    // }
     @media (min-width: 60rem) {
       color: #fff;
       &:hover {
         color: #dfddeb;
+        pointer-events="none"
       }
     }
   }
@@ -111,7 +112,15 @@ const StyledNavDesktop = styled.div`
 
 /* Media Query for screens with a maximum width of 960px */
 const StyledNavMobile = styled.div`
+  @media (min-width: 960px) {
+    display: none;
+  }
   @media (max-width: 960px) {
+    background: white;
+    width: 100%;
+    cursor: pointer;
+    margin: 0.5rem 0;
+
     ul {
       flex-direction: column;
       width: 100%;
@@ -136,11 +145,6 @@ const StyledNavMobile = styled.div`
         color: black;
       }
     }
-
-    background: white;
-    width: 100%;
-    cursor: pointer;
-    margin: 0.5rem 0;
   }
 `;
 
@@ -156,9 +160,9 @@ const StyledLinkListAnchor = styled.a<StyledLinkProps>`
     color: #fff;
   }
 
-  &:hover {
-    background-color: #ffffff3d;
-  }
+  // &:hover {
+  //   background-color: #ffffff3d;
+  // }
   @media (max-width: 960px) {
     text-decoration: none;
     font-weight: 600;
@@ -203,9 +207,9 @@ const StyledMenuButton = styled.button`
   padding: 1rem 0.5rem;
   margin: 0px;
   font-family: 'moderat', sans-serif;
-  background-color: blue;
+  background-color: transparent;
   &:hover {
-    color: black;
+    background-color: #ffffff3d;
   }
   .span-toggle {
     display: flex;
@@ -223,7 +227,7 @@ const StyledMenuButton = styled.button`
 
 const StyledBarIcon = styled(FaBars)`
   margin-left: 0.25rem;
-  color: yellow;
+  color: #fff;
 `;
 
 const StyledBarX = styled(FaTimes)`
@@ -286,12 +290,51 @@ const NavBar: React.FC<NavBarProps> = () => {
             </a>
           </StyledLogoDiv>
 
-          <>
-            {/* DESKTOP */}
-            <StyledNavDesktop>
+          {/* DESKTOP */}
+          <StyledNavDesktop>
+            <ul>
+              <li>
+                <StyledLinkListAnchor className="desktopAncor" href="#">
+                  Get Free quotes »
+                </StyledLinkListAnchor>
+              </li>
+              <li>
+                <StyledLinkListAnchor href="#">
+                  How does it work
+                </StyledLinkListAnchor>
+              </li>
+              <li>
+                <StyledLinkListAnchor href="#">Log In</StyledLinkListAnchor>
+              </li>
+              <li>
+                <StyledLinkListAnchor className=" signup-style" href="#">
+                  Signup as a professional
+                </StyledLinkListAnchor>
+              </li>
+            </ul>
+          </StyledNavDesktop>
+          {/* MOBILE */}
+          <StyledMenuButton onClick={toggleNav}>
+            <span className="span-toggle">
+              Menu
+              {navbarOpen ? <StyledBarX /> : <StyledBarIcon />}
+            </span>
+            {/* <button className="span-toggle">
+                   Menu
+                   <FaTimes />
+                 </button> */}
+            {/* <span className="icon-bars">
+                   <i className="fa-solid fa-bars"></i>
+                 </span>
+                 <span className="span-toggle iconx">
+                   <i className="fa-solid fa-x"></i>
+                 </span> */}
+          </StyledMenuButton>
+          <StyledNavMobile>
+            {navbarOpen && (
               <ul>
                 <li>
-                  <StyledLinkListAnchor className="desktopAncor" href="#">
+                  <StyledLinkListAnchor href="#">
                     Get Free quotes »
                   </StyledLinkListAnchor>
                 </li>
@@ -309,49 +352,8 @@ const NavBar: React.FC<NavBarProps> = () => {
                   </StyledLinkListAnchor>
                 </li>
               </ul>
-            </StyledNavDesktop>
-            {/* MOBILE */}
-            <StyledMenuButton onClick={toggleNav}>
-              <span className="span-toggle">
-                Menu
-                {navbarOpen ? <StyledBarX /> : <StyledBarIcon />}
-              </span>
-              {/* <button className="span-toggle">
-                   Menu
-                   <FaTimes />
-                 </button> */}
-              {/* <span className="icon-bars">
-                   <i className="fa-solid fa-bars"></i>
-                 </span>
-                 <span className="span-toggle iconx">
-                   <i className="fa-solid fa-x"></i>
-                 </span> */}
-            </StyledMenuButton>
-            <StyledNavMobile>
-              {navbarOpen && (
-                <ul>
-                  <li>
-                    <StyledLinkListAnchor href="#">
-                      Get Free quotes »
-                    </StyledLinkListAnchor>
-                  </li>
-                  <li>
-                    <StyledLinkListAnchor href="#">
-                      How does it work
-                    </StyledLinkListAnchor>
-                  </li>
-                  <li>
-                    <StyledLinkListAnchor href="#">Log In</StyledLinkListAnchor>
-                  </li>
-                  <li>
-                    <StyledLinkListAnchor className=" signup-style" href="#">
-                      Signup as a professional
-                    </StyledLinkListAnchor>
-                  </li>
-                </ul>
-              )}
-            </StyledNavMobile>
-          </>
+            )}
+          </StyledNavMobile>
         </StyledNavbar>
       </StyledHeader>
     </>

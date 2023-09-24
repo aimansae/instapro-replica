@@ -2,6 +2,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/react';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const StyledArticle = styled.article`
   position: relative;
@@ -82,6 +86,11 @@ const StyledH1 = styled.h1`
     line-height: 1.313;
     margin-bottom: 3rem;
     color: #fff;
+
+    @media (min-width: 60rem) {
+      font-size: 3rem;
+      line-height: 1.208;
+    }
 }`;
 
 const StyledFormContainer = styled.div`
@@ -93,13 +102,10 @@ const StyledFormContainer = styled.div`
 `;
 
 const StyledH2 = styled.h2`
-  font-size: 2rem;
-  line-height: 1.313;
-  color: #2c2c2c;
-
-  @media only screen and (min-width: 760px) and (max-width: 960px) {
-    font-size: 1.5rem;
-  }
+  /*add quetion only*/
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 `;
 
 const StyledInputContainer = styled.div`
@@ -140,6 +146,10 @@ const StyledInputContainer = styled.div`
     @media (max-width: 48rem) {
         padding: 0 1rem;
     }
+  
+    .arrow-right{
+      font-weight: 900;
+    }
     
 //   @media (max-width: 48rem) {
 //     width: 100%;
@@ -160,6 +170,12 @@ const StyledInput = styled.input`
   z-index: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
 `;
 
 const StyledButtonDesk = styled.button`
@@ -177,6 +193,37 @@ const StyledButtonMobile = styled.button`
     display: block;
   }
 `;
+
+const StyledSignupLink = styled.div`
+  margin-bottom: 3rem;
+  a {
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: start;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    padding-bottom: 0;
+  }
+`;
+
+const yellowArrow: SerializedStyles = css`
+
+  color: #3f27ba;
+  padding-top: 4px;
+  font-size: 0.875rem;
+  background-color: #e5cb4e;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  margin-right: 0.3rem;
+}`;
 const Main = () => {
   return (
     <main>
@@ -217,9 +264,7 @@ const Main = () => {
             <article>
               <form>
                 <label htmlFor="search-input">
-                  <StyledH2 className="question">
-                    What work do you have to do?
-                  </StyledH2>
+                  <StyledH2>What work do you have to do?</StyledH2>
                 </label>
                 <StyledInputContainer>
                   <StyledInput
@@ -234,19 +279,19 @@ const Main = () => {
                   {/* for smaller screen<i className="fa-solid fa-arrow-right"></i>--> */}
 
                   <StyledButtonMobile className="input-button" type="submit">
-                    <i className="fa-solid fa-arrow-right"></i>
+                    <AiOutlineArrowRight className="arrow-right" />
                   </StyledButtonMobile>
                 </StyledInputContainer>
               </form>
             </article>
           </StyledFormContainer>
 
-          <div className="signup-container">
+          <StyledSignupLink>
             <a href="#">
-              <i className="fa-solid fa-arrow-right yellow-arrow"></i>
+              <FontAwesomeIcon icon={faArrowRight} css={yellowArrow} />
               <span>Sign up as a professional</span>
             </a>
-          </div>
+          </StyledSignupLink>
         </StyledMainContainer>
       </StyledArticle>
     </main>

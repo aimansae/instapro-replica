@@ -1,5 +1,26 @@
+/* Moderat Font, dornloaded from original website*/
+@font-face {
+  font-family: "moderat";
+  src: url("/styles/font/moderat.woff2") format('woff');
+}
+
+@font-face {
+  font-family: "moderat";
+  src: url("/styles/font/moderat.woff2") format('woff');
+  font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+
+  body {
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    overflow-x: hidden;
+}
