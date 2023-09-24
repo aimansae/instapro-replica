@@ -181,6 +181,9 @@ const StyledLogoSVG = styled.svg`
   @media (min-width: 60rem) {
     height: 2.5rem;
   }
+  @media (max-width: 48rem) {
+    height: 1.7rem;
+  }
 `;
 
 const StyledSvgPath = styled.path`
@@ -191,7 +194,7 @@ const StyledActiveSvgPath = styled.path`
   fill: rgb(0, 153, 204);
 `;
 
-const StyledMenuButton = styled.button`
+const StyledMenuButton = styled.button<{ navbarOpen: boolean }>`
   position: absolute;
   height: 2rem;
   top: 0.75rem;
@@ -211,10 +214,14 @@ const StyledMenuButton = styled.button`
   &:hover {
     background-color: #ffffff3d;
   }
-  .span-toggle {
-    display: flex;
-    align-items: center;
-  }
+  color: ${({ navbarOpen }) =>
+    navbarOpen ? 'black' : 'white'}; /* Color based on navbarOpen */
+  border: 2px solid ${({ navbarOpen }) => (navbarOpen ? '#3F27BA' : 'white')}; /* Change border color based on navbarOpen */
+
+  // .span-toggle {
+  //   display: flex;
+  //   align-items: center;
+  // }
   @media (max-width: 960px) {
     display: flex;
     text-decoration: none;
@@ -222,7 +229,13 @@ const StyledMenuButton = styled.button`
   }
   @media (max-width: 48rem) {
     font-size: 0.875rem;
+    padding: 0.3rem;
   }
+`;
+const StyledSpanToggle = styled.span`
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
 `;
 
 const StyledBarIcon = styled(FaBars)`
@@ -232,7 +245,7 @@ const StyledBarIcon = styled(FaBars)`
 
 const StyledBarX = styled(FaTimes)`
   margin-left: 0.25rem;
-  color: #fff;
+  color: ${({ navbarOpen }) => (navbarOpen ? '#fff' : 'black')};
 `;
 
 // STYLING LOGO IF ACTIVE
@@ -314,11 +327,11 @@ const NavBar: React.FC<NavBarProps> = () => {
             </ul>
           </StyledNavDesktop>
           {/* MOBILE */}
-          <StyledMenuButton onClick={toggleNav}>
-            <span className="span-toggle">
+          <StyledMenuButton onClick={toggleNav} navbarOpen={navbarOpen}>
+            <StyledSpanToggle>
               Menu
               {navbarOpen ? <StyledBarX /> : <StyledBarIcon />}
-            </span>
+            </StyledSpanToggle>
             {/* <button className="span-toggle">
                    Menu
                    <FaTimes />
