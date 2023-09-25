@@ -2,21 +2,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import HoseImage from '../public/images/hose.png';
-
+import TestimonialImage1 from '../public/images/testimonialimg1.png';
 import Image from 'next/image';
 import PaintingImage from '../public/images/painting.png';
 import RoofImage from '../public/images/roof.png';
-
+import TestimonialImage2 from '../public/images/testimonialimg2.png';
+import TestimonialImage3 from '../public/images/testimonialimg3.png';
 import BrickImage from '../public/images/brick.png';
 import HeatingImage from '../public/images/heating.png';
 import FloorImage from '../public/images/floor.png';
-
-import TestimonialImage1 from '../public/images/testimonialimg1.png';
-import TestimonialImage2 from '../public/images/testimonialimg2.png';
-import TestimonialImage3 from '../public/images/testimonialimg3.png';
-import TestimonialImage4 from '../public/images/testimonialimg4.png';
-import TestimonialImage5 from '../public/images/testimonialimg5.png';
-import TestimonialImage6 from '../public/images/testimonialimg6.png';
 
 const StyledSummer = styled.section`
   @media only screen and (min-width: 760px) and (max-width: 960px) {
@@ -290,7 +284,9 @@ const SummerSection = () => {
               <div className="card-text">
                 <SytledTitleIconDiv>
                   <StyledIcon className="fa-solid fa-people-roof card-icon"></StyledIcon>
-                  <StyledTitle>Roof and roofing</StyledTitle>
+                  <StyledTitle className="card-title title-margin">
+                    Roof and roofing
+                  </StyledTitle>
                 </SytledTitleIconDiv>
                 <p className="clip-text">
                   Are you interested in information on the prices of jobs in
@@ -342,7 +338,9 @@ const SummerSection = () => {
               <div className="card-text">
                 <SytledTitleIconDiv>
                   <i className="fa-solid fa-house-chimney card-icon"></i>{' '}
-                  <StyledTitle>Home construction and renovation</StyledTitle>
+                  <StyledTitle className="card-title title-margin">
+                    Home construction and renovation
+                  </StyledTitle>
                 </SytledTitleIconDiv>
                 <p className="clip-text">
                   Home refurbishing? enlarge the rooms? Renovate the kitchen?
@@ -351,7 +349,7 @@ const SummerSection = () => {
                 </p>
 
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a href="">
                     home construction and renovation: find out all the
                     information
@@ -360,7 +358,7 @@ const SummerSection = () => {
                 <StyledTestimonials>
                   <div className="img-testimonial">
                     <StyledtestimonialImage
-                      src={TestimonialImage4}
+                      src="./images/testimonial-img4.PNG"
                       alt="Testimonials Image"
                     />
                   </div>
@@ -375,7 +373,7 @@ const SummerSection = () => {
                   </StyledTestimonialP>
                 </StyledTestimonials>
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a href="">See construction companies</a>
                 </StyledIconLink>
               </div>
@@ -384,8 +382,10 @@ const SummerSection = () => {
               <StyledImage src={HeatingImage} alt="Heating Image" />
               <div className="card-text">
                 <SytledTitleIconDiv>
-                  <StyledIcon className="fa fa-fire fa-solid card-icon"></StyledIcon>
-                  <StyledTitle>Heating</StyledTitle>
+                  <StyledIcon className="fa-solid fa-fire card-icon"></StyledIcon>
+                  <StyledTitle className="card-title title-margin">
+                    Heating
+                  </StyledTitle>
                 </SytledTitleIconDiv>
                 <p className="clip-text">
                   Are you interested in information on the prices of jobs in
@@ -393,7 +393,7 @@ const SummerSection = () => {
                   professionals can do for you and what the average costs
                 </p>
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a
                     href="floors and tiles: find out all the information"
                     target="_blank"
@@ -403,7 +403,7 @@ const SummerSection = () => {
                 </StyledIconLink>
                 <StyledTestimonials>
                   <div className="img-testimonial">
-                    <StyledtestimonialImage src={TestimonialImage5} alt="" />
+                    <StyledImage src="./images/testimonialImg5.png" alt="" />
                   </div>
                   <StyledTestimonialP>
                     <p>
@@ -416,7 +416,7 @@ const SummerSection = () => {
                   </StyledTestimonialP>
                 </StyledTestimonials>
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a href="">See plumbing companies</a>
                 </StyledIconLink>
               </div>
@@ -425,8 +425,10 @@ const SummerSection = () => {
               <StyledImage src={FloorImage} alt="Floor Image" />
               <div className="card-text">
                 <SytledTitleIconDiv>
-                  <StyledIcon className="fa fa-toilet-paper card-icon"></StyledIcon>
-                  <StyledTitle>Floors and tiles</StyledTitle>
+                  <StyledIcon className="fa-solid fa-people-roof card-icon"></StyledIcon>
+                  <StyledTitle className="card-title title-margin">
+                    Floors and tiles
+                  </StyledTitle>
                 </SytledTitleIconDiv>
                 <p className="clip-text">
                   New parquet floor, or terracotta tiles? Stoneware floor? Read
@@ -434,7 +436,7 @@ const SummerSection = () => {
                   parquet installers can do for you, and understand
                 </p>
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a
                     href="https://www.instapro.it/tinteggiatura"
                     target="_blank"
@@ -444,7 +446,10 @@ const SummerSection = () => {
                 </StyledIconLink>
                 <StyledTestimonials>
                   <div className="img-testimonial">
-                    <StyledtestimonialImage src={TestimonialImage6} alt="" />
+                    <StyledtestimonialImage
+                      src="./images/testimonial-img6.PNG"
+                      alt=""
+                    />
                   </div>
                   <StyledTestimonialP>
                     <p>
@@ -457,7 +462,7 @@ const SummerSection = () => {
                   </StyledTestimonialP>
                 </StyledTestimonials>
                 <StyledIconLink>
-                  <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                  <i className="fa-solid fa-arrow-right card-arrow"></i>
                   <a href="">See floor layers</a>
                 </StyledIconLink>
               </div>
