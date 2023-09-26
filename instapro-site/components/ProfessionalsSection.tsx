@@ -53,6 +53,7 @@ const StyledFindProfDiv = styled.div`
   @media (max-width: 48rem) {
     padding: 0 1.5rem;
     padding-top: 3rem;
+    margin-bottom: 3rem;
   }
 `;
 

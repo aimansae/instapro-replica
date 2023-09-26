@@ -16,6 +16,10 @@ const RootLayout = ({ children }: MyComponentProps) => {
   return (
     <html lang="en">
       <Head>
+        {/* <script
+          src="https://kit.fontawesome.com/5b2ec3dbf8.js"
+          crossOrigin="anonymous"
+        ></script> */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
