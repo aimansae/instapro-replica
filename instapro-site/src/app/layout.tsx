@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
-
 import '@styles/global.css'; // to import css for entire app
 
 export const metadata = {
@@ -25,6 +24,7 @@ const RootLayout = ({ children }: MyComponentProps) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-..."
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <main>{children}</main>

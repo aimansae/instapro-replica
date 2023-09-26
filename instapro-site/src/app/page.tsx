@@ -1,6 +1,7 @@
 // to render homepage
 'use client';
 import BlueSection from '@components/BlueSection';
+import Footer from '@components/Footer';
 import HowitWorks from '@components/HowitWorks';
 import Main from '@components/Main';
 import NavBar from '@components/NavBar';
@@ -19,6 +20,7 @@ const Home = () => {
       <ProfessionalsSection showMore={false} />
       <BlueSection />
       <ReviewData />
+      <Footer />
     </div>
   );
 };
