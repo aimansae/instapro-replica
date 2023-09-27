@@ -12,11 +12,13 @@ interface NavBarProps {
 interface StyledLinkProps {
   href: string;
 }
-type StyledMenuButtonProps = {
+type StyledActiveMenuProps = {
   navbarOpen: boolean;
 };
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header<StyledActiveMenuProps>`
+
+
   padding: 0.75rem 1.5rem;
   width: min(100%, calc(60rem + (2 * 1.5rem)));
   margin-inline: auto;
@@ -27,6 +29,7 @@ const StyledHeader = styled.header`
     padding: 0;
     width: 100%;
   }
+
   @media (min-width: 60rem) {
     padding: 1.5rem;
     height: 5rem;
@@ -37,6 +40,13 @@ const StyledHeader = styled.header`
     // padding-left: 1.5rem;
     // padding-right: 1.5rem;
   }
+
+  /* Change border color based on navbarOpen */
+  ${({ navbarOpen }) =>
+    navbarOpen &&
+    css`
+      background-color: #fff;
+    `}
 `;
 
 const StyledNavbar = styled.nav`
@@ -81,9 +91,7 @@ const StyledNavDesktop = styled.div`
     font-family: 'moderat', sans-serif;
     color: #2c2c2c;
 
-    // &:hover {
-    //   color: #dfddeb;
-    // }
+
     @media (min-width: 60rem) {
       color: #fff;
       &:hover {
@@ -118,11 +126,14 @@ const StyledNavMobile = styled.div`
   @media (min-width: 960px) {
     display: none;
   }
+
   @media (max-width: 960px) {
-    background: white;
+    background-color: white;
     width: 100%;
     cursor: pointer;
     margin: 0.5rem 0;
+    position: absolute;
+    margin-top: 44px;
 
     ul {
       flex-direction: column;
@@ -163,9 +174,6 @@ const StyledLinkListAnchor = styled.a<StyledLinkProps>`
     color: #fff;
   }
 
-  // &:hover {
-  //   background-color: #ffffff3d;
-  // }
   @media (max-width: 960px) {
     text-decoration: none;
     font-weight: 600;
@@ -174,13 +182,12 @@ const StyledLinkListAnchor = styled.a<StyledLinkProps>`
     margin: 0;
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    // &:hover {
-    //   color: black;
-    // }
   }
 `;
+
 const StyledLogoSVG = styled.svg`
   height: 2rem;
+
   @media (min-width: 60rem) {
     height: 2.5rem;
   }
@@ -197,7 +204,7 @@ const StyledActiveSvgPath = styled.path`
   fill: rgb(0, 153, 204);
 `;
 
-const StyledMenuButton = styled.button<StyledMenuButtonProps>`
+const StyledMenuButton = styled.button<StyledActiveMenuProps>`
   position: absolute;
   height: 2rem;
   top: 0.75rem;
@@ -210,7 +217,7 @@ const StyledMenuButton = styled.button<StyledMenuButtonProps>`
   border-radius: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1rem;
   margin: 0px;
   font-family: 'moderat', sans-serif;
   background-color: transparent;
@@ -218,29 +225,40 @@ const StyledMenuButton = styled.button<StyledMenuButtonProps>`
   &:hover {
     background-color: #ffffff3d;
   }
-  color: black;
+
+  color: #fff;
   border: 2px solid white;
+
   @media (max-width: 960px) {
-    display: flex;I
+    display: flex;
     text-decoration: none;
     align-items: center;
   }
+
   @media (max-width: 48rem) {
     font-size: 0.875rem;
     padding: 0.3rem;
   }
+
   /* Change border color based on navbarOpen */
   ${({ navbarOpen }) =>
     navbarOpen &&
     css`
-      background-color: #fff;
+      color: black;
+      border: 2px solid #3f27ba;
     `}
 `;
 
-const StyledSpanToggle = styled.span`
+const StyledSpanToggle = styled.span<StyledActiveMenuProps>`
   display: flex;
   align-items: center;
   font-size: 0.875rem;
+
+  ${({ navbarOpen }) =>
+    navbarOpen &&
+    css`
+      color: black;
+    `}
 `;
 
 const StyledBarIcon = styled(FaBars)`
@@ -264,7 +282,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   };
   return (
     <>
-      <StyledHeader>
+      <StyledHeader navbarOpen={navbarOpen}>
         <StyledNavbar>
           <StyledLogoDiv>
             <a href="#">
@@ -333,7 +351,7 @@ const NavBar: React.FC<NavBarProps> = () => {
           </StyledNavDesktop>
           {/* MOBILE */}
           <StyledMenuButton onClick={toggleNav} navbarOpen={navbarOpen}>
-            <StyledSpanToggle>
+            <StyledSpanToggle navbarOpen={false}>
               Menu
               {navbarOpen ? <StyledBarX /> : <StyledBarIcon />}
             </StyledSpanToggle>
