@@ -130,3 +130,12 @@ The directoy i as working in was not correct
 For icons such as hamburger bar: npm install react-icons --save
 For font awesome icons: npm install --save font-awesome
 Import in Page.js
+
+
+CONFIG ERRORS
+Removed
+
+npm uninstall styled-components
+npm uninstall tailwindcss@3.3.3
+npm uninstall postcss@8.4.29
+npm uninstall autoprefixer@10.4.15

@@ -248,7 +248,7 @@ ol li {
     font-weight: 600;
     margin-left: 1.5rem;
     color: #2C2C2C;
-}
+} /*done*/
 
 .how-li-item p {
     margin-left: 2.3rem;
@@ -360,7 +360,7 @@ p {
     .ul-services li:last-child {
         margin-top: 1.5rem;
 
-    }
+    }/*done*/
 
     .active li a {
         margin: 0;
@@ -469,17 +469,17 @@ input[type="text"]:focus {
 
 .signup-container a {
     text-decoration: none;
-}
+} /*done*/
 
 .signup-container span:hover {
     text-decoration: none;
-}
+} /*done*/
 
 .signup-container span {
     color: #fff;
     font-size: 1rem;
     text-decoration: underline;
-}
+} /*done*/
 
 
 /* .yellow-arrow {
@@ -497,11 +497,11 @@ input[type="text"]:focus {
     display: flex;
     justify-content: space-around;
     gap: 1.5rem;
-}
+} /*done as StyledCardContainer*/
 
 .card {
     width: 33.33%;
-}
+} /*done*/
 
 
 .how-it-works-section,
@@ -509,11 +509,11 @@ input[type="text"]:focus {
     background-color: #F9F8F6;
     box-sizing: border-box;
     padding: 6rem 0;
-}
+} /*done for how, find dont*/
 
 .requests-number-section {
     background-color: #F9F8F6;
-}
+}/*done as StyledReviewSection*/
 
 
 
@@ -522,12 +522,12 @@ input[type="text"]:focus {
     gap: 1.5rem;
     justify-content: space-around;
     margin-top: 3rem;
-}
+} /*done*/
 
 li.how-li-item {
     width: 33.33%;
 
-}
+}/*done*/
 
 
 
@@ -542,7 +542,7 @@ li.how-li-item {
     justify-content: space-around;
     text-align: center;
     padding: 3rem;
-}
+}/*done /
 
 
 
@@ -550,7 +550,7 @@ li.how-li-item {
     border-radius: 10px;
     width: 100%;
     margin-bottom: 1rem;
-}
+}/*done*/
 
 
 .card-icon {
@@ -573,7 +573,7 @@ li.how-li-item {
 
     margin: 0.5rem 0 1rem;
     color: #6F6F6F;
-}
+} /*done*/
 
 .card-text a {
     color: #330691;
@@ -586,7 +586,7 @@ li.how-li-item {
 .card-arrow {
     color: #3f27ba;
     font-size: 1rem;
-}
+}/*done*/
 
 /* section with links for jobs*/
 .jobs-wrapper {
@@ -595,7 +595,7 @@ li.how-li-item {
     justify-content: space-between;
     margin-top: 3rem;
 
-}
+}/*done*/
 
 .jobs-link-ul {
     list-style: none;
@@ -621,7 +621,7 @@ li.how-li-item {
 
 .icon-and-link .card-arrow {
     margin-right: .5rem;
-}
+} /*done for card arrow*/
 
 .icon-and-link a {
     color: #3727BA;
@@ -646,7 +646,7 @@ li.icon-and-link {
     justify-content: space-around;
     border-top: 1px solid #E6E6E6;
     padding-top: 1.5rem;
-}
+}/*done*/
 
 .img-testimonial img {
     height: 6rem;
@@ -654,11 +654,11 @@ li.icon-and-link {
     /* margin-right: .75rem;
     margin-right: 1rem; */
 
-}
+} /*done*/
 
 .flex-testimonial p {
     margin-left: .5rem;
-}
+} /*done*/
 
 .text-bold {
     font-weight: bolder;
@@ -674,16 +674,17 @@ li.icon-and-link {
 .blue-card-container {
     display: flex;
     gap: 1.5rem;
-}
+}/*done as StyledCardDiv*/
+
 
 .getresults-title {
     margin-bottom: 3.2rem;
     color: #fff
-}
+} /*done*/
 
 .img-and-title {
     display: flex;
-}
+}/*done as StyledImgContainer*/
 
 .review-card {
     background-color: #fff;
@@ -691,7 +692,7 @@ li.icon-and-link {
     border-radius: .5rem;
     cursor: pointer;
 
-}
+}/*done as StyledReviewCard*/
 
 .review-title {
     color: #6F6F6F
@@ -741,20 +742,18 @@ li.icon-and-link {
     display: flex;
     justify-content: center;
 
-}
+}/*done as StyledBtnDiv*/
 
 .users-review {
     display: flex;
     margin-top: 3rem;
-}
-
-.users-review {
     color: #fff;
-}
+}/*done as StyledReviewInfo*/
+
 
 .users-review p {
     margin-left: 1.5rem;
-}
+}/*done as StyledReviewInfo*/
 
 
 
@@ -789,7 +788,7 @@ li.icon-and-link {
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 0px 0px 48px;
-}
+}/*done*/
 
 .expand-hide {
     display: none;
@@ -806,7 +805,7 @@ li.icon-and-link {
     line-height: 3.625rem;
     text-align: center;
     font-weight: bolder;
-}
+}/*done*/
 
 .requestnum-list-item p {
     color: #0171cd;
@@ -814,45 +813,45 @@ li.icon-and-link {
     line-height: 2rem;
     font-weight: bolder;
     white-space: nowrap;
-}
+}/*done*/
 
 li.rating-description {
     font-size: 18px;
-}
+}/*done*/
 li .rating-description{
     color: #2C2C2C;
-}
+}/*done*/
 
 /* footer*/
 .footer{
     border-top: 8.5px solid #DFDDEB ;
 
-}
+}/*done*/
 
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
-}
+}/*done*/
 
 .socialmedia-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}/*done as StyledSocialIconDiv*/
 
 
 .footer-ul {
     /*flex-wrap: wrap;*/
     list-style: none;
     width: 33%;
-}
+}/*done*/
 
 .footer-ul li {
     /* padding: 10px; */
     box-sizing: border-box;
     flex-wrap: wrap;
-}
+}/*done*/
 
 
 
@@ -860,34 +859,34 @@ li .rating-description{
     background-color: #f9f8f6;
     padding: 16px 24px;
     border-radius: .5rem;
-}
+}/*done*/
 .singup-link i {
     margin-right: .5rem;
-}
+}/*done*/
 
 
 
 
 .socialmedia-wrapper {
     margin-bottom: 3rem;
-}
+}/*done*/
 
 .ul-socialmedia {
     display: flex;
 
-}
+}/*done*/
 
 .ul-rating-desciption {
     display: flex;
     align-items: center;
 
-}
+}/*done*/
 
 .socialmedia-wrapper li {
 
     align-items: center;
     color: #3f27ba;
-}
+}/*done*/
 
 .socialmedia-wrapper ul {
     list-style: none;
@@ -897,7 +896,7 @@ li .rating-description{
 
 .ul-socialmedia i {
     margin-right: .75rem;
-}
+}/*done*/
 
 .ul-socialmedia li {
     font-size: 2rem;
@@ -906,11 +905,11 @@ li .rating-description{
 .ul-rating-desciption li:not(:last-child) {
     text-decoration: none;
     margin-right: .5rem;
-}
+}/*done*/
 
 .singup-link li a {
     text-decoration: underline;
-}
+}/*done*/
 
 
 .rating-description p {
@@ -923,33 +922,33 @@ li .rating-description{
 .trustpilot-logo {
     width: 3.2em;
     height: auto;
-}
+}/*done*/
 
 /*parnter list*/
 .div-partners {
     display: flex;
     flex-direction: column;
-}
+}/*done*/
 
 
 
 .country-link .service-link {
     display: block;
     margin-bottom: 0.5rem;
-}
+}/*done for country-link*/
 
 .country-link a,
 .service-link a {
     color: #3f27ba;
-}
+}/*done for country-link*/
 
 .service-link a {
     text-decoration: none;
-}
+}/*done*/
 
 .service-link a:hover {
     text-decoration: underline;
-}
+}/*done*/
 
 span.copyright {
     color: #5e636e;
@@ -961,7 +960,7 @@ span.copyright {
 .service-link {
     display: inline-block;
     margin-bottom: 0;
-}
+}/*done*/
 
 /*toggle menu added now*/
 .link-list {
@@ -989,40 +988,39 @@ span.copyright {
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-}
+} /*done*/
 
 .footer-ul a {
     font-size: 1rem;
     color: #3F27BA;
-    ;
     text-decoration: none;
-}
+}/*done*/
 
 .footer-ul a:hover {
     text-decoration: underline;
 
 
-}
+}/*done*/
 
 .singup-link a {
     color: #330691;
     text-decoration: underline;
-}
+}/*done*/
 
 .singup-link a:hover {
     text-decoration: none;
-}
+}/*done*/
 
 
 .ul-partners {
     line-height: 1;
-}
+}/*done*/
 
 .ul-partners li,
 .ul-services {
     list-style: none;
     font-size: 1rem;
-}
+}/*done*/
 
 .ul-services {
     display: flex;
@@ -1030,31 +1028,31 @@ span.copyright {
     gap: 1rem;
     flex-wrap: wrap;
     line-height: 1.5rem;
-}
+}/*done as StyledServices*/
 
 .ul-partners {
     display: flex;
     flex-wrap: wrap;
     line-height: 1.5rem;
-
+/*done*/
 }
 
 .ul-partners li {
     margin-right: .5rem;
-}
+}/*done*/
 
 .ul-partners a:hover {
     text-decoration: none;
-}
+}/*done*/
 
 .div-partners p {
     margin-bottom: 1.5rem;
-}
+}/*done*/
 
 .wrapper-list-container {
     display: flex;
     margin-bottom: 3rem;
-}
+}/*done as StyledListContainer */
 
 /* .ul-services li:last-child {
     margin-top: 1.5rem;
@@ -1132,7 +1130,7 @@ span.copyright {
         margin: 0 auto;
         padding: 0 3rem;
 
-    }
+    } /*done for how-it div-summer-sectionAS styledSummerContainer, find,StyledReviewNum*/
 
     .div-requests-number {
         padding-bottom: 3rem;
@@ -1148,9 +1146,7 @@ span.copyright {
     .summer-section {
 
         padding-top: 6rem;
-
-
-    }
+    } /*done*/
 
     .summer-section2 {
         padding-top: 3rem;
@@ -1164,7 +1160,7 @@ span.copyright {
 
     .requestnum-list-item {
         margin: 3rem;
-    }
+    }/*done*/
 
 }
 
@@ -1192,11 +1188,11 @@ span.copyright {
     .div-find-prof,
     .div-send-request {
         padding: 0 1.5rem;
-    }
+    }/*done for div-how, div-summer-section*/
 
     .div-find-prof {
         padding-top: 3rem;
-    }
+    }/*done*/
 
 
     .how-it-works-section,
@@ -1204,7 +1200,7 @@ span.copyright {
     .summer-section2 .find-prof-section,
     .div-requests-number {
         padding: 3rem 0;
-    }
+    } /*done for summer s, find,StyledReviewNum*/
 
     .l-screen-btn {
         display: none;
@@ -1225,7 +1221,7 @@ span.copyright {
     .requestnum-ol-container {
         padding-top: 0;
         padding-bottom: 0;
-    }
+    }/*done*/
 
     .requestnum-title p {
         font-size: 1.5rem;
@@ -1237,11 +1233,11 @@ span.copyright {
     }
     .requestnum-list-item p {
         font-size: 1.5rem;
-    }
+    }/*done*/
 
     footer {
         padding: 3.13rem 1.5rem;
-    }
+    }/*done*/
 
     .how-ol-container,
     .jobs-wrapper,
@@ -1251,16 +1247,16 @@ span.copyright {
     .ul-partners,
     .ul-services {
         flex-direction: column;
-    }
+    } /*done for how-ol, jobs-wr, ol, social wrapper*/
 
     .ul-services {
         gap: 1.5rem;
-    }
+    }/*done*/
 
     .summer-card-div {
         flex-direction: column;
         gap: 4rem;
-    }
+    } /*done*/
 
     li.how-li-item,
     .card,
@@ -1269,12 +1265,12 @@ span.copyright {
     .request-btn,
     .footer-ul {
         width: 100%;
-    }
+    } /*done for li.how-li,request-btn, footer-ul*/
 
     .card-image {
         height: 6rem;
         object-fit: cover;
-    }
+    }/*done*/
 
     .how-list-title {
         font-size: 1.25rem;
@@ -1291,7 +1287,7 @@ span.copyright {
 
     .card-title {
         font-size: 1.125rem
-    }
+    } /*done*/
 
 
     .find-prof-section {
@@ -1305,43 +1301,43 @@ span.copyright {
 
     .more-btn {
         margin-bottom: 3rem;
-    }
+    } /*done as srtledFindprofDiv*/
 
     .getresults-title {
         margin-bottom: 1.2rem;
-    }
+    }/*done*/
 
     .requestnum-list-item {
         margin-bottom: 3rem;
-    }
+    }/*done*/
 
     .div-testimonials {
         justify-content: start;
         margin-bottom: 1rem;
-    }
+    }/*done*/
 
     .img-testimonial {
         height: 6rem;
-    }
+    } /*done*/
 
 
     .flex-testimonial p {
 
         display: inline-block;
         white-space: pre-line;
-    }
+    } /*done*/
 
     .footer-ul li {
         margin-bottom: 1rem;
 
-    }
+    }/*done*/
 
     .socialmedia-wrapper {
         justify-content: start;
         align-items: start;
         gap: 2rem;
         margin-top: 1.5rem;
-    }
+    }/*done*/
 
     .ul-socialmedia i {
         font-size: 2rem;
@@ -1353,11 +1349,11 @@ span.copyright {
 
     .ul-partners li {
         margin-bottom: .5rem;
-    }
+    }/*done*/
 
     .ul-services li:last-child {
         margin-top: 1.5rem;
-    }
+    }/*done*/
 
     .blue-card-container {
         display: -webkit-inline-box;
@@ -1369,7 +1365,7 @@ span.copyright {
         width: 100vw;
         margin: 0 calc(-1 * 1.5rem) 1rem;
         padding: 1rem 0 1rem 1.5rem;
-    }
+    }/*done as StyledCardDiv*/
 
     .review-card {
         width: 90%;
@@ -1377,11 +1373,11 @@ span.copyright {
 
     .img-and-title {
         align-items: center;
-    }
+    } /*done as StyledImgContainer*/
 
     .users-review {
         margin-top: 0;
-    }
+    }/*done as StyledReviewInfo*/
 
 
 }
@@ -1394,11 +1390,11 @@ span.copyright {
     .main-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    } /*done only for main-c*/ 
+    } /*done only for main-c how-it, div-summer-s, find-prof*/ 
 
     .summer-section {
         padding-top: 6rem
-    }
+    } /*done*/
 
     .input-container {
         width: 60%;
@@ -1414,16 +1410,16 @@ span.copyright {
 
     .card-title {
         font-size: 1.125rem;
-    }
+    }/*done*/
 
     .text-bold {
         display: inline-block;
         white-space: pre-wrap;
-    }
+    }/*done*/
 
     .every-period-title {
         margin-top: 2rem;
-    }
+    }/*done*/
 
     .summer-section2 {
         padding-bottom: 6rem;
@@ -1440,7 +1436,7 @@ span.copyright {
 
     .requests-number-section {
         padding-bottom: 3rem;
-    }
+    }/*done as StyledReviewSection*/
 
 
     .footer {
@@ -1459,16 +1455,16 @@ span.copyright {
 
     .li.how-li-item {
         margin-left: 0;
-    }
+    } /*done*/
 
 
     .div-testimonials {
         width: auto;
-    }
+    }/*done*/
 
     .review-card {
         width: 80%;
-    }
+    }/*done as styledreviewCard*/
 
     .requestnum-list-item p {
         font-size: 1.5rem;
@@ -1478,7 +1474,7 @@ span.copyright {
 
     .request-btn {
         padding: calc(1rem - 1px) 2rem;
-    }
+    }/*done*/
 }
 
 
