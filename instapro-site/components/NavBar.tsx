@@ -12,6 +12,9 @@ interface NavBarProps {
 interface StyledLinkProps {
   href: string;
 }
+type StyledMenuButtonProps = {
+  navbarOpen: boolean;
+};
 
 const StyledHeader = styled.header`
   padding: 0.75rem 1.5rem;
@@ -194,7 +197,7 @@ const StyledActiveSvgPath = styled.path`
   fill: rgb(0, 153, 204);
 `;
 
-const StyledMenuButton = styled.button<{ navbarOpen: boolean }>`
+const StyledMenuButton = styled.button<StyledMenuButtonProps>`
   position: absolute;
   height: 2rem;
   top: 0.75rem;
@@ -211,19 +214,14 @@ const StyledMenuButton = styled.button<{ navbarOpen: boolean }>`
   margin: 0px;
   font-family: 'moderat', sans-serif;
   background-color: transparent;
+
   &:hover {
     background-color: #ffffff3d;
   }
-  color: ${({ navbarOpen }) =>
-    navbarOpen ? 'black' : 'white'}; /* Color based on navbarOpen */
-  border: 2px solid ${({ navbarOpen }) => (navbarOpen ? '#3F27BA' : 'white')}; /* Change border color based on navbarOpen */
-
-  // .span-toggle {
-  //   display: flex;
-  //   align-items: center;
-  // }
+  color: black;
+  border: 2px solid white;
   @media (max-width: 960px) {
-    display: flex;
+    display: flex;I
     text-decoration: none;
     align-items: center;
   }
@@ -231,7 +229,14 @@ const StyledMenuButton = styled.button<{ navbarOpen: boolean }>`
     font-size: 0.875rem;
     padding: 0.3rem;
   }
+  /* Change border color based on navbarOpen */
+  ${({ navbarOpen }) =>
+    navbarOpen &&
+    css`
+      background-color: #fff;
+    `}
 `;
+
 const StyledSpanToggle = styled.span`
   display: flex;
   align-items: center;
@@ -332,16 +337,6 @@ const NavBar: React.FC<NavBarProps> = () => {
               Menu
               {navbarOpen ? <StyledBarX /> : <StyledBarIcon />}
             </StyledSpanToggle>
-            {/* <button className="span-toggle">
-                   Menu
-                   <FaTimes />
-                 </button> */}
-            {/* <span className="icon-bars">
-                   <i className="fa-solid fa-bars"></i>
-                 </span>
-                 <span className="span-toggle iconx">
-                   <i className="fa-solid fa-x"></i>
-                 </span> */}
           </StyledMenuButton>
           <StyledNavMobile>
             {navbarOpen && (
