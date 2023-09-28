@@ -25,7 +25,11 @@ export const StyledHowDiv = styled.div`
     max-width: 100%;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-}
+  }
+  @media (min-width: 60rem) {
+    max-width: calc(60rem + 2 * 3rem);
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 `;
 
@@ -86,12 +90,12 @@ export const StyledLiTitle = styled.span`
 `;
 
 export const StyledLiP = styled.p`
-  margin-left: 2.3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   color: #2c2c2c;
   font-size: 1rem;
-  @media (max-width: 48rem) {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  @media (min-width: 48rem) {
+    margin-left: 2.3rem;
+    margin-top: 1rem;
   }
 `;
