@@ -9,10 +9,10 @@ import HeatingImage from '../public/images/heating.png';
 import FloorImage from '../public/images/floor.png';
 import TestimonialImage1 from '../public/images/testimonialimg1.png';
 import TestimonialImage2 from '../public/images/testimonialimg2.png';
-import TestimonialImage3 from '../public/images/testimonialimg3.png';
-import TestimonialImage4 from '../public/images/testimonialimg4.png';
-import TestimonialImage5 from '../public/images/testimonialimg5.png';
-import TestimonialImage6 from '../public/images/testimonialimg6.png';
+import TestimonialImage3 from '../public/images/testimonialImg3.png';
+import TestimonialImage4 from '../public/images/testimonialImg4.png';
+import TestimonialImage5 from '../public/images/testimonialImg5.png';
+import TestimonialImage6 from '../public/images/testimonialImg6.png';
 
 const SummerSection = () => {
   return (
