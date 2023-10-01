@@ -2,23 +2,27 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 
 export const StyledSummer = styled.section`
-  padding: 3rem 0;
+padding: 3rem 0;
 
-  @media (min-width: 48rem) {
-    padding-top: 6rem;
-  }
+@media (min-width: 48rem){
+    padding-top: 6rem;}
+ 
 `;
 
 export const StyledSummerContainer = styled.div`
+  margin: 0 auto;
   padding: 0 1.5rem;
 
   @media (min-width: 48rem) {
-    padding-bottom: 6rem;
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   @media (min-width: 60rem) {
-    max-width: 66rem;
-    margin: 0 auto;
+    max-width: calc(60rem + 2 * 3rem);
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 `;
 
@@ -166,13 +170,7 @@ export const StyledTestimonialP = styled.div`
 
 export const StyledPeriodsection = styled.section`
   padding: 3rem 0;
-  margin-bottom: 3rem;
-
-  @media (min-width: 60rem) {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-  }
-  @media (in-width: 48rem) {
+  @media (min-width: 48rem) {
     padding-bottom: 6rem;
   }
 `;
