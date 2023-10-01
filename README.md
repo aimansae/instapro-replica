@@ -139,3 +139,14 @@ npm uninstall styled-components
 npm uninstall tailwindcss@3.3.3
 npm uninstall postcss@8.4.29
 npm uninstall autoprefixer@10.4.15
+
+
+Errors before deployment:
+error import { AiOutlineArrowRight } from 'react-icons/ai';
+9:12:56 PM: Module not found: Can"t resolve "react-icons/ai"
+
+Fixed: npm install react-icons@latest
+
+Deployed Site link:
+https://instapro-replica-as.netlify.app
+
