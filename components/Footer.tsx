@@ -1,34 +1,93 @@
 import React from 'react';
-import RatingImage from '../public/images/4star-rating.png';
-import TruspilotImage from '../public/images/truspilotLogo.png';
-import { StyledFooter, StyledFooterDiv, StyledSocialIconDiv, StyledRatingImage, StyledPartnersDiv, StyledListContainer, StyledServices } from './Footer.styled';
+
+import * as Styled from './Footer.styled';
+import SocialMedia from './SocialMedia';
+const services = [
+  { title: 'Service Center', href: 'https://support.instapro.it/s/' },
+  { title: 'About Instapro', href: 'https://www.instapro.it/chi-siamo' },
+  { title: 'Blogs and press', href: 'https://www.instapro.it/blog' },
+  { title: 'Work with us', href: '/https://careers.instapro.group/' },
+  {
+    title: 'Quality standard',
+    href: 'https://www.instapro.it/standard-di-qualita',
+  },
+  {
+    title: 'Become Partner with us',
+    href: 'https://www.instapro.it/blog/diventa-un-partner-con-noi',
+  },
+];
+
+const partners = [
+  {
+    country: 'United States: ',
+    href: 'https://www.homeadvisor.com/',
+    site: 'HomeAdvisor ',
+    moreHref: 'https://www.angi.com/',
+    moreSite: ' Angi',
+  },
+  {
+    country: 'United Kingdom: ',
+    href: 'https://www.mybuilder.com/',
+    site: 'MyBuilder',
+  },
+  { country: 'Canada: ', href: 'https://homestars.com/', site: 'Homestars' },
+  {
+    country: 'France: ',
+    href: 'https://www.123devis.com/',
+    site: '123Devis ',
+    moreHref: 'https://www.travaux.com/',
+    moreSite: ' Travaux.com',
+  },
+  {
+    country: 'Germany: ',
+    href: 'https://www.my-hammer.de/',
+    site: 'My Hammer',
+  },
+  {
+    country: 'Austria: ',
+    href: 'https://www.my-hammer.de/',
+    site: 'My Hammer',
+  },
+  {
+    country: 'Netherlands: ',
+    href: 'https://www.werkspot.nl/',
+    site: 'Werkspot',
+  },
+];
+
+const about = [
+  { text: 'Sectors', href: 'https://www.instapro.it/settori' },
+  { text: 'Services', href: 'https://www.instapro.it/servizi' },
+  { text: 'Location', href: 'https://www.instapro.it/tutte-citta' },
+  {
+    text: 'Price Guide',
+    href: 'https://www.instapro.it/guida-ai-prezzi-costo',
+  },
+  {
+    text: 'Privacy and cookie management',
+    href: 'https://www.instapro.it/informativa-privacy',
+  },
+  {
+    text: 'Terms and conditions',
+    href: 'https://www.instapro.it/termini-condizioni',
+  },
+];
 
 const Footer = () => {
   return (
     <>
-      <StyledFooter>
-        <StyledFooterDiv>
+      <Styled.Footer>
+        <Styled.FooterDiv>
           <ul>
-            <li>
-              <a href="">Service Center</a>
-            </li>
-            <li>
-              <a href="">About Instapro</a>
-            </li>
-            <li>
-              <a href="">Blogs and press</a>
-            </li>
-            <li>
-              <a href="">Work with us</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="">Quality Standard</a>
-            </li>
-            <li>
-              <a href="">Become a partner with us</a>
-            </li>
+            {services.map((service, index) => (
+              <>
+                <li key={index}>
+                  <a href={service.href} target="blank">
+                    {service.title}
+                  </a>
+                </li>
+              </>
+            ))}
           </ul>
           <ul>
             <li className="singup-link">
@@ -39,87 +98,53 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </StyledFooterDiv>
+        </Styled.FooterDiv>
 
-        <StyledSocialIconDiv>
-          <ul>
-            <li>
-              <i className="fa fa-facebook fa-brands"></i>
-            </li>
-            <li>
-              <i className="fa fa-twitter fa-brands"></i>
-            </li>
-            <li>
-              <i className="fa fa-youtube"></i>
-            </li>
-          </ul>
-          <ul className="ul-rating-desciption">
-            <li className="rating-description">Very Good</li>
-            <li>
-              <StyledRatingImage src={RatingImage} alt="Truspilot rating" />
-            </li>
-            <li>
-              <a href="https://it.trustpilot.com/" target="_blank">
-                <StyledRatingImage src={TruspilotImage} alt="Truspilot Logo" />
-              </a>
-            </li>
-          </ul>
-        </StyledSocialIconDiv>
+        <SocialMedia />
 
-        <StyledPartnersDiv>
+        <Styled.PartnersDiv>
           <p>Official Partner of HomeAdvisor International</p>
-          <StyledListContainer>
+          <Styled.ListContainer>
             <ul>
-              <li>
-                United States: <a href="#">Homeadvisor & Angi</a>
-              </li>
-              <li>
-                United Kingdom: <a href="#"> MyBuilder</a>
-              </li>
-              <li>
-                Canada: <a href="#">Homestars</a>
-              </li>
-              <li>
-                France: <a href="#">123 Devis & Travaux.com</a>
-              </li>
-              <li>
-                Germany <a href="#">My Hammer</a>
-              </li>
-              <li>
-                Netherlands: <a href="#">My Hammer</a>
-              </li>
-              <li>
-                Austria: <a href="#">Werkspot</a>
-              </li>
+              {partners.map((partner, index) => (
+                <li key={index}>
+                  {partner.country}
+                  <a href={partner.href} target="_blank">
+                    {partner.site}
+                  </a>
+                  {partner.moreHref && partner.moreSite && ( 
+                     <>
+                     &
+                     <a
+                        href={partner.moreHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {partner.moreSite}
+                      </a>
+                      </>
+                    
+                  )}
+                </li>
+              ))}
             </ul>
-          </StyledListContainer>
-          <StyledServices>
+          </Styled.ListContainer>
+          <Styled.Services>
             <ul>
-              <li>
-                <a href="#">Sectors</a>
-              </li>
-              <li>
-                <a href="#"> Services</a>
-              </li>
-              <li>
-                <a href="#">Location</a>
-              </li>
-              <li>
-                <a href="#">Price guide</a>
-              </li>
-              <li>
-                <a href="#">Privacy and cookie management</a>
-              </li>
-              <li>
-                <a href="#">Terms and conditions</a>
-              </li>
+              {about.map((li, index) => (
+                <li key={index}>
+                  <a href={li.href} target="_blank">
+                    {li.text}
+                  </a>
+                </li>
+              ))}
               <li>
                 <span className="copyright">© 2005-2023 Werkspot BV</span>
               </li>
             </ul>
-          </StyledServices>
-        </StyledPartnersDiv>
-      </StyledFooter>
+          </Styled.Services>
+        </Styled.PartnersDiv>
+      </Styled.Footer>
     </>
   );
 };

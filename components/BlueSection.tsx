@@ -1,94 +1,72 @@
 import React from 'react';
-import { StyledBlueSection, StyledBlueDiv, StyledCardDiv, StyledReviewCard, StyledImgContainer, StyledImg, StyledReviewDescription, StyledReviewInfo, StyledH2 } from './BlueSection.styled';
-import ReviewImage from '../public/images/review1.jpg';
+import * as Styled from './BlueSection.styled';
+import ReviewImage1 from '../public/images/review1.jpg';
+import ReviewImage2 from '../public/images/review2.jpg';
+import ReviewImage3 from '../public/images/review3.jpg';
+
+const reviews = [
+  {
+    id: 1,
+    link: 'https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna',
+    image: ReviewImage1,
+    title: 'Inside; 2rooms; Within 2 weeks',
+    tpName: 'The work was done by St. George by Ibrahim Salama',
+    description: `" Fast, accurate, reliable and helpful. 
+  He painted and
+  stuccoed where needed. Really great job."`,
+  },
+
+  {
+    id: 2,
+    link: 'https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna',
+    image: ReviewImage2,
+    title: 'Roof installation or replacement; 140 m²; Pi...',
+    tpName: 'The work was carried out by Edil Global srls',
+    description: `“Fast and punctual, they were able to meet my needs in record time. They tiled a 130m2 garage in less than a week, finding the tiles exactly as I was looking for and at..”`,
+  },
+
+  {
+    id: 3,
+    link: 'https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna',
+    image: ReviewImage3,
+    title: '125 m²; Gutters, Gutters, Joists, Beams...',
+    tpName: 'The work was done by St. George by Ibrahim Salama',
+    description: `“ Wood gutter paint job and vertical steel gutters and downspouts performed”`,
+  },
+];
 
 const BlueSection = () => {
   return (
     <>
-      <StyledBlueSection>
-        <StyledBlueDiv>
-          <StyledH2>Get the results you want</StyledH2>
-          <StyledCardDiv>
-            <StyledReviewCard>
-              <a href="https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna">
-                <StyledImgContainer>
-                  <StyledImg src={ReviewImage} alt="" />
-                  <p>Inside; 2rooms; Within 2 weeks</p>
-                </StyledImgContainer>
-                <StyledReviewDescription>
-                  <div className="reviewstar-container">
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                  </div>
-                  <p className="review-title">
-                    The work was done by St. George by Ibrahim Salama
-                  </p>
-                  <p className="review-description">
-                    “ Fast, accurate, reliable and helpful. He painted and
-                    stuccoed where needed. Really great job. ”
-                  </p>
-                </StyledReviewDescription>
-              </a>
-            </StyledReviewCard>
-
-            <StyledReviewCard>
-              <a href="https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna">
-                <StyledImgContainer>
-                  <StyledImg src={ReviewImage} alt="" />
-
-                  <p>Roof installation or replacement; 140 m²; Pi...</p>
-                </StyledImgContainer>
-                <StyledReviewDescription>
-                  <div className="reviewstar-container">
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                  </div>
-                  <p className="review-title">
-                    The work was carried out by Edil Global srls
-                  </p>
-                  <p className="review-description">
-                    “ Fast and punctual, they were able to meet my needs in
-                    record time. They tiled a 130m2 garage in less than a week,
-                    finding the tiles exactly as I was looking for and at
-                  </p>
-                </StyledReviewDescription>
-              </a>
-            </StyledReviewCard>
-            <StyledReviewCard>
-              <a href="https://www.instapro.it/tinteggiatura/imbiancatura-tinteggiatura-interna">
-                <StyledImgContainer>
-                  <StyledImg src={ReviewImage} alt="" />
-                  <p className="review-card-title">
-                    125 m²; Gutters, Gutters, Joists, Beams...
-                  </p>
-                </StyledImgContainer>
-                <StyledReviewDescription>
-                  <div className="reviewstar-container">
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                    <i className=" fa  fa-star fa-solid"></i>
-                  </div>
-                  <p className="review-title">
-                    The work was carried out by FB IMBIANCATURE DI BUSNELLI
-                    FEDERICO
-                  </p>
-                  <p className="review-description">
-                    “ Wood gutter paint job and vertical steel gutters and
-                    downspouts performed”
-                  </p>
-                </StyledReviewDescription>
-              </a>
-            </StyledReviewCard>
-          </StyledCardDiv>
-          <StyledReviewInfo>
+      <Styled.BlueSection>
+        <Styled.BlueDiv>
+          <Styled.H2>Get the results you want</Styled.H2>
+          <Styled.CardDiv>
+            {reviews.map((review) => (
+              <>
+                <Styled.ReviewCard key={review.id}>
+                  <a href={review.link}>
+                    <Styled.ImgContainer>
+                      <Styled.Img src={review.image} alt="" />
+                      <p>{review.title}</p>
+                    </Styled.ImgContainer>
+                    <Styled.ReviewDescription>
+                      <div className="reviewstar-container">
+                        <i className=" fa  fa-star fa-solid"></i>
+                        <i className=" fa  fa-star fa-solid"></i>
+                        <i className=" fa  fa-star fa-solid"></i>
+                        <i className=" fa  fa-star fa-solid"></i>
+                        <i className=" fa  fa-star fa-solid"></i>
+                      </div>
+                      <p className="review-title">{review.tpName}</p>
+                      <p className="review-description">{review.description}</p>
+                    </Styled.ReviewDescription>
+                  </a>
+                </Styled.ReviewCard>
+              </>
+            ))}
+          </Styled.CardDiv>
+          <Styled.ReviewInfo>
             <svg
               fill="none"
               height="40px"
@@ -108,9 +86,9 @@ const BlueSection = () => {
               </g>
             </svg>
             <p>Instapro reviews are left by users like you</p>
-          </StyledReviewInfo>
-        </StyledBlueDiv>
-      </StyledBlueSection>
+          </Styled.ReviewInfo>
+        </Styled.BlueDiv>
+      </Styled.BlueSection>
     </>
   );
 };

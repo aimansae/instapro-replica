@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
-export const StyledSummer = styled.section`
-padding: 3rem 0;
+export const Summer = styled.section`
+  padding: 3rem 0;
 
-@media (min-width: 48rem){
-    padding-top: 6rem;}
- 
+  @media (min-width: 48rem) {
+    padding-top: 6rem;
+  }
 `;
 
-export const StyledSummerContainer = styled.div`
+export const SummerContainer = styled.div`
   margin: 0 auto;
   padding: 0 1.5rem;
 
@@ -26,7 +26,7 @@ export const StyledSummerContainer = styled.div`
   }
 `;
 
-export const StyledH2 = styled.h2`
+export const H2 = styled.h2`
   margin-bottom: 2rem;
   font-size: 1.5rem;
 
@@ -39,7 +39,7 @@ export const StyledH2 = styled.h2`
   }
 `;
 
-export const StyledCardContainer = styled.div`
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -50,13 +50,16 @@ export const StyledCardContainer = styled.div`
     flex-direction: row;
   }
 `;
-export const StyledCard = styled.div`
+
+export const Card = styled.div`
   width: 100%;
+
   p {
     margin: 0.5rem 0 1rem;
     color: #6f6f6f;
     font-size: 1rem;
   }
+
   .clip-text {
     margin: 0.5rem 0 1rem;
     -webkit-line-clamp: 3;
@@ -64,12 +67,13 @@ export const StyledCard = styled.div`
     display: -webkit-box;
     overflow: hidden;
   }
+
   @media (min-width: 48rem) {
     width: 33.33%;
   }
 `;
 
-export const StyledImage = styled(Image)`
+export const CustomImage = styled(Image)`
   border-radius: 10px;
   width: 100%;
   margin-bottom: 1rem;
@@ -80,17 +84,18 @@ export const StyledImage = styled(Image)`
     height: auto;
   }
 `;
-export const SytledTitleIconDiv = styled.div`
+
+export const TitleIconDiv = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const StyledIcon = styled.i`
+export const Icon = styled.i`
   font-size: 1.5rem;
   color: #3f27ba;
 `;
 
-export const StyledTitle = styled.span`
+export const Title = styled.span`
   font-size: 1.125rem;
   font-weight: 600;
   margin-left: 0.75rem;
@@ -100,7 +105,7 @@ export const StyledTitle = styled.span`
   }
 `;
 
-export const StyledIconLink = styled.div`
+export const IconLink = styled.div`
   display: flex;
   align-items: baseline;
   margin-right: 0.5rem;
@@ -115,15 +120,18 @@ export const StyledIconLink = styled.div`
     color: #3727ba;
     font-size: 1rem;
     curosor: pointer;
+
     &:hover {
       text-decoration: none;
     }
+
     &:visited {
       color: #330691;
     }
   }
 `;
-export const StyledTestimonials = styled.div`
+
+export const Testimonials = styled.div`
   display: flex;
   margin-top: 1.5rem;
   border-top: 1px solid #e6e6e6;
@@ -155,21 +163,22 @@ export const StyledTestimonials = styled.div`
   }
 `;
 
-export const StyledtestimonialImage = styled(Image)`
+export const TestimonialImage = styled(Image)`
   height: 6rem;
   object-fit: cover;
   width: auto;
 `;
 
-export const StyledTestimonialP = styled.div`
+export const TestimonialP = styled.div`
   @media only screen and (min-width: 48rem) {
     display: inline-block;
     white-space: pre-wrap;
   }
 `;
 
-export const StyledPeriodsection = styled.section`
+export const Periodsection = styled.section`
   padding: 3rem 0;
+
   @media (min-width: 48rem) {
     padding-bottom: 6rem;
   }

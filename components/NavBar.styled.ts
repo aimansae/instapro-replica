@@ -6,14 +6,16 @@ export type NavBarProps = {
   className?: string;
   href: string;
 };
-export type StyledLinkProps = {
+
+export type LinkProps = {
   href: string;
 };
-export type StyledActiveMenuProps = {
+
+export type ActiveMenuProps = {
   navbarOpen: boolean;
 };
 
-export const StyledHeader = styled.header<StyledActiveMenuProps>`
+export const Header = styled.header<ActiveMenuProps>`
   width: min(100%, calc(60rem + (2 * 1.5rem)));
   margin-inline: auto;
   z-index: 10;
@@ -25,6 +27,7 @@ export const StyledHeader = styled.header<StyledActiveMenuProps>`
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
   @media (min-width: 60rem) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -43,7 +46,7 @@ export const StyledHeader = styled.header<StyledActiveMenuProps>`
     `}
 `;
 
-export const StyledNavbar = styled.nav`
+export const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -55,7 +58,7 @@ export const StyledNavbar = styled.nav`
   }
 `;
 
-export const StyledLogoDiv = styled.div`
+export const LogoDiv = styled.div`
   padding-left: 1.5rem;
   padding-top: 0.75rem;
 
@@ -64,7 +67,7 @@ export const StyledLogoDiv = styled.div`
   }
 `;
 
-export const StyledNavDesktop = styled.div`
+export const NavDesktop = styled.div`
   display: none;
 
   ul {
@@ -84,10 +87,12 @@ export const StyledNavDesktop = styled.div`
     display: block;
     font-family: 'moderat', sans-serif;
     color: #fff;
+    
     &:hover {
       color: #dfddeb;
     }
   }
+
   .signup-style {
     outline: transparent solid 2px;
     border-radius: 0.5rem;
@@ -98,12 +103,13 @@ export const StyledNavDesktop = styled.div`
       background-color: #ffffff3d;
     }
   }
+
   @media (min-width: 60rem) {
     display: block;
   }
 `;
 
-export const StyledNavMobile = styled.div`
+export const NavMobile = styled.div`
   background-color: white;
   width: 100%;
   cursor: pointer;
@@ -124,6 +130,7 @@ export const StyledNavMobile = styled.div`
       background-color: #f0f5fe;
     }
   }
+
   a {
     display: block;
     font-weight: 600;
@@ -133,19 +140,20 @@ export const StyledNavMobile = styled.div`
     padding: 1rem 1.5rem;
     font-size: 1rem;
   }
+
   @media (min-width: 60rem) {
     display: none;
   }
 `;
 
-export const StyledLinkListAnchor = styled.a<StyledLinkProps>`
+export const LinkListAnchor = styled.a<LinkProps>`
   margin: 0px 0px 0px 1rem;
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
 `;
 
-export const StyledLogoSVG = styled.svg`
+export const LogoSVG = styled.svg`
   height: 2rem;
 
   @media (min-width: 60rem) {
@@ -153,15 +161,15 @@ export const StyledLogoSVG = styled.svg`
   }
 `;
 
-export const StyledSvgPath = styled.path`
+export const SvgPath = styled.path`
   fill: #fff;
 `;
 
-export const StyledActiveSvgPath = styled.path`
+export const ActiveSvgPath = styled.path`
   fill: rgb(0, 153, 204);
 `;
 
-export const StyledMenuButton = styled.button<StyledActiveMenuProps>`
+export const MenuButton = styled.button<ActiveMenuProps>`
   position: absolute;
   height: 2rem;
   top: 0.75rem;
@@ -169,7 +177,6 @@ export const StyledMenuButton = styled.button<StyledActiveMenuProps>`
   display: flex;
   font-weight: 700;
   padding: 0.3rem;
-
   border: 1px solid #fff;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -199,7 +206,7 @@ export const StyledMenuButton = styled.button<StyledActiveMenuProps>`
     `}
 `;
 
-export const StyledSpanToggle = styled.span<StyledActiveMenuProps>`
+export const SpanToggle = styled.span<ActiveMenuProps>`
   display: flex;
   align-items: center;
   font-size: 0.875rem;
@@ -211,12 +218,12 @@ export const StyledSpanToggle = styled.span<StyledActiveMenuProps>`
     `}
 `;
 
-export const StyledBarIcon = styled(FaBars)`
+export const BarIcon = styled(FaBars)`
   margin-left: 0.25rem;
   color: #fff;
 `;
 
-export const StyledBarX = styled(FaTimes)`
+export const BarX = styled(FaTimes)`
   margin-left: 0.25rem;
   color: ${({ navbarOpen }) => (navbarOpen ? '#fff' : 'black')};
 `;

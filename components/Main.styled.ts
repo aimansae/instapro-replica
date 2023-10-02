@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/react';
 
-export const StyledArticle = styled.article`
+export const Article = styled.article`
   position: relative;
   overflow: hidden;
   margin-top: -5rem;
@@ -25,7 +25,7 @@ export const StyledArticle = styled.article`
   }
 `;
 
-export const StyledPicture = styled.picture`
+export const Picture = styled.picture`
   display: block;
   position: absolute;
   top: 0;
@@ -36,14 +36,14 @@ export const StyledPicture = styled.picture`
   overflow: hidden;
 `;
 
-export const customImage: SerializedStyles = css`
+export const CustomImage: SerializedStyles = css`
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 `;
 
-export const StyledMainContainer = styled.div`
+export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -62,7 +62,7 @@ export const StyledMainContainer = styled.div`
   }
 `;
 
-export const StyledH1Container = styled.div`
+export const H1Container = styled.div`
   margin-top: 6rem;
 
   @media (min-width: 60rem) {
@@ -70,7 +70,7 @@ export const StyledH1Container = styled.div`
   }
 `;
 
-export const StyledH1 = styled.h1`
+export const H1 = styled.h1`
     font-size: 2rem;
     line-height: 1.313;
     margin-bottom: 3rem;
@@ -82,7 +82,7 @@ export const StyledH1 = styled.h1`
     }
 }`;
 
-export const StyledFormContainer = styled.div`
+export const FormContainer = styled.div`
   margin: 0 0 6rem;
   width: 100%;
 
@@ -91,19 +91,20 @@ export const StyledFormContainer = styled.div`
   }
 `;
 
-export const StyledH2 = styled.h2`
+export const H2 = styled.h2`
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 `;
 
-export const StyledInputContainer = styled.div`
+export const InputContainer = styled.div`
   position: relative;
   border-radius: 3.5rem;
   background-color: #ffffff;
   border: 2px solid transparent;
   box-shadow: 0 0.0625rem 0.375rem rgba(0, 0, 0, 0.15);
   display: flex;
+  width:100%;
 
   &:focus-within {
     border: 2px solid #3f27ba;
@@ -128,18 +129,15 @@ export const StyledInputContainer = styled.div`
     &:hover {
       background-color: #330691;
     }
+
     @media (min-width: 48rem) {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
-
-  @media only screen and (min-width: 48rem) and (max-width: 60rem) {
-    width: 65%;
-  }
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
   position: relative;
   flex-grow: 1;
   border-radius: inherit;
@@ -152,22 +150,25 @@ export const StyledInput = styled.input`
   z-index: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+
   &:focus {
     outline: none;
   }
+
   &::placeholder {
     font-size: 1rem; /* Adjust the font size as needed */
   }
 `;
 
-export const StyledButtonDesk = styled.button`
+export const ButtonDesk = styled.button`
   display: none;
 
   @media (min-width: 48rem) {
     display: block;
   }
 `;
-export const StyledButtonMobile = styled.button`
+
+export const ButtonMobile = styled.button`
   display: block;
 
   @media (min-width: 48rem) {
@@ -175,7 +176,7 @@ export const StyledButtonMobile = styled.button`
   }
 `;
 
-export const StyledSignupLink = styled.div`
+export const SignupLink = styled.div`
   margin-bottom: 3rem;
 
   a {
@@ -185,15 +186,17 @@ export const StyledSignupLink = styled.div`
     align-items: start;
     text-decoration: none;
   }
+
   .underlined {
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
   }
 `;
 
-export const StyledYellowArrowIcon = styled.i`
+export const YellowArrowIcon = styled.i`
 
   color: #3f27ba;
   padding-top: 4px;

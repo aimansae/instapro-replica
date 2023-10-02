@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
-export const StyledBlueSection = styled.section`
+export const BlueSection = styled.section`
   background-color: #017acd;
   padding: 3rem 0;
 
@@ -14,7 +14,7 @@ export const StyledBlueSection = styled.section`
   }
 `;
 
-export const StyledBlueDiv = styled.div`
+export const BlueDiv = styled.div`
   padding: 0 1.5rem;
 
   @media (min-width: 48rem) {
@@ -29,7 +29,7 @@ export const StyledBlueDiv = styled.div`
   }
 `;
 
-export const StyledH2 = styled.h2`
+export const H2 = styled.h2`
   font-size: 2rem;
   line-height: 1.313;
   margin-bottom: 1.2rem;
@@ -40,7 +40,7 @@ export const StyledH2 = styled.h2`
   }
 `;
 
-export const StyledCardDiv = styled.div`
+export const CardDiv = styled.div`
   display: flex;
   gap: 1.5rem;
 
@@ -57,7 +57,7 @@ export const StyledCardDiv = styled.div`
   }
 `;
 
-export const StyledReviewCard = styled.div`
+export const ReviewCard = styled.div`
   width: 80%;
   background-color: #fff;
   padding: 1rem;
@@ -73,7 +73,7 @@ export const StyledReviewCard = styled.div`
   }
 `;
 
-export const StyledImgContainer = styled.div`
+export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
 
@@ -83,17 +83,17 @@ export const StyledImgContainer = styled.div`
     font-weight: 600;
   }
 `;
-export const StyledImg = styled(Image)`
 
-    min-width: 3.5rem;
-    height: 3.5rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 0.25rem;
-    margin: 0 1rem 0 0;
-  }`;
+export const Img = styled(Image)`
+  min-width: 3.5rem;
+  height: 3.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  margin: 0 1rem 0 0;
+`;
 
-export const StyledReviewDescription = styled.div`
+export const ReviewDescription = styled.div`
   .reviewstar-container {
     display: flex;
     margin: 0.5rem 0;
@@ -113,7 +113,7 @@ export const StyledReviewDescription = styled.div`
     color: #6f6f6f;
   }
 `;
-export const StyledReviewInfo = styled.div`
+export const ReviewInfo = styled.div`
   display: flex;
   margin-top: 0;
   color: #fff;

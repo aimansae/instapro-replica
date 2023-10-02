@@ -1,48 +1,56 @@
 import React from 'react';
 import { fa1, fa2, fa3 } from '@fortawesome/free-solid-svg-icons';
-import * as Styled from '@components/HowitWorks.styled'
+import * as Styled from '@components/HowitWorks.styled';
+
+const aboutList = [
+  {
+    id: 1,
+    icon: fa1,
+    class: 'fa-1',
+    title: 'Send the request',
+    description:
+      'Send your request in a few simple steps and invite the professionals you are interested in to respond.',
+  },
+  {
+    id: 2,
+    icon: fa2,
+    class: 'fa-2',
+    title: 'The companies will get back to you',
+    description:
+      'Companies interested in carrying out the work usually respond within 24 hours.',
+  },
+  {
+    id: 3,
+    icon: fa3,
+    class: 'fa-3',
+    title: 'Select and get in touch',
+    description:
+      'Send your request in a few simple steps and invite the professionals you are interested in to respond.',
+  },
+];
+
 const HowitWorks = () => {
   return (
     <>
-      <Styled.StyledHowSection>
-        <Styled.StyledHowDiv>
-          <Styled.StyledH2>How Instapro Works</Styled.StyledH2>
-          <Styled.StyledHowOl>
-            <Styled.StyledHowLi>
-              <Styled.StyledCountDiv>
-                <Styled.StyledNumIcon icon={fa1} className="fa-1"></Styled.StyledNumIcon>
-                <Styled.StyledLiTitle>Send the request</Styled.StyledLiTitle>
-              </Styled.StyledCountDiv>
-              <Styled.StyledLiP>
-                Send your request in a few simple steps and invite the
-                professionals you are interested in to respond.
-              </Styled.StyledLiP>
-            </Styled.StyledHowLi>
-            <Styled.StyledHowLi>
-              <Styled.StyledCountDiv>
-                <Styled.StyledNumIcon icon={fa2} className="fa-2"></Styled.StyledNumIcon>
-                <Styled.StyledLiTitle>
-                  The companies will get back to you
-                </Styled.StyledLiTitle>
-              </Styled.StyledCountDiv>
-              <Styled.StyledLiP>
-                Companies interested in carrying out the work usually respond
-                within 24 hours.
-              </Styled.StyledLiP>
-            </Styled.StyledHowLi>
-            <Styled.StyledHowLi>
-              <Styled.StyledCountDiv>
-                <Styled.StyledNumIcon icon={fa3} className="fa-3"></Styled.StyledNumIcon>
-                <Styled.StyledLiTitle>Select and get in touch</Styled.StyledLiTitle>
-              </Styled.StyledCountDiv>
-              <Styled.StyledLiP>
-                Send your request in a few simple steps and invite the
-                professionals you are interested in to respond.
-              </Styled.StyledLiP>
-            </Styled.StyledHowLi>
-          </Styled.StyledHowOl>
-        </Styled.StyledHowDiv>
-      </Styled.StyledHowSection>
+      <Styled.HowSection>
+        <Styled.HowDiv>
+          <Styled.H2>How Instapro Works</Styled.H2>
+          <Styled.HowOl>
+            {aboutList.map((li) => (
+              <Styled.HowLi key={li.id}>
+                <Styled.CountDiv>
+                  <Styled.NumIcon
+                    icon={li.icon}
+                    className={li.class}
+                  ></Styled.NumIcon>
+                  <Styled.LiTitle>{li.title}</Styled.LiTitle>
+                </Styled.CountDiv>
+                <Styled.LiP>{li.description}</Styled.LiP>
+              </Styled.HowLi>
+            ))}
+          </Styled.HowOl>
+        </Styled.HowDiv>
+      </Styled.HowSection>
     </>
   );
 };

@@ -12,326 +12,162 @@ const ProfessionalsSection: React.FC<SectionProps> = () => {
     console.log('clicked');
   };
 
+  const companies = [
+    {
+      id: 1,
+      icon: 'fa fa-fa-caret-up fa-solid card-icon',
+      title: 'Heating',
+      moreInfo: 'heating',
+      companiesLink: 'thermo-hydraulic',
+    },
+    {
+      id: 2,
+      icon: '',
+      title: 'Floor and tiles',
+      moreInfo: 'floor and tiles',
+      companiesLink: 'floor and titles',
+    },
+    {
+      id: 3,
+      icon: '',
+      title: 'Door and windows',
+      moreInfo: 'door and windows',
+      companiesLink: 'door and windows',
+    },
+    {
+      id: 4,
+      icon: '',
+      title: 'Home construction and renovation',
+      moreInfo: 'Home construction and renovation',
+      companiesLink: 'construction',
+    },
+    {
+      id: 5,
+      icon: '',
+      title: 'Painting',
+      moreInfo: 'painting',
+      other: 'painters',
+    },
+    {
+      id: 6,
+      icon: '',
+      title: 'Gardening and Outdoors',
+      moreInfo: 'gardening and outdoors',
+      other: 'gardeners',
+    },
+  ];
+
+  const moreCompanies = [
+    {
+      id: 7,
+      icon: 'fa fa-fa-caret-up fa-solid card-icon',
+      title: 'Drywall',
+      moreInfo: 'plasterboard',
+      companiesLink: 'plasterboarders',
+    },
+    {
+      id: 8,
+      icon: '',
+      title: 'Roof and coverings',
+      moreInfo: 'roof and coverings',
+      companiesLink: 'roof repair',
+    },
+    {
+      id: 9,
+      icon: '',
+      title: 'Bathrooms and sanitary ware',
+      moreInfo: 'bathrooms and sanitary ware',
+      other: 'bathroom specialists',
+    },
+    {
+      id: 10,
+      icon: '',
+      title: 'Air conditioning',
+      moreInfo: 'air conditioning',
+      companiesLink: 'see',
+    },
+    {
+      id: 11,
+      icon: '',
+      title: 'Isolation',
+      moreInfo: 'isolation',
+      companiesLink: 'insulation',
+    },
+    {
+      id: 12,
+      icon: '',
+      title: 'Electricity',
+      moreInfo: 'electricity',
+      other: 'electricians',
+    },
+  ];
+
   return (
     <>
-      <Styled.StyledFindProf>
-        <Styled.StyledFindProfDiv>
-          <Styled.StyledH2>Find professionals for every job</Styled.StyledH2>
-          <Styled.StyledJobsWrapper>
-            <Styled.StyledJoblist>
-              <i className="fa fa-fire fa-solid card-icon"></i>
-              <Styled.StyledCartTitle>Heating</Styled.StyledCartTitle>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    heating: find out all the information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    Plumbing companies
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
-            <Styled.StyledJoblist>
-              <i className="fa fa-toilet-paper fa-solid card-icon"></i>
-              <Styled.StyledCartTitle>Floor and tiles</Styled.StyledCartTitle>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    floors and tiles: find out all the information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    floor workers
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
-            <Styled.StyledJoblist>
-              <i className="fa fa-door-closed fa-solid card-icon"></i>
-              <Styled.StyledCartTitle>Doors and windows</Styled.StyledCartTitle>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    doors and windows: find out all the information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    window and door installers
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
-            <Styled.StyledJoblist>
-              <div className=" icon-and-link">
-                <i className="fa fa-house-chimney fa-solid card-icon"></i>
-                <Styled.StyledCartTitle>
-                  {' '}
-                  Home construction and renovation
-                </Styled.StyledCartTitle>
-              </div>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    home construction and renovation: find out all the
-                    information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    construction companies
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    facade renovation companies
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
-
-            <Styled.StyledJoblist>
-              <i className="fa fa-paint-roller fa-solid card-icon"></i>
-              <Styled.StyledCartTitle>Painting</Styled.StyledCartTitle>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    painting: find out all the information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-solid fa-arrow-right card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    painters
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
-            <Styled.StyledJoblist>
-              <i className="fa fa-car fa-solid  card-icon"></i>
-              <Styled.StyledCartTitle>Gardening and outdoors</Styled.StyledCartTitle>
-              <ul className="jobs-link-ul">
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    gardening and outdoors: find out all the information
-                  </a>
-                </li>
-                <li className=" icon-and-link">
-                  <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                  <a
-                    href="https://www.instapro.it/riscaldamento"
-                    target="_blank"
-                  >
-                    gardeners
-                  </a>
-                </li>
-              </ul>
-            </Styled.StyledJoblist>
+      <Styled.FindProf>
+        <Styled.FindProfDiv>
+          <Styled.H2>Find professionals for every job</Styled.H2>
+          <Styled.JobsWrapper>
+            {companies.map((company) => (
+              <Styled.Joblist key={company.id}>
+                <i className={company.icon}></i>
+                <Styled.CartTitle>{company.title}</Styled.CartTitle>
+                <ul className="jobs-link-ul">
+                  <li className=" icon-and-link">
+                    <i className="fa fa-arrow-right fa-solid card-arrow"></i>
+                    <a
+                      href="https://www.instapro.it/riscaldamento"
+                      target="_blank"
+                    >
+                      {company.moreInfo}: find out all the information
+                    </a>
+                  </li>
+                  <li className=" icon-and-link">
+                    <i className="fa fa-arrow-right fa-solid card-arrow"></i>
+                    <a
+                      href="https://www.instapro.it/riscaldamento"
+                      target="_blank"
+                    >
+                      {company.companiesLink
+                        ? company.companiesLink + ' companies'
+                        : company.other}
+                    </a>
+                  </li>
+                </ul>
+              </Styled.Joblist>
+            ))}
 
             {/* --EXPAND Jobs on Button click--> */}
-            {showMore && (
-              <>
-                <Styled.StyledJobsWrapper>
-                  <Styled.StyledJoblist>
-                    <i className="fa  fa-fire fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Heating</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          heating: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          Plumbing companies
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-                  <Styled.StyledJoblist>
-                    <i className="fa  fa-toilet-paper fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Floor and tiles</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          floors and tiles: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          floor workers
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-                  <Styled.StyledJoblist>
-                    <i className="fa  fa-people-roof fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Doors and windows</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          painting: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          Plumbing companies
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-                  <Styled.StyledJoblist>
-                    <i className="fa  fa-people-roof fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Home</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          painting: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          Plumbing companies
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-                  <Styled.StyledJoblist>
-                    <i className="fa  fa-people-roof fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Painting</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          painting: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          Plumbing companies
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-
-                  <Styled.StyledJoblist>
-                    <i className="fa fa-people-roof fa-solid card-icon"></i>
-                    <Styled.StyledCartTitle>Gardening</Styled.StyledCartTitle>
-                    <ul className="jobs-link-ul">
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          painting: find out all the information
-                        </a>
-                      </li>
-                      <li className=" icon-and-link">
-                        <i className="fa fa-arrow-right fa-solid card-arrow"></i>
-                        <a
-                          href="https://www.instapro.it/riscaldamento"
-                          target="_blank"
-                        >
-                          Plumbing companies
-                        </a>
-                      </li>
-                    </ul>
-                  </Styled.StyledJoblist>
-                </Styled.StyledJobsWrapper>
-              </>
-            )}
-          </Styled.StyledJobsWrapper>
+            {showMore &&
+              moreCompanies.map((company) => (
+                <Styled.Joblist key={company.id}>
+                  <i className={company.icon}></i>
+                  <Styled.CartTitle>{company.title}</Styled.CartTitle>
+                  <ul className="jobs-link-ul">
+                    <li className=" icon-and-link">
+                      <i className="fa fa-arrow-right fa-solid card-arrow"></i>
+                      <a
+                        href="https://www.instapro.it/riscaldamento"
+                        target="_blank"
+                      >
+                        {company.moreInfo}: find out all the information
+                      </a>
+                    </li>
+                    <li className=" icon-and-link">
+                      <i className="fa fa-arrow-right fa-solid card-arrow"></i>
+                      <a
+                        href="https://www.instapro.it/riscaldamento"
+                        target="_blank"
+                      >
+                        {company.companiesLink
+                          ? company.companiesLink + ' companies'
+                          : company.other}
+                      </a>
+                    </li>
+                  </ul>
+                </Styled.Joblist>
+              ))}
+          </Styled.JobsWrapper>
           {!showMore && (
             <div className="more-btn">
               <button className="expand-button" onClick={expandonClick}>
@@ -339,8 +175,8 @@ const ProfessionalsSection: React.FC<SectionProps> = () => {
               </button>
             </div>
           )}
-        </Styled.StyledFindProfDiv>
-      </Styled.StyledFindProf>
+        </Styled.FindProfDiv>
+      </Styled.FindProf>
     </>
   );
 };

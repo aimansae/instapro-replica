@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyledReviewsSection, StyledReviewNum, StyledBtnDiv } from './ReviewData.styled';
+import * as Styled from './ReviewData.styled';
+
 
 const ReviewData = () => {
   return (
     <>
-      <StyledReviewsSection>
-        <StyledReviewNum>
+      <Styled.ReviewsSection>
+        <Styled.ReviewNum>
           <ol>
             <li>
               <span className="requestnum-title">7.109</span>
@@ -20,13 +21,13 @@ const ReviewData = () => {
               <p>reviews</p>
             </li>
           </ol>
-          <StyledBtnDiv>
+          <Styled.BtnDiv>
             <a className="request-btn" href="#">
               Submit your request
             </a>
-          </StyledBtnDiv>
-        </StyledReviewNum>
-      </StyledReviewsSection>
+          </Styled.BtnDiv>
+        </Styled.ReviewNum>
+      </Styled.ReviewsSection>
     </>
   );
 };

@@ -6,8 +6,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 const Main = () => {
   return (
     <main>
-      <Styled.StyledArticle>
-        <Styled.StyledPicture>
+      <Styled.Article>
+        <Styled.Picture>
           <source
             type="image/avif"
             srcSet="/images/picture480x586.avif 480w, /images/picture768x586.avif 768w, 
@@ -24,7 +24,7 @@ const Main = () => {
           />
 
           <img
-            className={Styled.customImage as unknown as string}
+            className={Styled.CustomImage as unknown as string}
             src="/images/picture1440x636.jpg"
             srcSet="/images/picture480x586.jpg 480w, /images/picture768x586.jpg 768w, 
                     /images/picture960x1172.jpg 960w, /images/picture1440x636.jpg 1440w, 
@@ -32,55 +32,45 @@ const Main = () => {
                     /home/2000x1272.jpg 2000w"
             alt=""
           />
-        </Styled.StyledPicture>
-        <Styled.StyledMainContainer>
-          <Styled.StyledH1Container>
-            <Styled.StyledH1>
+        </Styled.Picture>
+        <Styled.MainContainer>
+          <Styled.H1Container>
+            <Styled.H1>
               Find a professional for all your home related projects
-            </Styled.StyledH1>
-          </Styled.StyledH1Container>
-          <Styled.StyledFormContainer>
+            </Styled.H1>
+          </Styled.H1Container>
+          <Styled.FormContainer>
             <article>
               <form>
                 <label htmlFor="search-input">
-                  <Styled.StyledH2>
-                    What work do you have to do?
-                  </Styled.StyledH2>
+                  <Styled.H1>What work do you have to do?</Styled.H1>
                 </label>
-                <Styled.StyledInputContainer>
-                  <Styled.StyledInput
+                <Styled.InputContainer>
+                  <Styled.Input
                     type="text"
                     id="search-input"
                     name="search-input"
                     placeholder="For example: Home renovation"
                   />
-                  <Styled.StyledButtonDesk
-                    className="input-button"
-                    type="submit"
-                  >
+                  <Styled.ButtonDesk className="input-button" type="submit">
                     Find a professional
-                  </Styled.StyledButtonDesk>
-                  {/* for smaller screen<i className="fa-solid fa-arrow-right"></i>--> */}
-
-                  <Styled.StyledButtonMobile
-                    className="input-button"
-                    type="submit"
-                  >
+                  </Styled.ButtonDesk>
+                  <Styled.ButtonMobile className="input-button" type="submit">
                     <AiOutlineArrowRight className="arrow-right" />
-                  </Styled.StyledButtonMobile>
-                </Styled.StyledInputContainer>
+                  </Styled.ButtonMobile>
+                </Styled.InputContainer>
               </form>
             </article>
-          </Styled.StyledFormContainer>
+          </Styled.FormContainer>
 
-          <Styled.StyledSignupLink>
+          <Styled.SignupLink>
             <a href="#">
-              <Styled.StyledYellowArrowIcon className="fa fa-arrow-right fa-light" />
+              <Styled.YellowArrowIcon className="fa fa-arrow-right fa-light" />
               <span className="underlined">Sign up as a professional</span>
             </a>
-          </Styled.StyledSignupLink>
-        </Styled.StyledMainContainer>
-      </Styled.StyledArticle>
+          </Styled.SignupLink>
+        </Styled.MainContainer>
+      </Styled.Article>
     </main>
   );
 };

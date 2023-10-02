@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
 
-export const StyledReviewsSection = styled.section`
+export const ReviewsSection = styled.section`
   background-color: #f9f8f6;
-
-  @media;
 `;
 
-export const StyledReviewNum = styled.div`
+export const ReviewNum = styled.div`
   padding: 3rem 0;
 
   @media (min-width: 60rem) {
@@ -51,6 +49,7 @@ export const StyledReviewNum = styled.div`
       margin: 3rem;
     }
   }
+  
   .requestnum-title {
     color: #3f27ba;
     font-size: 3rem;
@@ -60,13 +59,13 @@ export const StyledReviewNum = styled.div`
   }
 `;
 
-export const StyledBtnDiv = styled.div`
+export const BtnDiv = styled.div`
   display: flex;
   justify-content: center;
   padding: calc(1rem - 1px) 2rem;
 
   .request-btn {
-    padding: 15px 64px;
+    padding: 15px 32px;
     background-color: #3f27ba;
     color: #fff;
     border-radius: 9999px;

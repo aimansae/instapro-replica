@@ -4,7 +4,7 @@ export type SectionProps = {
   showMore: boolean;
 };
 
-export const StyledFindProf = styled.section`
+export const FindProf = styled.section`
   background-color: #f9f8f6;
   box-sizing: border-box;
   padding: 3rem 1.5rem;
@@ -12,12 +12,13 @@ export const StyledFindProf = styled.section`
   @media (min-width: 48rem) {
     padding: 6rem 1.5rem;
   }
+
   @media (min-width: 30rem) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 `;
-export const StyledFindProfDiv = styled.div`
+export const FindProfDiv = styled.div`
   margin: 0 auto;
   padding-top: 3rem;
 
@@ -37,6 +38,7 @@ export const StyledFindProfDiv = styled.div`
       width: auto;
     }
   }
+
   .expand-button {
     border: 1px solid #3f27ba;
     padding: 7px 32px;
@@ -55,7 +57,7 @@ export const StyledFindProfDiv = styled.div`
   }
 `;
 
-export const StyledH2 = styled.h2`
+export const H2 = styled.h2`
   font-size: 1.5rem;
 
   @media (min-width: 48rem) {
@@ -63,7 +65,7 @@ export const StyledH2 = styled.h2`
   }
 `;
 
-export const StyledJobsWrapper = styled.div`
+export const JobsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -75,7 +77,7 @@ export const StyledJobsWrapper = styled.div`
   }
 `;
 
-export const StyledJoblist = styled.div`
+export const Joblist = styled.div`
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -109,9 +111,11 @@ export const StyledJoblist = styled.div`
 
   a {
     color: #3727ba;
+
     &:hover {
       text-decoration: none;
     }
+
     &:visited {
       color: #330691;
     }
@@ -122,7 +126,7 @@ export const StyledJoblist = styled.div`
   }
 `;
 
-export const StyledCartTitle = styled.span`
+export const CartTitle = styled.span`
   font-size: 1.125rem;
   font-weight: 600;
 

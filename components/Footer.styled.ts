@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
-export const StyledFooter = styled.footer`
+export const Footer = styled.footer`
   border-top: 8.5px solid #dfddeb;
   padding: 3.13rem 1.5rem;
 
   @media (min-width: 48rem) {
     padding: 3.1rem 1.5rem;
   }
-  
+
   @media (min-width: 60rem) {
     max-width: 66rem;
     margin: 0 auto;
@@ -16,7 +16,7 @@ export const StyledFooter = styled.footer`
   }
 `;
 
-export const StyledFooterDiv = styled.div`
+export const FooterDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
@@ -45,6 +45,7 @@ export const StyledFooterDiv = styled.div`
     font-size: 1rem;
     color: #3f27ba;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
@@ -85,65 +86,9 @@ export const StyledFooterDiv = styled.div`
   }
 `;
 
-export const StyledSocialIconDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  margin-bottom: 3rem;
-  flex-direction: column;
-  justify-content: start;
-  gap: 2rem;
-  margin-top: 1.5rem;
 
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 
-  li {
-    font-size: 2rem;
-    align-items: center;
-    color: #3f27ba;
-  }
-
-  i {
-    margin-right: 0.75rem;
-    font-size: 2rem;
-  }
-
-  .ul-rating-desciption {
-    display: flex;
-    align-items: center;
-  }
-
-  .ul-rating-desciption li:not(:last-child) {
-    text-decoration: none;
-    margin-right: 0.5rem;
-  }
-
-  .ul-rating-desciption li {
-    font-size: 1.125rem;
-  }
-
-  .rating-description {
-    font-size: 18px;
-    color: #2c2c2c;
-  }
-
-  @media (min-width: 48rem) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
-
-export const StyledRatingImage = styled(Image)`
-  width: 3.2em;
-  height: auto;
-`;
-
-export const StyledPartnersDiv = styled.div`
+export const PartnersDiv = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -153,7 +98,7 @@ export const StyledPartnersDiv = styled.div`
   }
 `;
 
-export const StyledListContainer = styled.div`
+export const ListContainer = styled.div`
   display: flex;
   margin-bottom: 3rem;
   flex-direction: column;
@@ -174,23 +119,25 @@ export const StyledListContainer = styled.div`
     font-size: 1rem;
     margin-right: 0.5rem;
     display: block;
+    width:100%;
     margin-bottom: 0.5rem;
 
     @media (min-width: 48rem) {
       margin-bottom: 0;
-    }
+      width:auto;
   }
 
   a {
     color: #3f27ba;
+
     &:hover {
       text-decoration: none;
     }
   }
 `;
 
-export const StyledServices = styled.div`
-ul{
+export const Services = styled.div`
+  ul {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -200,35 +147,38 @@ ul{
     gap: 1.5rem;
 
     @media (min-width: 48rem) {
-        flex-direction: row;
+      flex-direction: row;
     }
-}
-li:last-child {
-    margin-top: 1.5rem;
-}
-li{
+  }
+
+  li {
     list-style: none;
     font-size: 1rem;
     display: block;
     margin-bottom: 0;
-}
 
-a{
+    &:last-child {
+      margin-top: 1.5rem;
+    }
+  }
+
+  a {
     text-decoration: none;
     color: #3f27ba;
-    &:hover{
-        text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
     }
-}
+  }
 
-@media (min-width: 48rem) {
-li:last-child {
-    margin-top: 0;
-}
-}
+  @media (min-width: 48rem) {
+    li:last-child {
+      margin-top: 0;
+    }
+  }
 
-.copyright{
+  .copyright {
     color: #5e636e;
     white-space: nowrap;
-}
+  }
 `;
