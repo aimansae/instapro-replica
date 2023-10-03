@@ -1,4 +1,3 @@
-// to render homepage
 'use client';
 import BlueSection from '@components/BlueSection';
 import Footer from '@components/Footer';

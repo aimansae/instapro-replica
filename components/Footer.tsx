@@ -7,6 +7,9 @@ const services = [
   { title: 'About Instapro', href: 'https://www.instapro.it/chi-siamo' },
   { title: 'Blogs and press', href: 'https://www.instapro.it/blog' },
   { title: 'Work with us', href: '/https://careers.instapro.group/' },
+];
+
+const moreServices = [
   {
     title: 'Quality standard',
     href: 'https://www.instapro.it/standard-di-qualita',
@@ -90,6 +93,17 @@ const Footer = () => {
             ))}
           </ul>
           <ul>
+            {moreServices.map((service, index) => (
+              <>
+                <li key={index}>
+                  <a href={service.href} target="blank">
+                    {service.title}
+                  </a>
+                </li>
+              </>
+            ))}
+          </ul>
+          <ul>
             <li className="singup-link">
               <p>Are you a professional?</p>
               <a href="">
@@ -112,18 +126,17 @@ const Footer = () => {
                   <a href={partner.href} target="_blank">
                     {partner.site}
                   </a>
-                  {partner.moreHref && partner.moreSite && ( 
-                     <>
-                     &
-                     <a
+                  {partner.moreHref && partner.moreSite && (
+                    <>
+                      &
+                      <a
                         href={partner.moreHref}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {partner.moreSite}
                       </a>
-                      </>
-                    
+                    </>
                   )}
                 </li>
               ))}
