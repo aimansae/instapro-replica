@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'moderat';
-  src: url('./font/moderat.woff2') format('woff');
+  font-family: 'Moderat';
+  src: url('./font/moderat.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'moderat';
-  src: url('./font/moderat.woff2') format('woff');
+  font-family: 'Moderat';
+  src: url('./font/moderat.woff2') format('woff2');
   font-weight: bold;
 }
 

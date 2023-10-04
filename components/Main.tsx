@@ -27,7 +27,7 @@ const Main = () => {
             className={Styled.CustomImage as unknown as string}
             src="/images/picture1440x636.jpg"
             srcSet="/images/picture480x586.jpg 480w, /images/picture768x586.jpg 768w, 
-                    /images/picture960x1172.jpg 960w, /images/picture1440x636.jpg 1440w, 
+                    /images/picture960x1172.png 960w, /images/picture1440x636.jpg 1440w, 
                     /images/picture1538x1172.png 1538w, /home/1920x1084.jpg 1920w, 
                     /home/2000x1272.jpg 2000w"
             alt=""
