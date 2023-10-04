@@ -78,87 +78,81 @@ const about = [
 
 const Footer = () => {
   return (
-    <>
-      <Styled.Footer>
-        <Styled.FooterDiv>
-          <ul>
-            {services.map((service, index) => (
-              <>
-                <li key={index}>
-                  <a href={service.href} target="blank">
-                    {service.title}
-                  </a>
-                </li>
-              </>
-            ))}
-          </ul>
-          <ul>
-            {moreServices.map((service, index) => (
-              <>
-                <li key={index}>
-                  <a href={service.href} target="blank">
-                    {service.title}
-                  </a>
-                </li>
-              </>
-            ))}
-          </ul>
-          <ul>
-            <li className="singup-link">
-              <p>Are you a professional?</p>
-              <a href="">
-                <i className="fa fa-arrow-right fa-solid yellow-arrow"></i>
-                <span>subscribe now</span>
+    <Styled.Footer>
+      <Styled.FooterDiv>
+        <ul>
+          {services.map((service, index) => (
+            <li key={index}>
+              <a href={service.href} target="blank">
+                {service.title}
               </a>
             </li>
-          </ul>
-        </Styled.FooterDiv>
+          ))}
+        </ul>
+        <ul>
+          {moreServices.map((service, index) => (
+            <li key={index}>
+              <a href={service.href} target="blank">
+                {service.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <ul>
+          <li className="singup-link">
+            <p>Are you a professional?</p>
+            <a href="">
+              <i className="fa fa-arrow-right fa-solid yellow-arrow"></i>
+              <span>subscribe now</span>
+            </a>
+          </li>
+        </ul>
+      </Styled.FooterDiv>
 
-        <SocialMedia />
+      <SocialMedia />
 
-        <Styled.PartnersDiv>
-          <p>Official Partner of HomeAdvisor International</p>
-          <Styled.ListContainer>
-            <ul>
-              {partners.map((partner, index) => (
-                <li key={index}>
-                  {partner.country}
-                  <a href={partner.href} target="_blank">
-                    {partner.site}
-                  </a>
-                  {partner.moreHref && partner.moreSite && (
-                    <>
-                      &
-                      <a
-                        href={partner.moreHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {partner.moreSite}
-                      </a>
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </Styled.ListContainer>
-          <Styled.Services>
-            <ul>
-              {about.map((li, index) => (
-                <li key={index}>
-                  <a href={li.href} target="_blank">
-                    {li.text}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <span className="copyright">© 2005-2023 Werkspot BV</span>
+      <Styled.PartnersDiv>
+        <p>Official Partner of HomeAdvisor International</p>
+        <Styled.ListContainer>
+          <ul>
+            {partners.map((partner, index) => (
+              <li key={index}>
+                {partner.country}
+                <a href={partner.href} target="_blank">
+                  {partner.site}
+                </a>
+                {partner.moreHref && partner.moreSite && (
+                  <>
+                    &
+                    <a
+                      href={partner.moreHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {partner.moreSite}
+                    </a>
+                  </>
+                )}
               </li>
-            </ul>
-          </Styled.Services>
-        </Styled.PartnersDiv>
-      </Styled.Footer>
-    </>
+            ))}
+          </ul>
+        </Styled.ListContainer>
+        <Styled.Services>
+          <ul>
+            {about.map((li, index) => (
+              <li key={index}>
+                <a href={li.href} target="_blank">
+                  {li.text}
+                </a>
+              </li>
+            ))}
+            <li>
+              <span className="copyright">© 2005-2023 Werkspot BV</span>
+            </li>
+          </ul>
+        </Styled.Services>
+      </Styled.PartnersDiv>
+    </Styled.Footer>
   );
 };
 

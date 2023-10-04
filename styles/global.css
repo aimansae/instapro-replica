@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'moderat';
-  src: url('/styles/font/moderat.woff2') format('woff');
+  src: url('./font/moderat.woff2') format('woff');
 }
 
 @font-face {
   font-family: 'moderat';
-  src: url('/styles/font/moderat.woff2') format('woff');
+  src: url('./font/moderat.woff2') format('woff');
   font-weight: bold;
 }
 
@@ -21,5 +21,4 @@ body {
   font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
   font-size: 1.5rem;
-  overflow-x: hidden;
 }

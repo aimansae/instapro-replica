@@ -31,27 +31,25 @@ const aboutList = [
 
 const HowitWorks = () => {
   return (
-    <>
-      <Styled.HowSection>
-        <Styled.HowDiv>
-          <Styled.H2>How Instapro Works</Styled.H2>
-          <Styled.HowOl>
-            {aboutList.map((li) => (
-              <Styled.HowLi key={li.id}>
-                <Styled.CountDiv>
-                  <Styled.NumIcon
-                    icon={li.icon}
-                    className={li.class}
-                  ></Styled.NumIcon>
-                  <Styled.LiTitle>{li.title}</Styled.LiTitle>
-                </Styled.CountDiv>
-                <Styled.LiP>{li.description}</Styled.LiP>
-              </Styled.HowLi>
-            ))}
-          </Styled.HowOl>
-        </Styled.HowDiv>
-      </Styled.HowSection>
-    </>
+    <Styled.HowSection>
+      <Styled.HowDiv>
+        <Styled.H2>How Instapro Works</Styled.H2>
+        <Styled.HowOl>
+          {aboutList.map((li) => (
+            <Styled.HowLi key={li.id}>
+              <Styled.CountDiv>
+                <Styled.NumIcon
+                  icon={li.icon}
+                  className={li.class}
+                ></Styled.NumIcon>
+                <Styled.LiTitle>{li.title}</Styled.LiTitle>
+              </Styled.CountDiv>
+              <Styled.LiP>{li.description}</Styled.LiP>
+            </Styled.HowLi>
+          ))}
+        </Styled.HowOl>
+      </Styled.HowDiv>
+    </Styled.HowSection>
   );
 };
 

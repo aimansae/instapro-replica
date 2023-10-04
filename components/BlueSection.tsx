@@ -43,7 +43,6 @@ const BlueSection = () => {
           <Styled.H2>Get the results you want</Styled.H2>
           <Styled.CardDiv>
             {reviews.map((review) => (
-              <>
                 <Styled.ReviewCard key={review.id}>
                   <a href={review.link}>
                     <Styled.ImgContainer>
@@ -63,7 +62,6 @@ const BlueSection = () => {
                     </Styled.ReviewDescription>
                   </a>
                 </Styled.ReviewCard>
-              </>
             ))}
           </Styled.CardDiv>
           <Styled.ReviewInfo>

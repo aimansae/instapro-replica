@@ -11,7 +11,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <NavBar href={''} />
       <Main />
       <HowitWorks />
@@ -20,7 +20,7 @@ const Home = () => {
       <BlueSection />
       <ReviewData />
       <Footer />
-    </div>
+    </>
   );
 };
 
