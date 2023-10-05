@@ -2,7 +2,7 @@
 import BlueSection from '@components/BlueSection';
 import Footer from '@components/Footer';
 import HowitWorks from '@components/HowitWorks';
-import Main from '@components/Main';
+import Hero from '@components/Hero';
 import NavBar from '@components/NavBar';
 import ProfessionalsSection from '@components/ProfessionalsSection';
 import ReviewData from '@components/ReviewData';
@@ -13,12 +13,14 @@ const Home = () => {
   return (
     <>
       <NavBar href={''} />
-      <Main />
+      <main>
+      <Hero />
       <HowitWorks />
       <SummerSection />
       <ProfessionalsSection showMore={false} />
       <BlueSection />
       <ReviewData />
+      </main>
       <Footer />
     </>
   );

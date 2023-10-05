@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import * as Styled from '@components/Main.styled';
+import * as Styled from '@components/Hero.styled';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-const Main = () => {
+const Hero = () => {
   return (
-    <main>
       <Styled.Article>
         <Styled.Picture>
           <source
@@ -71,8 +70,7 @@ const Main = () => {
           </Styled.SignupLink>
         </Styled.MainContainer>
       </Styled.Article>
-    </main>
   );
 };
 
-export default Main;
+export default Hero;
