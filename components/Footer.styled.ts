@@ -86,8 +86,6 @@ export const FooterDiv = styled.div`
   }
 `;
 
-
-
 export const PartnersDiv = styled.div`
   display: flex;
   flex-direction: column;

@@ -14,12 +14,12 @@ const Home = () => {
     <>
       <NavBar href={''} />
       <main>
-      <Hero />
-      <HowitWorks />
-      <SummerSection />
-      <ProfessionalsSection showMore={false} />
-      <BlueSection />
-      <ReviewData />
+        <Hero />
+        <HowitWorks />
+        <SummerSection />
+        <ProfessionalsSection showMore={false} />
+        <BlueSection />
+        <ReviewData />
       </main>
       <Footer />
     </>

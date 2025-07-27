@@ -16,24 +16,26 @@ export type ActiveMenuProps = {
 };
 
 export const Header = styled.header<ActiveMenuProps>`
-  width: min(100%, calc(60rem + (2 * 1.5rem)));
+  width: 100%;
   margin-inline: auto;
   z-index: 10;
   position: relative;
-  background-color: transparent;
-
-  @media (min-width: 48rem) {
+  color:black @media (min-width: 48rem) {
     max-width: 100%;
+  }
+  @media (min-width: 20rem) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
   @media (min-width: 60rem) {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     max-width: calc(60rem + 2 * 3rem);
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  @media (min-width: 60rem) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     height: 5rem;
     width: 100%;
   }
@@ -50,7 +52,6 @@ export const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: start;
-
   @media (min-width: 60rem) {
     justify-content: space-between;
     align-items: center;
@@ -61,7 +62,6 @@ export const Navbar = styled.nav`
 export const LogoDiv = styled.div`
   padding-left: 1.5rem;
   padding-top: 0.75rem;
-
   @media (min-width: 48rem) {
     padding-left: 0;
   }
@@ -86,11 +86,7 @@ export const NavDesktop = styled.div`
     font-weight: 600;
     display: block;
     font-family: 'moderat', sans-serif;
-    color: #fff;
-    
-    &:hover {
-      color: #dfddeb;
-    }
+    color: black;
   }
 
   .signup-style {
@@ -99,7 +95,7 @@ export const NavDesktop = styled.div`
     border: 1px solid rgb(217, 215, 213);
 
     &:hover {
-      color: #fff;
+      border-color: black;
       background-color: #ffffff3d;
     }
   }
@@ -185,8 +181,8 @@ export const MenuButton = styled.button<ActiveMenuProps>`
   margin: 0px;
   font-family: 'moderat', sans-serif;
   background-color: transparent;
-  color: #fff;
-  border: 2px solid white;
+  color: black;
+  border: 2px solid black;
   align-items: center;
 
   &:hover {
@@ -220,7 +216,7 @@ export const SpanToggle = styled.span<ActiveMenuProps>`
 
 export const BarIcon = styled(FaBars)`
   margin-left: 0.25rem;
-  color: #fff;
+  color: black;
 `;
 
 export const BarX = styled(FaTimes)`

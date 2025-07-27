@@ -1,150 +1,209 @@
-# Instapro website
+# Instapro Website Clone
 
 ![Instapro ](/images/instapro-preview.PNG)
 
-## Welcome! 👋
 
-This is a front-end coding challenge I followed through my mentor, my goal was to create a vebsite from scratch that looks almost 100% the same as [Instapro website](https://www.instapro.it/)
+## Table of Contents
 
+- [Welcome](#welcome)
+- [The Challenge](#the-challenge)
+- [Live Deployment](#live-deployment)
+- [Project Setup](#project-setup)
+- [Folder Structure](#folder-structure)
+- [Styling](#styling)
+- [Common Errors & Fixes](#common-errors--fixes)
+- [Challenges I Faced](#challenges-i-faced)
+- [Mentor Feedback](#mentor-feedback)
+- [Credit](#credit)
+
+## Welcome!
+
+This is a front-end challenge I completed under the guidance of my mentor.  
+The goal was to **recreate the Instapro website** as closely as possible.
+ * The original website link is NO longer available as Instapro UI was changed and modified*
+ [Instapro website](https://www.instapro.it/)
+ 
 **To do this challenge, basic understanding of HTML, CSS and JavaScript is required**
 
 ## The challenge
 
-The challenge is to build out this this replica that looks as close as possible to the original website
+The task was to build a front-end replica of the Instapro homepage, focusing on:
 
-## Deploying the project
+- Responsive layout
+- UI fidelity (pixel-perfect reproduction)
+- React/Next.js component structure
+- Clean and maintainable styling using Emotion
 
-This project was deployed through [Netlify](https://www.netlify.com/)
+## Live Deployment
 
-Please find the live version [here](as-instapro-replica.netlify.app)
+This project was deployed through [Netlify](https://www.netlify.com/). The live site can be found [here](as-instapro-replica.netlify.app).
 
-Set Up
+Please find my GitHub Repo [here](as-instapro-replica.netlify.app).
 
-Install Eslint and prettier:
+## Project Setup
 
-Eslint is a linting tool that helps developers to detect code quality and potential bugs, it takes care about the logint, and if they follow the best practices
-Prettier on the other side takes care about the formatting side (convention with spacing, quotes etc)
+[Install Eslint and prettier](https://blog.logrocket.com/using-prettier-eslint-javascript-formatting/):
 
-In vscode download extensions:
-Eslint, Prettier, Error Lens
+These tools help maintain code quality and consistent formatting.
 
-Download eslint and prettier together:
+#### In VS Code, install extensions:
 
-Npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
+- ESLint
+- Prettier
+- Error Lens (optional but helpful)
 
-npm i --save-dev prettier eslint
+#### Install dependencies:
 
-Configure files:
-Prettier: https://prettier.io/docs/en/options.html
-Create .prettierrc in root directory and addrules here (for example:)
+```bash
+npm install -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
 
-{“singleQuote”:true}
-
-Eslint: https://eslint.org/docs/latest/use/getting-started
-Create eslintrc.json (create manually or in terminal add:)
-
+Run the setup 
 npm init @eslint/config
+```
+Then update .eslintrc.json:
+ 
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn"
+  }
+}
 
-in .eslintrc.json add rules for prettier
+Create a .prettierrc file:
 
-"extends" : ["airbnb", "prettier"]
-"plugins": [prettier"]
-"rules" : {
-"prettier/prettier": "error",
-"no-unused-vars": "warn",}
+{
+  "singleQuote": true,
+  "semi": true
+}
+[Prettier options](https://prettier.io/docs/en/options.html)
 
-with this eslint AND prettier errors are shown
 
-To set up Next.js app:
-npx create-next-app@latest . (in case of new project)
+Scripts in package.json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "format": "prettier --write ."
+}
+Run this to auto-format your project:
 
-For existing project:
-npx create-next-app@latest nextjs-app (create appname)
-follow suggestions and questions
+```bash
+npm run format
+```
 
-Navigate to the Next.js App Directory:
+- Create a Next.js App
+If starting fresh:
+```bash
+npx create-next-app@latest
 
-Move into the newly created Next.js app directory:
-in terminal: cd instapro-site (the app name)
+If adding Next.js to an existing folder:
+npx create-next-app@latest instapro-site
+cd instapro-site
 
-To run the Next.js development server and view your app, use the following command:
-
+To run:
 npm run dev
+Visit http://localhost:3000 in your browser.
 
-This will open http://localhost:3000 to access the page in the browser
+```
 
-Next Js logics:
-in Instapro site directory create new folder:
+## Folder Structure
 
-- components
-- styles
-- utils
-  .env file
+instapro-site/
+├── components/
+├── styles/
+├── utils/
+├── public/
+│   └── images/
+├── .env
 
-- icons and images go in pubblic
+## Styling
 
-Styling:
-Install Emotion js
-npm i @emotion/styled @emotion/react
+Used [Emotion](https://emotion.sh/docs/styled) for styling:
 
-Inport {css } from @emotion/react
+```bash
+ 
+npm install @emotion/styled @emotion/react
 
-Errors
-Eslint: parameter children implicity has an any type:
-Children type for Typescript was not specified
-FIXED
-checked react version,
-in layout.tsx addd import { ReactNode } from 'react';
-specified the type for children:ReacNode on line 9
+Import as needed:
 
-Error: Module not found: Can't resolve '@styles/global.css'
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+```
+For icons such as hamburger bar user [React Icons](For icons such as hamburger bar:) 
 
-Fixed:
-tsconfig.json, removed / form path and src
+```bash
 
-Error: Error: Objects are not valid as a React child (found: object with keys {children, params}). If you meant to render a collection of children, use an array instead.
+npm install react-icons --save
 
-FIXED:
-adding proptype first
-type MyComponentProps = {
-children: ReactNode; // ReactNode is a type that can represent any valid React node (e.g., JSX, text, numbers, etc.)
-};
-added patenthesis
-const RootLayout = ({ children }: MyComponentProps)
-
-Prettirt Error: Error related to end of line section
-Delete cr: changed vs code setting from CRLF to LF
-
-ERRORS:
-npm run de not working error: Script missing
-Fixed by cd instapro-site
-The directoy i as working in was not correct
-
-For icons such as hamburger bar: npm install react-icons --save
 For font awesome icons: npm install --save font-awesome
+
+Import in Page.js: npm install react-icons --save
+
+For font awesome icons: npm install --save font-awesome
+
 Import in Page.js
+```
 
-CONFIG ERRORS
-Removed
+## Common Errors & Fixes
 
-npm uninstall styled-components
-npm uninstall tailwindcss@3.3.3
-npm uninstall postcss@8.4.29
-npm uninstall autoprefixer@10.4.15
+**Errors:**
+- Eslint: parameter children implicitly has an any type: Children type for Typescript was not specified
 
-Errors before deployment:
-error import { AiOutlineArrowRight } from 'react-icons/ai';
-9:12:56 PM: Module not found: Can"t resolve "react-icons/ai"
+*Fix:* Add React type:
 
-Fixed: npm install react-icons@latest
+```bash 
+import { ReactNode } from 'react';
 
-Deployed Site link:
-https://instapro-replica-as.netlify.app
+type MyComponentProps = {
+  children: ReactNode};
+  
+  ```
 
+- Error: Module not found: Can't resolve '@styles/global.css'
+
+*Fix:*   In tsconfig.json, correct the path (remove extra slashes or prefixes).
+
+-Error: Objects are not valid as a React child (found: object with keys {children, params}). If you meant to render a collection of children, use an array instead.
+
+*Fix:* Make sure you’re not rendering an object directly. Wrap children correctly and use ReactNode.
+
+-Error Prettier: Error related to end of line section
+
+*Fix:*Delete cr: changed vs code setting from CRLF to LF
+
+## Challenges I Faced
+During this project, I encountered several challenges that helped me grow as a front-end developer:
+
+- Styled-components: I had only used CSS Modules before, so learning and using styled-components for this project was completely new and a bit tricky at first.
+
+- Layout consistency: Making sure spacing and sizing were consistent across all sections was difficult and required careful planning.
+
+- Responsiveness: One of the biggest challenges was ensuring that the content was responsive and the hero image adapted well to all screen sizes. Eventually, I used a background-image approach to make it scale correctly.
+
+- Positioning & CSS techniques: I improved my understanding of flexbox, vertical scroll handling, and positioning elements (like footers and navbars) across devices.
+
+- Burger menu: Implementing a responsive navbar for smaller screens helped me get familiar with conditional rendering and mobile-friendly UX.
+
+Overall, this project strengthened my skills in responsive design, component-based development, and CSS fundamentals.
+
+## Mentor Feedback  
 Remarks from Mentor, after deployment:
-Add a script in your package.json for reformatting the code using prettier.
 
-In pacjage,json add:
+- Add a script in your package.json for reformatting the code using prettier.
+
+```bash
+"format": "prettier --write ."
+Run:
+
+npm run format
+
+```
+
+In package,json add:
+
 "scripts": {
 "dev": "next dev",
 "build": "next build",
@@ -153,6 +212,17 @@ In pacjage,json add:
 "format": "prettier --write ."
 },
 
-Once you add that script, run: npm run format . That way prettier will automatically reformat all the code in your project.
+Once you add that script, run: npm run format . 
 
-/public/images/ had a file named SummerSection, removed as not needed
+That way prettier will automatically reformat all the code in your project.
+
+Use npx to run it (preferred for local installs)
+If Prettier is only installed locally (as it should be), run:
+
+``` bash
+npx prettier --write .
+
+```
+
+## Credits
+- Special thanks to my mentor for guiding me through this first challenge and helping me understand layout, responsiveness, and real-world development workflows.

@@ -22,9 +22,7 @@ const RootLayout = ({ children }: MyComponentProps) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 };

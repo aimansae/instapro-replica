@@ -49,7 +49,7 @@ export const ReviewNum = styled.div`
       margin: 3rem;
     }
   }
-  
+
   .requestnum-title {
     color: #3f27ba;
     font-size: 3rem;

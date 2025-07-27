@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const BlueSection = styled.section`
   background-color: #017acd;
   padding: 3rem 0;
-  overflow:hidden;
+  overflow: hidden;
 
   p {
     font-size: 1rem;

@@ -43,25 +43,25 @@ const BlueSection = () => {
           <Styled.H2>Get the results you want</Styled.H2>
           <Styled.CardDiv>
             {reviews.map((review) => (
-                <Styled.ReviewCard key={review.id}>
-                  <a href={review.link}>
-                    <Styled.ImgContainer>
-                      <Styled.Img src={review.image} alt="" />
-                      <p>{review.title}</p>
-                    </Styled.ImgContainer>
-                    <Styled.ReviewDescription>
-                      <div className="reviewstar-container">
-                        <i className=" fa  fa-star fa-solid"></i>
-                        <i className=" fa  fa-star fa-solid"></i>
-                        <i className=" fa  fa-star fa-solid"></i>
-                        <i className=" fa  fa-star fa-solid"></i>
-                        <i className=" fa  fa-star fa-solid"></i>
-                      </div>
-                      <p className="review-title">{review.tpName}</p>
-                      <p className="review-description">{review.description}</p>
-                    </Styled.ReviewDescription>
-                  </a>
-                </Styled.ReviewCard>
+              <Styled.ReviewCard key={review.id}>
+                <a href={review.link}>
+                  <Styled.ImgContainer>
+                    <Styled.Img src={review.image} alt="" />
+                    <p>{review.title}</p>
+                  </Styled.ImgContainer>
+                  <Styled.ReviewDescription>
+                    <div className="reviewstar-container">
+                      <i className=" fa  fa-star fa-solid"></i>
+                      <i className=" fa  fa-star fa-solid"></i>
+                      <i className=" fa  fa-star fa-solid"></i>
+                      <i className=" fa  fa-star fa-solid"></i>
+                      <i className=" fa  fa-star fa-solid"></i>
+                    </div>
+                    <p className="review-title">{review.tpName}</p>
+                    <p className="review-description">{review.description}</p>
+                  </Styled.ReviewDescription>
+                </a>
+              </Styled.ReviewCard>
             ))}
           </Styled.CardDiv>
           <Styled.ReviewInfo>
