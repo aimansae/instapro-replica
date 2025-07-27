@@ -1,6 +1,6 @@
 # Instapro Website Clone
 
-![Instapro](/images/instapro-preview.PNG)
+![Instapro](./public/images/instapro-preview.PNG)
 
 
 ## Table of Contents
@@ -36,7 +36,7 @@ The task was to build a front-end replica of the Instapro homepage, focusing on:
 
 ## Live Deployment
 
-This project was deployed through [Netlify](https://www.netlify.com/). The live site can be found [here](as-instapro-replica.netlify.app).
+This project was deployed through [Netlify](https://www.netlify.com/). The live site can be found [here](https://instaproreplica.netlify.app/).
 
 Please find my GitHub Repo [here](as-instapro-replica.netlify.app).
 
