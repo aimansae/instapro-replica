@@ -1,6 +1,6 @@
 # Instapro Website Clone
 
-![Instapro ](/images/instapro-preview.PNG)
+![Instapro](/images/instapro-preview.PNG)
 
 
 ## Table of Contents

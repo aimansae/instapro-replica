@@ -53,7 +53,8 @@ export const CardContainer = styled.div`
 
 export const Card = styled.div`
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
   p {
     margin: 0.5rem 0 1rem;
     color: #6f6f6f;
@@ -75,7 +76,8 @@ export const Card = styled.div`
 
 export const CustomImage = styled(Image)`
   border-radius: 10px;
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
   margin-bottom: 1rem;
   height: 6rem;
   object-fit: cover;
@@ -87,7 +89,9 @@ export const CustomImage = styled(Image)`
 
 export const TitleIconDiv = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+  flex-grow: 1;
 `;
 
 export const Icon = styled.i`

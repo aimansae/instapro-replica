@@ -17,7 +17,7 @@ import TestimonialImage6 from '../public/images/testimonialImg6.png';
 const summerJobs = [
   {
     id: 1,
-    image: HoseImage,
+    image: '/images/hose.png',
     alt: 'Hose Image',
     title: 'Gardening and outdoors',
     description: `Do you want to know more about gardening jobs such as tree
@@ -25,31 +25,31 @@ const summerJobs = [
                   articles below to get an idea of ​​what our`,
     icon: 'fa fa-car fa-solid',
     link: 'gardening and outdoors: find out all the information',
-    testimonialImage: TestimonialImage1,
+    testimonialImage: '/images/testimonialimg1.png',
     testimonialTitle: '548 gardeners',
     testimonialLink: 'gardeners',
   },
   {
     id: 2,
-    image: PaintingImage,
+    image: '/images/painting.png',
     alt: 'Painting Image',
     title: 'Painting',
     description: `Do you need information on interior and exterior painting? Do you want to find information about wallpaper and stucco decorations? Read our articles`,
     icon: 'fa fa-paint-brush',
     link: 'painting: find out all the information',
-    testimonialImage: TestimonialImage2,
+    testimonialImage: '/images/testimonialimg2.png',
     testimonialTitle: '2988 painters',
     testimonialLink: 'painters',
   },
   {
     id: 3,
-    image: RoofImage,
+    image: '/images/roof.png',
     alt: 'Foof Image',
     title: 'Roof and roofing',
     description: `Are you interested in information on the prices of jobs in this service/category? To give you an idea of ​​what our professionals can do for you and what the average`,
     icon: 'fa fa-car',
     link: 'roof and covers: find out all the information',
-    testimonialImage: TestimonialImage3,
+    testimonialImage: '/images/testimonialImg3.png',
     testimonialTitle: '537 roof repair companies ',
     testimonialLink: 'roof companies',
   },
@@ -58,7 +58,7 @@ const summerJobs = [
 const everyPeriod = [
   {
     id: 6,
-    image: BrickImage,
+    image: '/images/brick.png',
     alt: 'Brick Image',
     title: 'Home construction and renovation',
     description: ` Home refurbishing? enlarge the rooms? Renovate the kitchen?
@@ -66,13 +66,13 @@ const everyPeriod = [
   construction companies can do for you, and the`,
     icon: 'fa fa-car fa-solid',
     link: 'home construction and renovation: find out all the information',
-    testimonialImage: TestimonialImage4,
+    testimonialImage: '/images/testimonialImg4.png',
     testimonialTitle: '2353 construction companies ',
     testimonialLink: 'construction',
   },
   {
     id: 7,
-    image: HeatingImage,
+    image: '/images/heating.png',
     alt: 'Heating Image',
     title: 'Heating',
     description: ` Are you interested in information on the prices of jobs in
@@ -80,13 +80,13 @@ const everyPeriod = [
   professionals can do for you and what the average costs`,
     icon: 'fa fa-car fa-solid',
     link: 'heating: find out all the information',
-    testimonialImage: TestimonialImage5,
+    testimonialImage: '/images/testimonialImg5.png',
     testimonialTitle: '1762 plumbing and heating companies',
     testimonialLink: 'plumbing',
   },
   {
     id: 8,
-    image: FloorImage,
+    image: '/images/floor.png',
     alt: 'Floor Image',
     title: 'Floors and tiles',
     description: `  New parquet floor, or terracotta tiles? Stoneware floor? Read
@@ -94,7 +94,7 @@ const everyPeriod = [
   parquet installers can do for you, and understand`,
     icon: 'fa fa-car fa-solid',
     link: 'floor and tiles: find out all the information',
-    testimonialImage: TestimonialImage6,
+    testimonialImage: '/images/testimonialImg6.png',
     testimonialTitle: '2847 floor installers',
     testimonialLink: 'floor',
   },
@@ -109,22 +109,29 @@ const SummerSection = () => {
           <Styled.CardContainer>
             {summerJobs.map((job) => (
               <Styled.Card key={job.id}>
-                <Styled.CustomImage src={job.image} alt={job.alt} />
+                <Styled.CustomImage
+                  src={job.image}
+                  alt={job.alt}
+                  width={400}
+                  height={250}
+                />
                 <div className="card-text">
                   <Styled.TitleIconDiv>
                     <Styled.Icon className={job.icon}></Styled.Icon>
                     <Styled.Title>{job.title}</Styled.Title>
+                    <p className="clip-text">{job.description}</p>
+                    <Styled.IconLink>
+                      <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
+                      <a href="">{job.link}</a>
+                    </Styled.IconLink>{' '}
                   </Styled.TitleIconDiv>
-                  <p className="clip-text">{job.description}</p>
-                  <Styled.IconLink>
-                    <i className="fa  fa-arrow-right fa-solid card-arrow"></i>
-                    <a href="">{job.link}</a>
-                  </Styled.IconLink>
                   <Styled.Testimonials>
                     <div className="img-testimonial">
                       <Styled.TestimonialImage
                         src={job.testimonialImage}
                         alt="Testimonials Image"
+                        width={32}
+                        height={32}
                       />
                     </div>
                     <Styled.TestimonialP>
@@ -154,7 +161,12 @@ const SummerSection = () => {
           <Styled.CardContainer>
             {everyPeriod.map((job) => (
               <Styled.Card key={job.id}>
-                <Styled.CustomImage src={job.image} alt="Brick Image" />
+                <Styled.CustomImage
+                  src={job.image}
+                  alt="Brick Image"
+                  width={400}
+                  height={250}
+                />
                 <div className="card-text">
                   <Styled.TitleIconDiv>
                     <Styled.Icon className={job.icon}></Styled.Icon>
@@ -170,6 +182,8 @@ const SummerSection = () => {
                       <Styled.TestimonialImage
                         src={job.testimonialImage}
                         alt={job.alt}
+                        width={32}
+                        height={32}
                       />
                     </div>
                     <Styled.TestimonialP>
